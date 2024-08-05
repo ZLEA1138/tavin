@@ -1,1 +1,2 @@
-# tavin
+# notactuallythebareminimum
+A blank slate for minetest games. You may re-license this however you like, build off it, do whatever. It was created explicitly with the intent of having people use it as a starting point, and as such you may claim ownership of any code within this project and you may remove the existing LICENSE and add your own LICENSE file or otherwise forego attribution. All rights to stop you doing stuff with this code are waived except the no warrantee and liability clauses of the LICENSE attached.
