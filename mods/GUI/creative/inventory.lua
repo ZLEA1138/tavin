@@ -1,5 +1,8 @@
 -- creative/inventory.lua
 
+-- support for MT game translation.
+local S = creative.get_translator
+
 local player_inventory = {}
 local inventory_cache = {}
 
@@ -137,7 +140,7 @@ trash:set_size("main", 1)
 creative.formspec_add = ""
 
 function creative.register_tab(name, title, items)
-	inventory.register_page("creative:" .. name, {
+	sfinv.register_page("creative:" .. name, {
 		title = title,
 		is_in_nav = function(self, player, context)
 			return minetest.is_creative_enabled(player:get_player_name())
@@ -149,8 +152,8 @@ function creative.register_tab(name, title, items)
 			local pagenum = math.floor(inv.start_i / (4*8) + 1)
 			local pagemax = math.max(math.ceil(inv.size / (4*8)), 1)
 			local esc = minetest.formspec_escape
-			return inventory.make_formspec(player, context,
-				(inv.size == 0 and ("label[3,2;"..esc("No items to show.").."]") or "") ..
+			return sfinv.make_formspec(player, context,
+				(inv.size == 0 and ("label[3,2;"..esc(S("No items to show.")).."]") or "") ..
 				"label[5.8,4.15;" .. minetest.colorize("#FFFF00", tostring(pagenum)) .. " / " .. tostring(pagemax) .. "]" ..
 				[[
 					image[4.08,4.2;0.8,0.8;creative_trash_icon.png]
@@ -162,10 +165,10 @@ function creative.register_tab(name, title, items)
 					image_button[2.63,4.05;0.8,0.8;creative_search_icon.png;creative_search;]
 					image_button[3.25,4.05;0.8,0.8;creative_clear_icon.png;creative_clear;]
 				]] ..
-				"tooltip[creative_search;" .. esc("Search") .. "]" ..
-				"tooltip[creative_clear;" .. esc("Reset") .. "]" ..
-				"tooltip[creative_prev;" .. esc("Previous page") .. "]" ..
-				"tooltip[creative_next;" .. esc("Next page") .. "]" ..
+				"tooltip[creative_search;" .. esc(S("Search")) .. "]" ..
+				"tooltip[creative_clear;" .. esc(S("Reset")) .. "]" ..
+				"tooltip[creative_prev;" .. esc(S("Previous page")) .. "]" ..
+				"tooltip[creative_next;" .. esc(S("Next page")) .. "]" ..
 				"listring[current_player;main]" ..
 				"field_close_on_enter[creative_filter;false]" ..
 				"field[0.3,4.2;2.8,1.2;creative_filter;;" .. esc(inv.filter) .. "]" ..
@@ -188,7 +191,7 @@ function creative.register_tab(name, title, items)
 			if fields.creative_clear then
 				inv.start_i = 0
 				inv.filter = ""
-				inventory.set_player_inventory_formspec(player, context)
+				sfinv.set_player_inventory_formspec(player, context)
 			elseif (fields.creative_search or
 					fields.key_enter_field == "creative_filter")
 					and fields.creative_filter then
@@ -196,7 +199,7 @@ function creative.register_tab(name, title, items)
 				inv.filter = fields.creative_filter:sub(1, 128) -- truncate to a sane length
 						:gsub("[%z\1-\8\11-\31\127]", "") -- strip naughty control characters (keeps \t and \n)
 						:lower() -- search is case insensitive
-				inventory.set_player_inventory_formspec(player, context)
+				sfinv.set_player_inventory_formspec(player, context)
 			elseif not fields.quit then
 				local start_i = inv.start_i or 0
 
@@ -216,7 +219,7 @@ function creative.register_tab(name, title, items)
 				end
 
 				inv.start_i = start_i
-				inventory.set_player_inventory_formspec(player, context)
+				sfinv.set_player_inventory_formspec(player, context)
 			end
 		end
 	})
@@ -242,13 +245,13 @@ minetest.register_on_mods_loaded(function()
 	end
 end)
 
-creative.register_tab("all", "All", minetest.registered_items)
-creative.register_tab("nodes", "Nodes", registered_nodes)
-creative.register_tab("tools", "Tools", registered_tools)
-creative.register_tab("craftitems", "Items", registered_craftitems)
+creative.register_tab("all", S("All"), minetest.registered_items)
+creative.register_tab("nodes", S("Nodes"), registered_nodes)
+creative.register_tab("tools", S("Tools"), registered_tools)
+creative.register_tab("craftitems", S("Items"), registered_craftitems)
 
-local old_homepage_name = inventory.get_homepage_name
-function inventory.get_homepage_name(player)
+local old_homepage_name = sfinv.get_homepage_name
+function sfinv.get_homepage_name(player)
 	if minetest.is_creative_enabled(player:get_player_name()) then
 		return "creative:all"
 	else

@@ -1,26 +1,30 @@
 -- creative/init.lua
 
-creative = {}
+-- Load support for MT game translation.
+local S = minetest.get_translator("creative")
 
-local function update_inventory(name)
+creative = {}
+creative.get_translator = S
+
+local function update_sfinv(name)
 	minetest.after(0, function()
 		local player = minetest.get_player_by_name(name)
 		if player then
-			if inventory.get_page(player):sub(1, 9) == "creative:" then
-				inventory.set_page(player, inventory.get_homepage_name(player))
+			if sfinv.get_page(player):sub(1, 9) == "creative:" then
+				sfinv.set_page(player, sfinv.get_homepage_name(player))
 			else
-				inventory.set_player_inventory_formspec(player)
+				sfinv.set_player_inventory_formspec(player)
 			end
 		end
 	end)
 end
 
 minetest.register_privilege("creative", {
-	description = "Allow player to use creative inventory",
+	description = S("Allow player to use creative inventory"),
 	give_to_singleplayer = false,
 	give_to_admin = false,
-	on_grant = update_inventory,
-	on_revoke = update_inventory,
+	on_grant = update_sfinv,
+	on_revoke = update_sfinv,
 })
 
 -- Override the engine's creative mode function
