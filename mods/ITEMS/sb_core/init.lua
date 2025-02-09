@@ -6,4 +6,5 @@ sb_core = {}
 -- makes nodes
 dofile(mod_path .. DIR_DELIM .. "nodes_base.lua")
 dofile(mod_path .. DIR_DELIM .. "nodes_liquid.lua")
+dofile(mod_path .. DIR_DELIM .. "nodes_trees.lua")
 dofile(mod_path .. DIR_DELIM .. "abms.lua")

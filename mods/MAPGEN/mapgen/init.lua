@@ -16,3 +16,5 @@ end
 -- biomes
 dofile(mod_path .. DIR_DELIM .. "biomes" .. DIR_DELIM .. "grasslands.lua")
 dofile(mod_path .. DIR_DELIM .. "biomes" .. DIR_DELIM .. "ocean.lua")
+dofile(mod_path .. DIR_DELIM .. "biomes" .. DIR_DELIM .. "savanna.lua")
+dofile(mod_path .. DIR_DELIM .. "biomes" .. DIR_DELIM .. "tundra.lua")

@@ -24,14 +24,38 @@ minetest.register_node("sb_core:sand", {
     sounds = {},
 })
 
--- GRASS BLOCK
-minetest.register_node("sb_core:grass", {
+-- GRASS BLOCKS
+minetest.register_node("sb_core:dirt_grass", {
     description = "Grass Dirt",
     groups = { item_grass = 1, solid = 1, suffocates = 2, topsoil = 1, oddly_breakable_by_hand = 2, crumbly = 1, soil = 1, dirt = 1, spreads_to_dirt = 1, },
     tiles = {
-        "grass_dirt.png",
+        "dirt_grass.png",
         "dirt.png",
-        "dirt.png^grass_dirt_side.png",
+        "dirt.png^dirt_grass_side.png",
+    },
+    drop = "sb_core:dirt",
+    sounds = {},
+})
+
+minetest.register_node("sb_core:dirt_savanna", {
+    description = "Savanna Dirt",
+    groups = { item_grass = 1, solid = 1, suffocates = 2, topsoil = 1, oddly_breakable_by_hand = 2, crumbly = 1, soil = 1, dirt = 1, spreads_to_dirt = 1, },
+    tiles = {
+        "dirt_savanna.png",
+        "dirt.png",
+        "dirt.png^dirt_savanna_side.png",
+    },
+    drop = "sb_core:dirt",
+    sounds = {},
+})
+
+minetest.register_node("sb_core:dirt_snow", {
+    description = "Snow Dirt",
+    groups = { item_grass = 1, solid = 1, suffocates = 2, topsoil = 1, oddly_breakable_by_hand = 2, crumbly = 1, soil = 1, dirt = 1, spreads_to_dirt = 1, },
+    tiles = {
+        "snow_dirt.png",
+        "dirt.png",
+        "dirt.png^snow_dirt_side.png",
     },
     drop = "sb_core:dirt",
     sounds = {},

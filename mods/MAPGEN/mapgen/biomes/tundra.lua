@@ -2,7 +2,7 @@ local sealevel = 0
 local alt_max = 1000
 local alt_min = -1000
 
-local this_biome = "grasslands"
+local this_biome = "tundra"
 
 -------------------------------
 ------------ BIOME ------------
@@ -11,7 +11,7 @@ local this_biome = "grasslands"
 minetest.register_biome({
     name = this_biome,
 
-    node_top = "sb_core:dirt_grass",
+    node_top = "sb_core:dirt_tundra",
     depth_top = 1,
 
     node_filler = "sb_core:dirt",

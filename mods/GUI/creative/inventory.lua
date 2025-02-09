@@ -140,7 +140,7 @@ trash:set_size("main", 1)
 creative.formspec_add = ""
 
 function creative.register_tab(name, title, items)
-	sfinv.register_page("creative:" .. name, {
+	inventory.register_page("creative:" .. name, {
 		title = title,
 		is_in_nav = function(self, player, context)
 			return minetest.is_creative_enabled(player:get_player_name())
@@ -152,7 +152,7 @@ function creative.register_tab(name, title, items)
 			local pagenum = math.floor(inv.start_i / (4*8) + 1)
 			local pagemax = math.max(math.ceil(inv.size / (4*8)), 1)
 			local esc = minetest.formspec_escape
-			return sfinv.make_formspec(player, context,
+			return inventory.make_formspec(player, context,
 				(inv.size == 0 and ("label[3,2;"..esc(S("No items to show.")).."]") or "") ..
 				"label[5.8,4.15;" .. minetest.colorize("#FFFF00", tostring(pagenum)) .. " / " .. tostring(pagemax) .. "]" ..
 				[[
@@ -191,7 +191,7 @@ function creative.register_tab(name, title, items)
 			if fields.creative_clear then
 				inv.start_i = 0
 				inv.filter = ""
-				sfinv.set_player_inventory_formspec(player, context)
+				inventory.set_player_inventory_formspec(player, context)
 			elseif (fields.creative_search or
 					fields.key_enter_field == "creative_filter")
 					and fields.creative_filter then
@@ -199,7 +199,7 @@ function creative.register_tab(name, title, items)
 				inv.filter = fields.creative_filter:sub(1, 128) -- truncate to a sane length
 						:gsub("[%z\1-\8\11-\31\127]", "") -- strip naughty control characters (keeps \t and \n)
 						:lower() -- search is case insensitive
-				sfinv.set_player_inventory_formspec(player, context)
+				inventory.set_player_inventory_formspec(player, context)
 			elseif not fields.quit then
 				local start_i = inv.start_i or 0
 
@@ -219,7 +219,7 @@ function creative.register_tab(name, title, items)
 				end
 
 				inv.start_i = start_i
-				sfinv.set_player_inventory_formspec(player, context)
+				inventory.set_player_inventory_formspec(player, context)
 			end
 		end
 	})
@@ -250,8 +250,8 @@ creative.register_tab("nodes", S("Nodes"), registered_nodes)
 creative.register_tab("tools", S("Tools"), registered_tools)
 creative.register_tab("craftitems", S("Items"), registered_craftitems)
 
-local old_homepage_name = sfinv.get_homepage_name
-function sfinv.get_homepage_name(player)
+local old_homepage_name = inventory.get_homepage_name
+function inventory.get_homepage_name(player)
 	if minetest.is_creative_enabled(player:get_player_name()) then
 		return "creative:all"
 	else
