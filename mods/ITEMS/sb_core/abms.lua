@@ -1,5 +1,5 @@
 
--- CHANGE DIRT TO GRASS WHEN NEAR GRASS
+-- Change dirt to grass when near grass
 minetest.register_abm({
     nodenames = {"group:spreads_to_dirt"},
     neighbors = {"group:grass_can_grow"},
@@ -22,9 +22,81 @@ minetest.register_abm({
     end
 })
 
--- CHANGE GRASS TO DIRT WHEN SUFFOCATED BY SOLID BLOCK ABOVE
+-- Change grass to dirt when suffocated by solid block above
 minetest.register_abm({
-    nodenames = {"sb_core:grass"},
+    nodenames = {"sb_core:dirt_grass_forest"},
+    neighbors = {"group:solid"},
+    interval = 25.0,
+    chance = 5,
+    action = function(pos, node, active_object_count, active_object_count_wider)
+        if minetest.get_item_group(minetest.get_node(vector.offset(pos, 0, 1, 0)).name, "solid") ~= 0 then
+            minetest.set_node(pos, {name = "sb_core:dirt"})
+        end
+    end
+})
+
+minetest.register_abm({
+    nodenames = {"sb_core:dirt_mycelium"},
+    neighbors = {"group:solid"},
+    interval = 25.0,
+    chance = 5,
+    action = function(pos, node, active_object_count, active_object_count_wider)
+        if minetest.get_item_group(minetest.get_node(vector.offset(pos, 0, 1, 0)).name, "solid") ~= 0 then
+            minetest.set_node(pos, {name = "sb_core:dirt"})
+        end
+    end
+})
+
+minetest.register_abm({
+    nodenames = {"sb_core:dirt_grass_plains"},
+    neighbors = {"group:solid"},
+    interval = 25.0,
+    chance = 5,
+    action = function(pos, node, active_object_count, active_object_count_wider)
+        if minetest.get_item_group(minetest.get_node(vector.offset(pos, 0, 1, 0)).name, "solid") ~= 0 then
+            minetest.set_node(pos, {name = "sb_core:dirt"})
+        end
+    end
+})
+
+minetest.register_abm({
+    nodenames = {"sb_core:dirt_grass_prairie"},
+    neighbors = {"group:solid"},
+    interval = 25.0,
+    chance = 5,
+    action = function(pos, node, active_object_count, active_object_count_wider)
+        if minetest.get_item_group(minetest.get_node(vector.offset(pos, 0, 1, 0)).name, "solid") ~= 0 then
+            minetest.set_node(pos, {name = "sb_core:dirt"})
+        end
+    end
+})
+
+minetest.register_abm({
+    nodenames = {"sb_core:dirt_grass_savanna"},
+    neighbors = {"group:solid"},
+    interval = 25.0,
+    chance = 5,
+    action = function(pos, node, active_object_count, active_object_count_wider)
+        if minetest.get_item_group(minetest.get_node(vector.offset(pos, 0, 1, 0)).name, "solid") ~= 0 then
+            minetest.set_node(pos, {name = "sb_core:dirt"})
+        end
+    end
+})
+
+minetest.register_abm({
+    nodenames = {"sb_core:dirt_grass_snow"},
+    neighbors = {"group:solid"},
+    interval = 25.0,
+    chance = 5,
+    action = function(pos, node, active_object_count, active_object_count_wider)
+        if minetest.get_item_group(minetest.get_node(vector.offset(pos, 0, 1, 0)).name, "solid") ~= 0 then
+            minetest.set_node(pos, {name = "sb_core:dirt"})
+        end
+    end
+})
+
+minetest.register_abm({
+    nodenames = {"sb_core:dirt_grass_snow"},
     neighbors = {"group:solid"},
     interval = 25.0,
     chance = 5,
