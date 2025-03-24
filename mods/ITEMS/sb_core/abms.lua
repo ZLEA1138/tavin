@@ -96,7 +96,7 @@ minetest.register_abm({
 })
 
 minetest.register_abm({
-    nodenames = {"sb_core:dirt_grass_snow"},
+    nodenames = {"sb_core:dirt_grass_swamp"},
     neighbors = {"group:solid"},
     interval = 25.0,
     chance = 5,
@@ -105,4 +105,25 @@ minetest.register_abm({
             minetest.set_node(pos, {name = "sb_core:dirt"})
         end
     end
+})
+
+-- Moss growth on cobble near water
+local moss_correspondences = {
+	["sb_core:cobble"] = "sb_core:cobble_mossy",
+	["sb_core:stone_bricks"] = "sb_core:stone_bricks_mossy",
+}
+
+minetest.register_abm({
+	label = "Moss growth",
+	nodenames = {"sb_core:cobble", "sb_core:stone_bricks"},
+	neighbors = {"group:water"},
+	interval = 16,
+	chance = 200,
+	catch_up = false,
+	action = function(pos, node)
+		node.name = moss_correspondences[node.name]
+		if node.name then
+			minetest.set_node(pos, node)
+		end
+	end
 })

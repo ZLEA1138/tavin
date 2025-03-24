@@ -74,7 +74,7 @@ minetest.register_tool("sb_tools:axe_stone", {
 })
 
 core.register_craft({
-    output = "sb_tools:pick_stone",
+    output = "sb_tools:axe_stone",
     recipe = {
         {"group:stone", "group:stone"},
         {"group:stone", "group:stick"},
@@ -83,7 +83,7 @@ core.register_craft({
 })
 
 core.register_craft({ -- why would you do this?
-    output = "sb_tools:pick_stone",
+    output = "sb_tools:axe_stone",
     recipe = {
         {"group:stone", "group:stone"},
         {"group:stick", "group:stone"},

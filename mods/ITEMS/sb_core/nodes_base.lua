@@ -92,7 +92,7 @@ minetest.register_node("sb_core:dirt", {
     description = "Dirt",
     tiles = {"dirt.png"},
 	is_ground_content = true,
-    groups = {crumbly = 1, soil = 1, grass_can_grow = 1},
+    groups = {crumbly = 5, soil = 1, grass_can_grow = 1},
     sounds = sounds.node_sound_dirt_defaults(),
 })
 
@@ -101,7 +101,7 @@ minetest.register_node("sb_core:dirt_dry", {
 	description = "Dry Dirt",
 	tiles = {"dirt_dry.png"},
 	is_ground_content = true,
-	groups = {crumbly = 1},
+	groups = {crumbly = 5},
 	sounds = sounds.node_sound_dirt_defaults(),
 })
 
@@ -110,7 +110,7 @@ minetest.register_node("sb_core:dirt_scorched", {
 	description = "Scorched Dirt",
 	tiles = {"dirt_scorched.png"},
 	is_ground_content = true,
-	groups = {crumbly = 1},
+	groups = {crumbly = 8},
 	sounds = sounds.node_sound_gravel_defaults(),
 })
 
@@ -123,7 +123,7 @@ minetest.register_node("sb_core:dirt_grass_forest", {
         "dirt.png^dirt_grass_forest_side.png",
     },
 	is_ground_content = true,
-    groups = {crumbly = 1, soil = 1, spreads_to_dirt = 1},
+    groups = {crumbly = 6, soil = 1, spreads_to_dirt = 1},
     drop = "sb_core:dirt",
     sounds = sounds.node_sound_dirt_defaults(),
 })
@@ -136,7 +136,7 @@ minetest.register_node("sb_core:dirt_mycelium", {
         "dirt.png^dirt_mycelium_side.png",
     },
 	is_ground_content = true,
-	groups = {crumbly = 1, soil = 1, spreads_to_dirt = 1},
+	groups = {crumbly = 6, soil = 1, spreads_to_dirt = 1},
     drop = "sb_core:dirt",
     sounds = sounds.node_sound_dirt_defaults(),
 })
@@ -149,7 +149,7 @@ minetest.register_node("sb_core:dirt_grass_plains", {
         "dirt.png^dirt_grass_plains_side.png",
     },
 	is_ground_content = true,
-    groups = {crumbly = 1, soil = 1, spreads_to_dirt = 1},
+    groups = {crumbly = 6, soil = 1, spreads_to_dirt = 1},
     drop = "sb_core:dirt",
     sounds = sounds.node_sound_dirt_defaults(),
 })
@@ -162,7 +162,7 @@ minetest.register_node("sb_core:dirt_grass_prairie", {
         "dirt.png^dirt_grass_prairie_side.png",
     },
 	is_ground_content = true,
-    groups = {crumbly = 1, soil = 1, spreads_to_dirt = 1},
+    groups = {crumbly = 6, soil = 1, spreads_to_dirt = 1},
     drop = "sb_core:dirt",
     sounds = sounds.node_sound_dirt_defaults(),
 })
@@ -175,7 +175,7 @@ minetest.register_node("sb_core:dirt_grass_savanna", {
         "dirt.png^dirt_grass_savanna_side.png",
     },
 	is_ground_content = true,
-    groups = {crumbly = 1, soil = 1, spreads_to_dirt = 1},
+    groups = {crumbly = 6, soil = 1, spreads_to_dirt = 1},
     drop = "sb_core:dirt",
     sounds = sounds.node_sound_dirt_defaults(),
 })
@@ -188,7 +188,7 @@ minetest.register_node("sb_core:dirt_grass_snow", {
         "dirt.png^snow_side.png",
     },
 	is_ground_content = true,
-    groups = {crumbly = 1, soil = 1, spreads_to_dirt = 1},
+    groups = {crumbly = 6, soil = 1, spreads_to_dirt = 1},
     drop = "sb_core:dirt",
     sounds = sounds.node_sound_dirt_defaults(),
 })
@@ -201,7 +201,7 @@ minetest.register_node("sb_core:dirt_grass_swamp", {
         "dirt.png^dirt_grass_swamp_side.png",
     },
 	is_ground_content = true,
-    groups = {crumbly = 1, soil = 1, spreads_to_dirt = 1},
+    groups = {crumbly = 6, soil = 1, spreads_to_dirt = 1},
     drop = "sb_core:dirt",
     sounds = sounds.node_sound_dirt_defaults(),
 })
@@ -211,7 +211,7 @@ minetest.register_node("sb_core:mud", {
     description = "Mud",
     tiles = {"mud.png"},
 	is_ground_content = true,
-    groups = {crumbly = 2},
+    groups = {crumbly = 5},
     sounds = sounds.node_sound_dirt_defaults(),
 })
 
@@ -220,7 +220,7 @@ minetest.register_node("sb_core:mud_packed", {
     description = "Packed Mud",
     tiles = {"mud_packed.png"},
 	is_ground_content = false,
-    groups = {crumbly = 2, soil = 1},
+    groups = {cracky = 4},
     sounds = sounds.node_sound_dirt_defaults(),
 })
 
@@ -229,7 +229,7 @@ minetest.register_node("sb_core:mud_bricks", {
     description = "Mud Bricks",
     tiles = {"mud_bricks.png"},
 	is_ground_content = false,
-    groups = {crumbly = 2, soil = 1},
+    groups = {crumbly = 6},
     sounds = sounds.node_sound_dirt_defaults(),
 })
 
@@ -246,7 +246,7 @@ minetest.register_node("sb_core:sand", {
     description = "Sand",
     tiles = {"sand.png"},
 	is_ground_content = true,
-    groups = {crumbly = 1, falling_node = 1, sand = 1},
+    groups = {crumbly = 5, falling_node = 1, sand = 1},
     sounds = sounds.node_sound_sand_defaults(),
 })
 
@@ -255,7 +255,7 @@ minetest.register_node("sb_core:sand_desert", {
     description = "Desert Sand",
     tiles = {"sand_desert.png"},
 	is_ground_content = true,
-    groups = {crumbly = 1, falling_node = 1, sand = 1},
+    groups = {crumbly = 5, falling_node = 1, sand = 1},
     sounds = sounds.node_sound_sand_defaults(),
 })
 
@@ -264,7 +264,7 @@ minetest.register_node("sb_core:sandstone", {
     description = "Sandstone",
     tiles = {"sandstone.png"},
 	is_ground_content = true,
-    groups = {crumbly = 3, cracky = 3},
+    groups = {cracky = 3},
     sounds = sounds.node_sound_stone_defaults(),
 })
 
@@ -273,7 +273,7 @@ minetest.register_node("sb_core:sandstone_desert", {
     description = "Desert Sandstone",
     tiles = {"sandstone_desert.png"},
 	is_ground_content = true,
-    groups = {crumbly = 3, cracky = 3},
+    groups = {cracky = 3},
     sounds = sounds.node_sound_stone_defaults(),
 })
 
@@ -348,7 +348,7 @@ minetest.register_node("sb_core:gravel", {
 	description = "Gravel",
 	tiles = {"gravel.png"},
 	is_ground_content = true,
-	groups = {crumbly = 2, falling_node = 1},
+	groups = {crumbly = 6, falling_node = 1},
 	drop = {
 		max_items = 1,
 		items = {
@@ -390,7 +390,7 @@ minetest.register_node("sb_core:clay", {
 	description = "Clay",
 	tiles = {"clay.png"},
 	is_ground_content = true,
-	groups = {crumbly = 2},
+	groups = {crumbly = 6},
 	drop = "sb_core:clay_lump 4",
 	sounds = sounds.node_sound_dirt_defaults(),
 })
