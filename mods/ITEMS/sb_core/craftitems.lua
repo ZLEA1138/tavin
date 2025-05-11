@@ -66,3 +66,40 @@ core.register_craft({
     recipe = "sb_core:stick",
     burntime = 5,
 })
+
+-- WUNGU FRUIT
+minetest.register_craftitem("sb_core:wungu_fruit", {
+	description = "Wungu Fruit",
+	inventory_image = "wungu_fruit.png",
+	on_use = minetest.item_eat(4),
+	groups = {compostability = 65},
+})
+
+-- STRING
+minetest.register_craftitem("sb_core:string", {
+	description = "String",
+	inventory_image = "string.png",
+	groups = {flammable = 2},
+})
+
+minetest.register_craft({
+	output = "sb_core:string 2",
+	recipe = {
+		{"sb_farming:strandflower"},
+		{"sb_farming:strandflower"},
+	}
+})
+
+-- PAPER
+minetest.register_craftitem("sb_core:paper", {
+	description = "Paper",
+	inventory_image = "paper.png",
+	groups = {flammable = 3},
+})
+
+minetest.register_craft({
+	output = "sb_core:paper 3",
+	recipe = {
+		{"sb_core:reeds", "sb_core:reeds", "sb_core:reeds"},
+	}
+})

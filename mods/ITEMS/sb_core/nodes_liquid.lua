@@ -1,5 +1,4 @@
-
-
+-- Water
 minetest.register_node("sb_core:water_source", {
     description = "Water Source",
 	drawtype = "liquid",
@@ -89,4 +88,63 @@ minetest.register_node("sb_core:water_source", {
 	post_effect_color = {a = 103, r = 30, g = 60, b = 90},
     groups = {water_flowing = 1, liquid = 1, water = 1, flowing = 1, not_in_creative_inventory = 1, cools_lava = 1},
 	sounds = sounds.node_sound_water_defaults(),
-  })
+})
+
+-- Ice
+minetest.register_node("sb_core:ice", {
+	description = "Ice",
+	tiles = {"ice.png"},
+	-- 'is ground content = false' to avoid tunnels in sea ice or ice rivers
+	is_ground_content = false,
+	paramtype = "light",
+	groups = {cracky = 2, oddly_breakable_by_hand = 8, cools_lava = 1, slippery = 3},
+	sounds = sounds.node_sound_ice_defaults(),
+})
+
+-- Snow
+minetest.register_node("sb_core:snow", {
+	description = "Snow",
+	tiles = {"snow.png"},
+	inventory_image = "snowball.png",
+	wield_image = "snowball.png",
+	paramtype = "light",
+	buildable_to = true,
+	floodable = true,
+	drawtype = "nodebox",
+	node_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, -0.5, 0.5, -0.25, 0.5},
+		},
+	},
+	collision_box = {
+		type = "fixed",
+		fixed = {
+			{-0.5, -0.5, -0.5, 0.5, -6 / 16, 0.5},
+		},
+	},
+	groups = {crumbly = 2, falling_node = 1, snowy = 1},
+	sounds = sounds.node_sound_snow_defaults(),
+
+	--on_construct = function(pos)
+		--pos.y = pos.y - 1
+		--if minetest.get_node(pos).name == "sb_core:dirt_with_grass" then
+			--minetest.set_node(pos, {name = "sb_core:dirt_with_snow"})
+		--end
+	--end,
+})
+
+-- Snow Block
+minetest.register_node("sb_core:snow_block", {
+	description = "Snow Block",
+	tiles = {"snow.png"},
+	groups = {crumbly = 3, cools_lava = 1, snowy = 1},
+	sounds = sounds.node_sound_snow_defaults(),
+
+	--on_construct = function(pos)
+		--pos.y = pos.y - 1
+		--if minetest.get_node(pos).name == "default:dirt_with_grass" then
+			--minetest.set_node(pos, {name = "default:dirt_with_snow"})
+		--end
+	--end,
+})

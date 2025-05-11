@@ -22,7 +22,24 @@ minetest.register_tool("sb_tools:axe_wood", {
 		damage_groups = {fleshy=4},
 	},
 	sound = {breaks = "tool_breaks"},
-	groups = {axe = 1, flammable = 2}
+	groups = {axe = 1, flammable = 2},
+	on_place = function(itemstack, user, pointed_thing)
+		if pointed_thing.type ~= "node" then
+			return
+		end
+		
+		local pos = pointed_thing.under
+		local pname = user:get_player_name()
+		
+		if minetest.is_protected(pos, pname) then
+			minetest.record_protection_violation(pos, pname)
+			return
+		end
+		
+		if functions.has_stripped(pos) then
+			functions.strip_log(pos,user,creative_mode)
+		end
+	end
 })
 
 core.register_craft({
@@ -70,7 +87,24 @@ minetest.register_tool("sb_tools:axe_stone", {
 		damage_groups = {fleshy=5},
 	},
 	sound = {breaks = "tool_breaks"},
-	groups = {axe = 1}
+	groups = {axe = 1},
+	on_place = function(itemstack, user, pointed_thing)
+		if pointed_thing.type ~= "node" then
+			return
+		end
+		
+		local pos = pointed_thing.under
+		local pname = user:get_player_name()
+		
+		if minetest.is_protected(pos, pname) then
+			minetest.record_protection_violation(pos, pname)
+			return
+		end
+		
+		if functions.has_stripped(pos) then
+			functions.strip_log(pos,user,creative_mode)
+		end
+	end
 })
 
 core.register_craft({
@@ -112,7 +146,24 @@ minetest.register_tool("sb_tools:axe_aereus", {
 		damage_groups = {fleshy=6},
 	},
 	sound = {breaks = "tool_breaks"},
-	groups = {axe = 1}
+	groups = {axe = 1},
+	on_place = function(itemstack, user, pointed_thing)
+		if pointed_thing.type ~= "node" then
+			return
+		end
+		
+		local pos = pointed_thing.under
+		local pname = user:get_player_name()
+		
+		if minetest.is_protected(pos, pname) then
+			minetest.record_protection_violation(pos, pname)
+			return
+		end
+		
+		if functions.has_stripped(pos) then
+			functions.strip_log(pos,user,creative_mode)
+		end
+	end
 })
 
 core.register_craft({
@@ -154,7 +205,24 @@ minetest.register_tool("sb_tools:axe_ferrum", {
 		damage_groups = {fleshy=6},
 	},
 	sound = {breaks = "tool_breaks"},
-	groups = {axe = 1}
+	groups = {axe = 1},
+	on_place = function(itemstack, user, pointed_thing)
+		if pointed_thing.type ~= "node" then
+			return
+		end
+		
+		local pos = pointed_thing.under
+		local pname = user:get_player_name()
+		
+		if minetest.is_protected(pos, pname) then
+			minetest.record_protection_violation(pos, pname)
+			return
+		end
+		
+		if functions.has_stripped(pos) then
+			functions.strip_log(pos,user,creative_mode)
+		end
+	end
 })
 
 core.register_craft({
@@ -196,7 +264,24 @@ minetest.register_tool("sb_tools:axe_aurem", {
 		damage_groups = {fleshy=4},
 	},
 	sound = {breaks = "tool_breaks"},
-	groups = {axe = 1}
+	groups = {axe = 1},
+	on_place = function(itemstack, user, pointed_thing)
+		if pointed_thing.type ~= "node" then
+			return
+		end
+		
+		local pos = pointed_thing.under
+		local pname = user:get_player_name()
+		
+		if minetest.is_protected(pos, pname) then
+			minetest.record_protection_violation(pos, pname)
+			return
+		end
+		
+		if functions.has_stripped(pos) then
+			functions.strip_log(pos,user,creative_mode)
+		end
+	end
 })
 
 core.register_craft({
@@ -238,7 +323,24 @@ minetest.register_tool("sb_tools:axe_wolfram", {
 		damage_groups = {fleshy=7},
 	},
 	sound = {breaks = "tool_breaks"},
-	groups = {axe = 1}
+	groups = {axe = 1},
+	on_place = function(itemstack, user, pointed_thing)
+		if pointed_thing.type ~= "node" then
+			return
+		end
+		
+		local pos = pointed_thing.under
+		local pname = user:get_player_name()
+		
+		if minetest.is_protected(pos, pname) then
+			minetest.record_protection_violation(pos, pname)
+			return
+		end
+		
+		if functions.has_stripped(pos) then
+			functions.strip_log(pos,user,creative_mode)
+		end
+	end
 })
 
 core.register_craft({
