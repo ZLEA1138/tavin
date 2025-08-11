@@ -644,7 +644,7 @@ if damage_enabled and minetest.settings:get_bool("enable_stamina") ~= false then
 			text = "stamina_hud_fg.png",
 			number = level,
 			alignment = {x = -1, y = -1},
-			offset = {x = -266, y = -110},
+			offset = {x = -265, y = -110},
 			max = 0
 		}
 
