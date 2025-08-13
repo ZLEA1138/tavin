@@ -808,8 +808,8 @@ core.register_craft({
 minetest.register_node("sb_core:stripped_log_wungu", {
 	description = "Stripped Wungu Log",
 	tiles = {
-		"log_wungu_top.png",
-		"log_wungu_top.png",
+		"stripped_log_wungu_top.png",
+		"stripped_log_wungu_top.png",
 		"stripped_log_wungu.png"
 	},
 	paramtype2 = "facedir",
