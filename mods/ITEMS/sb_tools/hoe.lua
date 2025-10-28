@@ -1,6 +1,6 @@
 -- Hoe registration function
 
-sb_farming.register_hoe = function(name, def)
+sb_tools.register_hoe = function(name, def)
 
 	-- Check for : prefix (register new hoes in your mod's namespace)
 	if name:sub(1,1) ~= ":" then name = ":" .. name end
@@ -25,7 +25,7 @@ sb_farming.register_hoe = function(name, def)
 		damage_groups = def.damage_groups or {fleshy = 1},
 
 		on_use = function(itemstack, user, pointed_thing)
-			return sb_farming.hoe_on_use(itemstack, user, pointed_thing, def.max_uses)
+			return sb_tools.hoe_on_use(itemstack, user, pointed_thing, def.max_uses)
 		end
 	})
 
@@ -51,7 +51,7 @@ end
 
 -- Turns dirt with group soil=1 into soil
 
-function sb_farming.hoe_on_use(itemstack, user, pointed_thing, uses)
+function sb_tools.hoe_on_use(itemstack, user, pointed_thing, uses)
 
 	local pt = pointed_thing or {}
 	local is_used = false
@@ -141,9 +141,44 @@ end
 
 -- Define Hoes
 
-sb_farming.register_hoe("sb_farming:hoe_wood", {
+sb_tools.register_hoe("sb_tools:hoe_wood", {
 	description = "Wooden Hoe",
 	inventory_image = "hoe_wood.png",
-	max_uses = 30,
+	max_uses = 60,
 	material = "group:wood"
+})
+
+sb_tools.register_hoe("sb_tools:hoe_stone", {
+	description = "Stone Hoe",
+	inventory_image = "hoe_stone.png",
+	max_uses = 132,
+	material = "group:stone"
+})
+
+sb_tools.register_hoe("sb_tools:hoe_aereus", {
+	description = "Aereus Hoe",
+	inventory_image = "hoe_aereus.png",
+	max_uses = 260,
+	material = "sb_minerals:aereus_ingot"
+})
+
+sb_tools.register_hoe("sb_tools:hoe_ferrum", {
+	description = "Ferrum Hoe",
+	inventory_image = "hoe_ferrum.png",
+	max_uses = 250,
+	material = "sb_minerals:ferrum_ingot"
+})
+
+sb_tools.register_hoe("sb_tools:hoe_aurem", {
+	description = "Aurem Hoe",
+	inventory_image = "hoe_aurem.png",
+	max_uses = 32,
+	material = "sb_minerals:aurem_ingot"
+})
+
+sb_tools.register_hoe("sb_tools:hoe_wolfram", {
+	description = "Wolfram Hoe",
+	inventory_image = "hoe_wolfram.png",
+	max_uses = 1562,
+	material = "sb_minerals:wolfram_ingot"
 })

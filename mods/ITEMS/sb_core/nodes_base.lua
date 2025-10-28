@@ -322,6 +322,40 @@ minetest.register_node("sb_core:sand_desert", {
     sounds = sounds.node_sound_sand_defaults(),
 })
 
+-- QUICKSAND (from Ethereal NG by TenPlus1)
+
+core.register_node("sb_core:quicksand", {
+	description = "Quicksand",
+	tiles = {"sand.png^[colorize:#00004F10"},
+	drawtype = "glasslike",
+	paramtype = "light",
+	drop = "sb_core:sand",
+	liquid_viscosity = 15,
+	liquidtype = "source",
+	liquid_alternative_flowing = "sb_core:quicksand",
+	liquid_alternative_source = "sb_core:quicksand",
+	liquid_renewable = false,
+	liquid_range = 0,
+	drowning = 1,
+	walkable = false,
+	climbable = false,
+	post_effect_color = {r = 230, g = 210, b = 160, a = 245},
+	groups = {crumbly = 3, sand = 1, liquid = 3, disable_jump = 1},
+	sounds = sounds.node_sound_sand_defaults()
+})
+
+core.register_craft({
+	output = "sb_core:quicksand",
+	recipe = {
+		{"group:sand", "group:sand", "group:sand"},
+		{"group:sand", "sb_bucket:bucket_water", "group:sand"},
+		{"group:sand", "group:sand", "group:sand"}
+	},
+	replacements = {{"sb_bucket:bucket_water", "sb_bucket:bucket_empty"}}
+})
+
+
+
 -- SANDSTONE
 minetest.register_node("sb_core:sandstone", {
     description = "Sandstone",

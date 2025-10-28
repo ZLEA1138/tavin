@@ -649,7 +649,6 @@ end
 -- setup soil, register hoes, override grass
 
 dofile(sb_farming.path .. "/soil.lua")
-dofile(sb_farming.path .. "/hoes.lua")
 
 
 -- add crops
