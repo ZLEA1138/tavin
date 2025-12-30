@@ -6,8 +6,23 @@ minetest.register_node("sb_core:stone", {
     description = "Stone",
     tiles = {"stone.png"},
 	is_ground_content = true,
-    groups = {cracky = 6, stone = 1},
-	drop = "sb_core:cobble",
+    groups = {
+		crumbly = mining.hardness(1.5, -2),
+		cracky = mining.hardness(1.5, 1),
+		choppy = mining.hardness(1.5, -2),
+		snappy = mining.hardness(1.5, -2),
+		oddly_breakable_by_hand = mining.hardness(1.5, -2),
+		stone = 1
+	},
+	drop = {
+        max_items = 1,
+        items = {
+            {
+				tool_groups = {"pickaxe"},
+                items = {"sb_core:cobble"},
+            },
+        },
+    },
     sounds = sounds.node_sound_stone_defaults(),
 })
 
@@ -30,7 +45,23 @@ minetest.register_node("sb_core:cobble", {
 	description = "Cobblestone",
 	tiles = {"cobble.png"},
 	is_ground_content = false,
-	groups = {cracky = 7, stone = 2},
+	groups = {
+		crumbly = mining.hardness(2, -2),
+		cracky = mining.hardness(2, 1),
+		choppy = mining.hardness(2, -2),
+		snappy = mining.hardness(2, -2),
+		oddly_breakable_by_hand = mining.hardness(2, -2),
+		stone = 2
+	},
+	drop = {
+        max_items = 1,
+        items = {
+            {
+				tool_groups = {"pickaxe"},
+                items = {"sb_core:cobble"},
+            },
+        },
+    },
 	sounds = sounds.node_sound_stone_defaults(),
 })
 
@@ -38,7 +69,23 @@ minetest.register_node("sb_core:cobble_mossy", {
 	description = "Mossy Cobblestone",
 	tiles = {"cobble_mossy.png"},
 	is_ground_content = false,
-	groups = {cracky = 7, stone = 1},
+	groups = {
+		crumbly = mining.hardness(2, -2),
+		cracky = mining.hardness(2, 1),
+		choppy = mining.hardness(2, -2),
+		snappy = mining.hardness(2, -2),
+		oddly_breakable_by_hand = mining.hardness(2, -2),
+		stone = 1
+	},
+	drop = {
+        max_items = 1,
+        items = {
+            {
+				tool_groups = {"pickaxe"},
+                items = {"sb_core:cobble_mossy"},
+            },
+        },
+    },
 	sounds = sounds.node_sound_stone_defaults(),
 })
 
@@ -47,7 +94,23 @@ minetest.register_node("sb_core:stone_smooth", {
 	description = "Smooth Stone",
 	tiles = {"stone_smooth.png"},
 	is_ground_content = false,
-	groups = {cracky = 7, stone = 1},
+	groups = {
+		crumbly = mining.hardness(2, -2),
+		cracky = mining.hardness(2, 1),
+		choppy = mining.hardness(2, -2),
+		snappy = mining.hardness(2, -2),
+		oddly_breakable_by_hand = mining.hardness(2, -2),
+		stone = 1
+	},
+	drop = {
+        max_items = 1,
+        items = {
+            {
+				tool_groups = {"pickaxe"},
+                items = {"sb_core:stone_smooth"},
+            },
+        },
+    },
 	sounds = sounds.node_sound_stone_defaults(),
 })
 
@@ -65,7 +128,23 @@ minetest.register_node("sb_core:stone_bricks", {
 	place_param2 = 0,
 	tiles = {"stone_bricks.png"},
 	is_ground_content = false,
-	groups = {cracky = 6, stone = 1},
+	groups = {
+		crumbly = mining.hardness(1.5, -2),
+		cracky = mining.hardness(1.5, 1),
+		choppy = mining.hardness(1.5, -2),
+		snappy = mining.hardness(1.5, -2),
+		oddly_breakable_by_hand = mining.hardness(1.5, -2),
+		stone = 1
+	},
+	drop = {
+        max_items = 1,
+        items = {
+            {
+				tool_groups = {"pickaxe"},
+                items = {"sb_core:stone_bricks"},
+            },
+        },
+    },
 	sounds = sounds.node_sound_stone_defaults(),
 })
 
@@ -83,7 +162,23 @@ minetest.register_node("sb_core:stone_bricks_mossy", {
 	place_param2 = 0,
 	tiles = {"stone_bricks_mossy.png"},
 	is_ground_content = false,
-	groups = {cracky = 6, stone = 1},
+	groups = {
+		crumbly = mining.hardness(1.5, -2),
+		cracky = mining.hardness(1.5, 1),
+		choppy = mining.hardness(1.5, -2),
+		snappy = mining.hardness(1.5, -2),
+		oddly_breakable_by_hand = mining.hardness(1.5, -2),
+		stone = 1
+	},
+	drop = {
+        max_items = 1,
+        items = {
+            {
+				tool_groups = {"pickaxe"},
+                items = {"sb_core:stone_bricks_mossy"},
+            },
+        },
+    },
 	sounds = sounds.node_sound_stone_defaults(),
 })
 
@@ -92,7 +187,16 @@ minetest.register_node("sb_core:dirt", {
     description = "Dirt",
     tiles = {"dirt.png"},
 	is_ground_content = true,
-    groups = {crumbly = 5, oddly_breakable_by_hand = 8, soil = 1, grass_can_grow = 1, pathable = 1},
+    groups = {
+		crumbly = mining.hardness(0.5, 0),
+		cracky = mining.hardness(0.5, -1),
+		choppy = mining.hardness(0.5, -1),
+		snappy = mining.hardness(0.5, -1),
+		oddly_breakable_by_hand = mining.hardness(0.5, 0),
+		soil = 1,
+		grass_can_grow = 1,
+		pathable = 1
+	},
 	soil = {
 		base = "sb_core:dirt",
 		dry = "sb_farming:soil",
@@ -106,7 +210,13 @@ minetest.register_node("sb_core:dirt_dry", {
 	description = "Dry Dirt",
 	tiles = {"dirt_dry.png"},
 	is_ground_content = true,
-	groups = {crumbly = 5, oddly_breakable_by_hand = 8},
+	groups = {
+		crumbly = mining.hardness(0.5, 0),
+		cracky = mining.hardness(0.5, -1),
+		choppy = mining.hardness(0.5, -1),
+		snappy = mining.hardness(0.5, -1),
+		oddly_breakable_by_hand = mining.hardness(0.5, 0),
+	},
 	sounds = sounds.node_sound_dirt_defaults(),
 })
 
@@ -115,11 +225,18 @@ minetest.register_node("sb_core:dirt_scorched", {
 	description = "Scorched Dirt",
 	tiles = {"dirt_scorched.png"},
 	is_ground_content = true,
-	groups = {crumbly = 8, oddly_breakable_by_hand = 11},
+	groups = {
+		crumbly = mining.hardness(0.65, 0),
+		cracky = mining.hardness(0.65, -1),
+		choppy = mining.hardness(0.65, -1),
+		snappy = mining.hardness(0.65, -1),
+		oddly_breakable_by_hand = mining.hardness(0.65, 0),
+	},
 	sounds = sounds.node_sound_gravel_defaults(),
 })
 
 -- GRASS BLOCKS
+-- Forest Grass
 minetest.register_node("sb_core:dirt_grass_forest", {
     description = "Forest Grass Block",
     tiles = {
@@ -128,7 +245,16 @@ minetest.register_node("sb_core:dirt_grass_forest", {
         "dirt.png^dirt_grass_forest_side.png",
     },
 	is_ground_content = true,
-    groups = {crumbly = 6, oddly_breakable_by_hand = 9, soil = 1, spreads_to_dirt = 1, pathable = 1},
+    groups = {
+		crumbly = mining.hardness(0.6, 0),
+		cracky = mining.hardness(0.6, -1),
+		choppy = mining.hardness(0.6, -1),
+		snappy = mining.hardness(0.6, -1),
+		oddly_breakable_by_hand = mining.hardness(0.6, 0),
+		soil = 1,
+		spreads_to_dirt = 1,
+		pathable = 1
+	},
 	soil = {
 		base = "sb_core:dirt_grass_forest",
 		dry = "sb_farming:soil",
@@ -138,6 +264,26 @@ minetest.register_node("sb_core:dirt_grass_forest", {
     sounds = sounds.node_sound_dirt_defaults(),
 })
 
+minetest.register_node("sb_core:dirt_grass_forest_snow", {
+    description = "Snowy Forest Grass Block",
+    tiles = {
+        "snow.png",
+        "dirt.png",
+        "dirt.png^snow_side.png",
+    },
+	is_ground_content = true,
+    groups = {
+		crumbly = mining.hardness(0.6, 0),
+		cracky = mining.hardness(0.6, -1),
+		choppy = mining.hardness(0.6, -1),
+		snappy = mining.hardness(0.6, -1),
+		oddly_breakable_by_hand = mining.hardness(0.6, 0)
+	},
+    drop = "sb_core:dirt",
+    sounds = sounds.node_sound_dirt_defaults(),
+})
+
+-- Mycelium
 minetest.register_node("sb_core:dirt_mycelium", {
     description = "Mycelium Block",
     tiles = {
@@ -146,7 +292,16 @@ minetest.register_node("sb_core:dirt_mycelium", {
         "dirt.png^dirt_mycelium_side.png",
     },
 	is_ground_content = true,
-	groups = {crumbly = 6, oddly_breakable_by_hand = 9, soil = 1, spreads_to_dirt = 1, pathable = 1},
+	groups = {
+		crumbly = mining.hardness(0.6, 0),
+		cracky = mining.hardness(0.6, -1),
+		choppy = mining.hardness(0.6, -1),
+		snappy = mining.hardness(0.6, -1),
+		oddly_breakable_by_hand = mining.hardness(0.6, 0),
+		soil = 1,
+		spreads_to_dirt = 1,
+		pathable = 1
+	},
 	soil = {
 		base = "sb_core:dirt_mycelium",
 		dry = "sb_farming:soil",
@@ -156,6 +311,26 @@ minetest.register_node("sb_core:dirt_mycelium", {
     sounds = sounds.node_sound_dirt_defaults(),
 })
 
+minetest.register_node("sb_core:dirt_mycelium_snow", {
+    description = "Snowy Mycelium Block",
+    tiles = {
+        "snow.png",
+        "dirt.png",
+        "dirt.png^snow_side.png",
+    },
+	is_ground_content = true,
+    groups = {
+		crumbly = mining.hardness(0.6, 0),
+		cracky = mining.hardness(0.6, -1),
+		choppy = mining.hardness(0.6, -1),
+		snappy = mining.hardness(0.6, -1),
+		oddly_breakable_by_hand = mining.hardness(0.6, 0)
+	},
+    drop = "sb_core:dirt",
+    sounds = sounds.node_sound_dirt_defaults(),
+})
+
+-- Plains Grass
 minetest.register_node("sb_core:dirt_grass_plains", {
     description = "Plains Grass Block",
     tiles = {
@@ -164,7 +339,16 @@ minetest.register_node("sb_core:dirt_grass_plains", {
         "dirt.png^dirt_grass_plains_side.png",
     },
 	is_ground_content = true,
-    groups = {crumbly = 6, oddly_breakable_by_hand = 9, soil = 1, spreads_to_dirt = 1, pathable = 1},
+    groups = {
+		crumbly = mining.hardness(0.6, 0),
+		cracky = mining.hardness(0.6, -1),
+		choppy = mining.hardness(0.6, -1),
+		snappy = mining.hardness(0.6, -1),
+		oddly_breakable_by_hand = mining.hardness(0.6, 0),
+		soil = 1,
+		spreads_to_dirt = 1,
+		pathable = 1
+	},
 	soil = {
 		base = "sb_core:dirt_grass_plains",
 		dry = "sb_farming:soil",
@@ -174,6 +358,26 @@ minetest.register_node("sb_core:dirt_grass_plains", {
     sounds = sounds.node_sound_dirt_defaults(),
 })
 
+minetest.register_node("sb_core:dirt_grass_plains_snow", {
+    description = "Snowy Plains Grass Block",
+    tiles = {
+        "snow.png",
+        "dirt.png",
+        "dirt.png^snow_side.png",
+    },
+	is_ground_content = true,
+    groups = {
+		crumbly = mining.hardness(0.6, 0),
+		cracky = mining.hardness(0.6, -1),
+		choppy = mining.hardness(0.6, -1),
+		snappy = mining.hardness(0.6, -1),
+		oddly_breakable_by_hand = mining.hardness(0.6, 0)
+	},
+    drop = "sb_core:dirt",
+    sounds = sounds.node_sound_dirt_defaults(),
+})
+
+-- Prairie Grass
 minetest.register_node("sb_core:dirt_grass_prairie", {
     description = "Prairie Grass Block",
     tiles = {
@@ -182,7 +386,16 @@ minetest.register_node("sb_core:dirt_grass_prairie", {
         "dirt.png^dirt_grass_prairie_side.png",
     },
 	is_ground_content = true,
-    groups = {crumbly = 6, oddly_breakable_by_hand = 9, soil = 1, spreads_to_dirt = 1, pathable = 1},
+    groups = {
+		crumbly = mining.hardness(0.6, 0),
+		cracky = mining.hardness(0.6, -1),
+		choppy = mining.hardness(0.6, -1),
+		snappy = mining.hardness(0.6, -1),
+		oddly_breakable_by_hand = mining.hardness(0.6, 0),
+		soil = 1,
+		spreads_to_dirt = 1,
+		pathable = 1
+	},
 	soil = {
 		base = "sb_core:dirt_grass_prairie",
 		dry = "sb_farming:soil",
@@ -192,6 +405,26 @@ minetest.register_node("sb_core:dirt_grass_prairie", {
     sounds = sounds.node_sound_dirt_defaults(),
 })
 
+minetest.register_node("sb_core:dirt_grass_prairie_snow", {
+    description = "Snowy Prairie Grass Block",
+    tiles = {
+        "snow.png",
+        "dirt.png",
+        "dirt.png^snow_side.png",
+    },
+	is_ground_content = true,
+    groups = {
+		crumbly = mining.hardness(0.6, 0),
+		cracky = mining.hardness(0.6, -1),
+		choppy = mining.hardness(0.6, -1),
+		snappy = mining.hardness(0.6, -1),
+		oddly_breakable_by_hand = mining.hardness(0.6, 0)
+	},
+    drop = "sb_core:dirt",
+    sounds = sounds.node_sound_dirt_defaults(),
+})
+
+-- Savanna Grass
 minetest.register_node("sb_core:dirt_grass_savanna", {
     description = "Savanna Grass Block",
     tiles = {
@@ -200,7 +433,16 @@ minetest.register_node("sb_core:dirt_grass_savanna", {
         "dirt.png^dirt_grass_savanna_side.png",
     },
 	is_ground_content = true,
-    groups = {crumbly = 6, oddly_breakable_by_hand = 9, soil = 1, spreads_to_dirt = 1, pathable = 1},
+    groups = {
+		crumbly = mining.hardness(0.6, 0),
+		cracky = mining.hardness(0.6, -1),
+		choppy = mining.hardness(0.6, -1),
+		snappy = mining.hardness(0.6, -1),
+		oddly_breakable_by_hand = mining.hardness(0.6, 0),
+		soil = 1,
+		spreads_to_dirt = 1,
+		pathable = 1
+	},
 	soil = {
 		base = "sb_core:dirt_grass_savanna",
 		dry = "sb_farming:soil",
@@ -210,24 +452,26 @@ minetest.register_node("sb_core:dirt_grass_savanna", {
     sounds = sounds.node_sound_dirt_defaults(),
 })
 
-minetest.register_node("sb_core:dirt_grass_snow", {
-    description = "Snowy Grass Block",
+minetest.register_node("sb_core:dirt_grass_savanna_snow", {
+    description = "Snowy Savanna Grass Block",
     tiles = {
         "snow.png",
         "dirt.png",
         "dirt.png^snow_side.png",
     },
 	is_ground_content = true,
-    groups = {crumbly = 6, oddly_breakable_by_hand = 9, soil = 1, spreads_to_dirt = 1, pathable = 1},
-	soil = {
-		base = "sb_core:dirt_grass_snow",
-		dry = "sb_farming:soil",
-		wet = "sb_farming:soil_wet"
+    groups = {
+		crumbly = mining.hardness(0.6, 0),
+		cracky = mining.hardness(0.6, -1),
+		choppy = mining.hardness(0.6, -1),
+		snappy = mining.hardness(0.6, -1),
+		oddly_breakable_by_hand = mining.hardness(0.6, 0)
 	},
     drop = "sb_core:dirt",
     sounds = sounds.node_sound_dirt_defaults(),
 })
 
+-- Swamp Grass
 minetest.register_node("sb_core:dirt_grass_swamp", {
     description = "Swamp Grass Block",
     tiles = {
@@ -236,11 +480,39 @@ minetest.register_node("sb_core:dirt_grass_swamp", {
         "dirt.png^dirt_grass_swamp_side.png",
     },
 	is_ground_content = true,
-    groups = {crumbly = 6, oddly_breakable_by_hand = 9, soil = 1, spreads_to_dirt = 1, pathable = 1},
+    groups = {
+		crumbly = mining.hardness(0.6, 0),
+		cracky = mining.hardness(0.6, -1),
+		choppy = mining.hardness(0.6, -1),
+		snappy = mining.hardness(0.6, -1),
+		oddly_breakable_by_hand = mining.hardness(0.6, 0),
+		soil = 1,
+		spreads_to_dirt = 1,
+		pathable = 1
+	},
 	soil = {
 		base = "sb_core:dirt_grass_swamp",
 		dry = "sb_farming:soil",
 		wet = "sb_farming:soil_wet"
+	},
+    drop = "sb_core:dirt",
+    sounds = sounds.node_sound_dirt_defaults(),
+})
+
+minetest.register_node("sb_core:dirt_grass_swamp_snow", {
+    description = "Snowy Swamp Grass Block",
+    tiles = {
+        "snow.png",
+        "dirt.png",
+        "dirt.png^snow_side.png",
+    },
+	is_ground_content = true,
+    groups = {
+		crumbly = mining.hardness(0.6, 0),
+		cracky = mining.hardness(0.6, -1),
+		choppy = mining.hardness(0.6, -1),
+		snappy = mining.hardness(0.6, -1),
+		oddly_breakable_by_hand = mining.hardness(0.6, 0)
 	},
     drop = "sb_core:dirt",
     sounds = sounds.node_sound_dirt_defaults(),
@@ -264,7 +536,14 @@ minetest.register_node("sb_core:dirt_path", {
 		}
 	},
 	is_ground_content = true,
-    groups = {crumbly = 6, oddly_breakable_by_hand = 9, dirtifies_below_solid = 1},
+    groups = {
+		crumbly = mining.hardness(0.65, 0),
+		cracky = mining.hardness(0.65, -1),
+		choppy = mining.hardness(0.65, -1),
+		snappy = mining.hardness(0.65, -1),
+		oddly_breakable_by_hand = mining.hardness(0.65, 0),
+		dirtifies_below_solid = 1
+	},
     drop = "sb_core:dirt",
     sounds = sounds.node_sound_dirt_defaults(),
 })
@@ -274,7 +553,13 @@ minetest.register_node("sb_core:mud", {
     description = "Mud",
     tiles = {"mud.png"},
 	is_ground_content = true,
-    groups = {crumbly = 5, oddly_breakable_by_hand = 8},
+    groups = {
+		crumbly = mining.hardness(0.5, 0),
+		cracky = mining.hardness(0.5, -1),
+		choppy = mining.hardness(0.5, -1),
+		snappy = mining.hardness(0.5, -1),
+		oddly_breakable_by_hand = mining.hardness(0.5, 0),
+	},
     sounds = sounds.node_sound_dirt_defaults(),
 })
 
@@ -283,7 +568,13 @@ minetest.register_node("sb_core:mud_packed", {
     description = "Packed Mud",
     tiles = {"mud_packed.png"},
 	is_ground_content = false,
-    groups = {cracky = 4},
+    groups = {
+		crumbly = mining.hardness(1, -1),
+		cracky = mining.hardness(1, 0),
+		choppy = mining.hardness(1, -1),
+		snappy = mining.hardness(1, -1),
+		oddly_breakable_by_hand = mining.hardness(1, 0),
+	},
     sounds = sounds.node_sound_dirt_defaults(),
 })
 
@@ -292,7 +583,22 @@ minetest.register_node("sb_core:mud_bricks", {
     description = "Mud Bricks",
     tiles = {"mud_bricks.png"},
 	is_ground_content = false,
-    groups = {cracky = 6},
+    groups = {
+		crumbly = mining.hardness(1.5, -2),
+		cracky = mining.hardness(1.5, 1),
+		choppy = mining.hardness(1.5, -2),
+		snappy = mining.hardness(1.5, -2),
+		oddly_breakable_by_hand = mining.hardness(1.5, -2),
+	},
+	drop = {
+        max_items = 1,
+        items = {
+            {
+				tool_groups = {"pickaxe"},
+                items = {"sb_core:mud_bricks"},
+            },
+        },
+    },
     sounds = sounds.node_sound_dirt_defaults(),
 })
 
@@ -309,7 +615,15 @@ minetest.register_node("sb_core:sand", {
     description = "Sand",
     tiles = {"sand.png"},
 	is_ground_content = true,
-    groups = {crumbly = 5, oddly_breakable_by_hand = 8, falling_node = 1, sand = 1},
+    groups = {
+		crumbly = mining.hardness(0.5, 0),
+		cracky = mining.hardness(0.5, -1),
+		choppy = mining.hardness(0.5, -1),
+		snappy = mining.hardness(0.5, -1),
+		oddly_breakable_by_hand = mining.hardness(0.5, 0),
+		falling_node = 1,
+		sand = 1
+	},
     sounds = sounds.node_sound_sand_defaults(),
 })
 
@@ -318,7 +632,15 @@ minetest.register_node("sb_core:sand_desert", {
     description = "Desert Sand",
     tiles = {"sand_desert.png"},
 	is_ground_content = true,
-    groups = {crumbly = 5, oddly_breakable_by_hand = 8, falling_node = 1, sand = 1},
+    groups = {
+		crumbly = mining.hardness(0.5, 0),
+		cracky = mining.hardness(0.5, -1),
+		choppy = mining.hardness(0.5, -1),
+		snappy = mining.hardness(0.5, -1),
+		oddly_breakable_by_hand = mining.hardness(0.5, 0),
+		falling_node = 1,
+		sand = 1
+	},
     sounds = sounds.node_sound_sand_defaults(),
 })
 
@@ -340,7 +662,16 @@ core.register_node("sb_core:quicksand", {
 	walkable = false,
 	climbable = false,
 	post_effect_color = {r = 230, g = 210, b = 160, a = 245},
-	groups = {crumbly = 3, sand = 1, liquid = 3, disable_jump = 1},
+	groups = {
+		crumbly = mining.hardness(0.2, 0),
+		cracky = mining.hardness(0.2, -2),
+		choppy = mining.hardness(0.2, -2),
+		snappy = mining.hardness(0.2, -2),
+		oddly_breakable_by_hand = mining.hardness(0.2, -2),
+		sand = 1,
+		liquid = 3,
+		disable_jump = 1
+	},
 	sounds = sounds.node_sound_sand_defaults()
 })
 
@@ -361,7 +692,22 @@ minetest.register_node("sb_core:sandstone", {
     description = "Sandstone",
     tiles = {"sandstone.png"},
 	is_ground_content = true,
-    groups = {cracky = 3},
+    groups = {
+		crumbly = mining.hardness(0.8, -2),
+		cracky = mining.hardness(0.8, 1),
+		choppy = mining.hardness(0.8, -2),
+		snappy = mining.hardness(0.8, -2),
+		oddly_breakable_by_hand = mining.hardness(0.8, -2),
+	},
+	drop = {
+        max_items = 1,
+        items = {
+            {
+				tool_groups = {"pickaxe"},
+                items = {"sb_core:sandstone"},
+            },
+        },
+    },
     sounds = sounds.node_sound_stone_defaults(),
 })
 
@@ -378,7 +724,22 @@ minetest.register_node("sb_core:sandstone_desert", {
     description = "Desert Sandstone",
     tiles = {"sandstone_desert.png"},
 	is_ground_content = true,
-    groups = {cracky = 3},
+    groups = {
+		crumbly = mining.hardness(0.8, -2),
+		cracky = mining.hardness(0.8, 1),
+		choppy = mining.hardness(0.8, -2),
+		snappy = mining.hardness(0.8, -2),
+		oddly_breakable_by_hand = mining.hardness(0.8, -2),
+	},
+	drop = {
+        max_items = 1,
+        items = {
+            {
+				tool_groups = {"pickaxe"},
+                items = {"sb_core:sandstone_desert"},
+            },
+        },
+    },
     sounds = sounds.node_sound_stone_defaults(),
 })
 
@@ -395,7 +756,22 @@ minetest.register_node("sb_core:sandstone_smooth", {
     description = "Smooth Sandstone",
     tiles = {"sandstone_smooth.png"},
 	is_ground_content = true,
-    groups = {cracky = 7},
+    groups = {
+		crumbly = mining.hardness(2, -2),
+		cracky = mining.hardness(2, 1),
+		choppy = mining.hardness(2, -2),
+		snappy = mining.hardness(2, -2),
+		oddly_breakable_by_hand = mining.hardness(2, -2),
+	},
+	drop = {
+        max_items = 1,
+        items = {
+            {
+				tool_groups = {"pickaxe"},
+                items = {"sb_core:sandstone_smooth"},
+            },
+        },
+    },
     sounds = sounds.node_sound_stone_defaults(),
 })
 
@@ -411,7 +787,22 @@ minetest.register_node("sb_core:sandstone_smooth_desert", {
     description = "Smooth Desert Sandstone",
     tiles = {"sandstone_smooth_desert.png"},
 	is_ground_content = true,
-    groups = {cracky = 7},
+    groups = {
+		crumbly = mining.hardness(2, -2),
+		cracky = mining.hardness(2, 1),
+		choppy = mining.hardness(2, -2),
+		snappy = mining.hardness(2, -2),
+		oddly_breakable_by_hand = mining.hardness(2, -2),
+	},
+	drop = {
+        max_items = 1,
+        items = {
+            {
+				tool_groups = {"pickaxe"},
+                items = {"sb_core:sandstone_smooth_desert"},
+            },
+        },
+    },
     sounds = sounds.node_sound_stone_defaults(),
 })
 
@@ -427,7 +818,22 @@ minetest.register_node("sb_core:sandstone_bricks", {
     description = "Sandstone Bricks",
     tiles = {"sandstone_bricks.png"},
 	is_ground_content = true,
-    groups = {cracky = 3},
+    groups = {
+		crumbly = mining.hardness(0.8, -2),
+		cracky = mining.hardness(0.8, 1),
+		choppy = mining.hardness(0.8, -2),
+		snappy = mining.hardness(0.8, -2),
+		oddly_breakable_by_hand = mining.hardness(0.8, -2),
+	},
+	drop = {
+        max_items = 1,
+        items = {
+            {
+				tool_groups = {"pickaxe"},
+                items = {"sb_core:sandstone_bricks"},
+            },
+        },
+    },
     sounds = sounds.node_sound_stone_defaults(),
 })
 
@@ -444,7 +850,22 @@ minetest.register_node("sb_core:sandstone_bricks_desert", {
     description = "Desert Sandstone Bricks",
     tiles = {"sandstone_bricks_desert.png"},
 	is_ground_content = true,
-    groups = {cracky = 3},
+    groups = {
+		crumbly = mining.hardness(0.8, -2),
+		cracky = mining.hardness(0.8, 1),
+		choppy = mining.hardness(0.8, -2),
+		snappy = mining.hardness(0.8, -2),
+		oddly_breakable_by_hand = mining.hardness(0.8, -2),
+	},
+	drop = {
+        max_items = 1,
+        items = {
+            {
+				tool_groups = {"pickaxe"},
+                items = {"sb_core:sandstone_bricks_desert"},
+            },
+        },
+    },
     sounds = sounds.node_sound_stone_defaults(),
 })
 
@@ -461,7 +882,14 @@ minetest.register_node("sb_core:gravel", {
 	description = "Gravel",
 	tiles = {"gravel.png"},
 	is_ground_content = true,
-	groups = {crumbly = 6, oddly_breakable_by_hand = 9, falling_node = 1},
+	groups = {
+		crumbly = mining.hardness(0.6, 0),
+		cracky = mining.hardness(0.6, -1),
+		choppy = mining.hardness(0.6, -1),
+		snappy = mining.hardness(0.6, -1),
+		oddly_breakable_by_hand = mining.hardness(0.6, 0),
+		falling_node = 1
+	},
 	drop = {
 		max_items = 1,
 		items = {
@@ -477,7 +905,22 @@ minetest.register_node("sb_core:obsidian", {
 	description = "Obsidian",
 	tiles = {"obsidian.png"},
 	is_ground_content = false,
-	groups = {cracky = 14, level = 4},
+	groups = {
+		crumbly = mining.hardness(50, -2),
+		cracky = mining.hardness(50, 4),
+		choppy = mining.hardness(50, -2),
+		snappy = mining.hardness(50, -2),
+		oddly_breakable_by_hand = mining.hardness(50, -2),
+	},
+	drop = {
+        max_items = 1,
+        items = {
+            {
+				tool_groups = {"pickaxe_level_4"},
+                items = {"sb_core:obsidian"},
+            },
+        },
+    },
 	sounds = sounds.node_sound_stone_defaults(),
 })
 
@@ -486,7 +929,22 @@ minetest.register_node("sb_core:obsidian_bricks", {
 	description = "Obsidian Bricks",
 	tiles = {"obsidian_bricks.png"},
 	is_ground_content = false,
-	groups = {cracky = 14, level = 4},
+	groups = {
+		crumbly = mining.hardness(50, -2),
+		cracky = mining.hardness(50, 4),
+		choppy = mining.hardness(50, -2),
+		snappy = mining.hardness(50, -2),
+		oddly_breakable_by_hand = mining.hardness(50, -2),
+	},
+	drop = {
+        max_items = 1,
+        items = {
+            {
+				tool_groups = {"pickaxe_level_4"},
+                items = {"sb_core:obsidian_bricks"},
+            },
+        },
+    },
 	sounds = sounds.node_sound_stone_defaults(),
 })
 
@@ -503,7 +961,13 @@ minetest.register_node("sb_core:clay", {
 	description = "Clay",
 	tiles = {"clay.png"},
 	is_ground_content = true,
-	groups = {crumbly = 6, oddly_breakable_by_hand = 9},
+	groups = {
+		crumbly = mining.hardness(0.6, 0),
+		cracky = mining.hardness(0.6, -1),
+		choppy = mining.hardness(0.6, -1),
+		snappy = mining.hardness(0.6, -1),
+		oddly_breakable_by_hand = mining.hardness(0.6, 0),
+	},
 	drop = "sb_core:clay_lump 4",
 	sounds = sounds.node_sound_dirt_defaults(),
 })
@@ -524,7 +988,22 @@ minetest.register_node("sb_core:bricks", {
 		"bricks.png",
 	},
 	is_ground_content = false,
-	groups = {cracky = 7},
+	groups = {
+		crumbly = mining.hardness(2, -2),
+		cracky = mining.hardness(2, 1),
+		choppy = mining.hardness(2, -2),
+		snappy = mining.hardness(2, -2),
+		oddly_breakable_by_hand = mining.hardness(2, -2),
+	},
+	drop = {
+        max_items = 1,
+        items = {
+            {
+				tool_groups = {"pickaxe"},
+                items = {"sb_core:bricks"},
+            },
+        },
+    },
 	sounds = sounds.node_sound_stone_defaults(),
 })
 

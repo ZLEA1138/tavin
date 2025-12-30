@@ -7,10 +7,12 @@ local carpet_proto = {
 		fixed = {-0.5, -0.5, -0.5, 0.5, -0.45, 0.5}
 	},
 	groups = {
-		snappy = 2,
+		crumbly = mining.hardness(0.1, -1),
+		cracky = mining.hardness(0.1, -1),
+		choppy = mining.hardness(0.1, -1),
+		snappy = mining.hardness(0.1, -1),
+		oddly_breakable_by_hand = mining.hardness(0.1, 0),
 		flammable = 3,
-		oddly_breakable_by_hand = 3,
-		choppy = 2,
 		carpet = 1,
 	}
 }

@@ -29,8 +29,13 @@ local def = {
 	waving = 1,
 	selection_box = sb_farming.select,
 	groups = {
-		handy = 1, snappy = 3, flammable = 4, plant = 1, attached_node = 1,
-		not_in_creative_inventory = 1, growing = 1
+		handy = 1,
+		dig_immediate = 3,
+		flammable = 4,
+		plant = 1,
+		attached_node = 1,
+		not_in_creative_inventory = 1,
+		growing = 1
 	},
 	is_ground_content = false,
 	sounds = sounds.node_sound_leaves_defaults()
@@ -111,7 +116,13 @@ minetest.register_node("sb_farming:strandflower_wild", {
 	sunlight_propagates = true,
 	walkable = false,
 	buildable_to = true,
-	groups = {handy = 1, snappy = 3, attached_node = 1, flammable = 4, compostability = 60},
+	groups = {
+		handy = 1,
+		dig_immediate = 3,
+		attached_node = 1,
+		flammable = 4,
+		compostability = 60
+	},
 	is_ground_content = false,
 	drop = {
 		items = {

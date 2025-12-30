@@ -28,7 +28,14 @@ minetest.register_node("sb_core:log_marshtree", {
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
-	groups = {tree = 1, choppy = 12, oddly_breakable_by_hand = 16, flammable = 2},
+	groups = {
+		crumbly = mining.hardness(2, -1),
+		cracky = mining.hardness(2, -1),
+		choppy = mining.hardness(2, 0),
+		snappy = mining.hardness(2, -1),
+		oddly_breakable_by_hand = mining.hardness(2, 0),
+		tree = 1,
+		flammable = 2},
 	sounds = sounds.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node,
 })
@@ -49,7 +56,15 @@ minetest.register_node("sb_core:stripped_log_marshtree", {
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
-	groups = {tree = 1, choppy = 12, oddly_breakable_by_hand = 16, flammable = 2},
+	groups = {
+		crumbly = mining.hardness(2, -1),
+		cracky = mining.hardness(2, -1),
+		choppy = mining.hardness(2, 0),
+		snappy = mining.hardness(2, -1),
+		oddly_breakable_by_hand = mining.hardness(2, 0),
+		tree = 1,
+		flammable = 2
+	},
 	sounds = sounds.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node,
 })
@@ -65,7 +80,15 @@ minetest.register_node("sb_core:planks_marshtree", {
 	description = "Marshtree Planks",
 	tiles = {"planks_marshtree.png"},
 	is_ground_content = false,
-	groups = {planks = 1, choppy = 12, oddly_breakable_by_hand = 16, flammable = 2},
+	groups = {
+		crumbly = mining.hardness(2, -1),
+		cracky = mining.hardness(2, -1),
+		choppy = mining.hardness(2, 0),
+		snappy = mining.hardness(2, -1),
+		oddly_breakable_by_hand = mining.hardness(2, 0),
+		planks = 1,
+		flammable = 2
+	},
 	sounds = sounds.node_sound_wood_defaults(),
 })
 
@@ -100,7 +123,16 @@ minetest.register_node("sb_core:leaves_marshtree", {
 	special_tiles = {"leaves_marshtree_simple.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, oddly_breakable_by_hand = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {
+		crumbly = mining.hardness(0.2, -1),
+		cracky = mining.hardness(0.2, -1),
+		choppy = mining.hardness(0.2, -1),
+		snappy = mining.hardness(0.2, 0),
+		oddly_breakable_by_hand = mining.hardness(0.2, 0),
+		leafdecay = 3,
+		flammable = 2,
+		leaves = 1
+	},
 	drop = {
 		max_items = 1,
 		items = {
@@ -142,8 +174,12 @@ minetest.register_node("sb_core:sapling_marshtree", {
 		type = "fixed",
 		fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 7 / 16, 4 / 16}
 	},
-	groups = {snappy = 2, dig_immediate = 3, flammable = 2,
-		attached_node = 1, sapling = 1},
+	groups = {
+		dig_immediate = 3,
+		flammable = 2,
+		attached_node = 1,
+		sapling = 1
+	},
 	sounds = sounds.node_sound_leaves_defaults(),
 
 	on_construct = function(pos)
@@ -181,7 +217,15 @@ minetest.register_node("sb_core:log_oki", {
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
-	groups = {tree = 1, choppy = 12, oddly_breakable_by_hand = 16, flammable = 2},
+	groups = {
+		crumbly = mining.hardness(2, -1),
+		cracky = mining.hardness(2, -1),
+		choppy = mining.hardness(2, 0),
+		snappy = mining.hardness(2, -1),
+		oddly_breakable_by_hand = mining.hardness(2, 0),
+		tree = 1,
+		flammable = 2
+	},
 	sounds = sounds.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node,
 })
@@ -202,7 +246,15 @@ minetest.register_node("sb_core:stripped_log_oki", {
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
-	groups = {tree = 1, choppy = 12, oddly_breakable_by_hand = 16, flammable = 2},
+	groups = {
+		crumbly = mining.hardness(2, -1),
+		cracky = mining.hardness(2, -1),
+		choppy = mining.hardness(2, 0),
+		snappy = mining.hardness(2, -1),
+		oddly_breakable_by_hand = mining.hardness(2, 0),
+		tree = 1,
+		flammable = 2
+	},
 	sounds = sounds.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node,
 })
@@ -218,7 +270,15 @@ minetest.register_node("sb_core:planks_oki", {
 	description = "Oki Planks",
 	tiles = {"planks_oki.png"},
 	is_ground_content = false,
-	groups = {planks = 1, choppy = 12, oddly_breakable_by_hand = 16, flammable = 2},
+	groups = {
+		crumbly = mining.hardness(2, -1),
+		cracky = mining.hardness(2, -1),
+		choppy = mining.hardness(2, 0),
+		snappy = mining.hardness(2, -1),
+		oddly_breakable_by_hand = mining.hardness(2, 0),
+		planks = 1,
+		flammable = 2
+	},
 	sounds = sounds.node_sound_wood_defaults(),
 })
 
@@ -253,7 +313,16 @@ minetest.register_node("sb_core:leaves_oki", {
 	special_tiles = {"leaves_oki_simple.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, oddly_breakable_by_hand = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {
+		crumbly = mining.hardness(0.2, -1),
+		cracky = mining.hardness(0.2, -1),
+		choppy = mining.hardness(0.2, -1),
+		snappy = mining.hardness(0.2, 0),
+		oddly_breakable_by_hand = mining.hardness(0.2, 0),
+		leafdecay = 3,
+		flammable = 2,
+		leaves = 1
+	},
 	drop = {
 		max_items = 1,
 		items = {
@@ -295,8 +364,12 @@ minetest.register_node("sb_core:sapling_oki", {
 		type = "fixed",
 		fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 7 / 16, 4 / 16}
 	},
-	groups = {snappy = 2, dig_immediate = 3, flammable = 2,
-		attached_node = 1, sapling = 1},
+	groups = {
+		dig_immediate = 3,
+		flammable = 2,
+		attached_node = 1,
+		sapling = 1
+	},
 	sounds = sounds.node_sound_leaves_defaults(),
 
 	on_construct = function(pos)
@@ -334,7 +407,15 @@ minetest.register_node("sb_core:log_sana", {
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
-	groups = {tree = 1, choppy = 12, oddly_breakable_by_hand = 16, flammable = 2},
+	groups = {
+		crumbly = mining.hardness(2, -1),
+		cracky = mining.hardness(2, -1),
+		choppy = mining.hardness(2, 0),
+		snappy = mining.hardness(2, -1),
+		oddly_breakable_by_hand = mining.hardness(2, 0),
+		tree = 1,
+		flammable = 2
+	},
 	sounds = sounds.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node,
 })
@@ -355,7 +436,15 @@ minetest.register_node("sb_core:stripped_log_sana", {
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
-	groups = {tree = 1, choppy = 12, oddly_breakable_by_hand = 16, flammable = 2},
+	groups = {
+		crumbly = mining.hardness(2, -1),
+		cracky = mining.hardness(2, -1),
+		choppy = mining.hardness(2, 0),
+		snappy = mining.hardness(2, -1),
+		oddly_breakable_by_hand = mining.hardness(2, 0),
+		tree = 1,
+		flammable = 2
+	},
 	sounds = sounds.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node,
 })
@@ -371,7 +460,15 @@ minetest.register_node("sb_core:planks_sana", {
 	description = "Sana Planks",
 	tiles = {"planks_sana.png"},
 	is_ground_content = false,
-	groups = {planks = 1, choppy = 12, oddly_breakable_by_hand = 16, flammable = 2},
+	groups = {
+		crumbly = mining.hardness(2, -1),
+		cracky = mining.hardness(2, -1),
+		choppy = mining.hardness(2, 0),
+		snappy = mining.hardness(2, -1),
+		oddly_breakable_by_hand = mining.hardness(2, 0),
+		planks = 1,
+		flammable = 2
+	},
 	sounds = sounds.node_sound_wood_defaults(),
 })
 
@@ -406,7 +503,16 @@ minetest.register_node("sb_core:leaves_sana", {
 	special_tiles = {"leaves_sana_simple.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, oddly_breakable_by_hand = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {
+		crumbly = mining.hardness(0.2, -1),
+		cracky = mining.hardness(0.2, -1),
+		choppy = mining.hardness(0.2, -1),
+		snappy = mining.hardness(0.2, 0),
+		oddly_breakable_by_hand = mining.hardness(0.2, 0),
+		leafdecay = 3,
+		flammable = 2,
+		leaves = 1
+	},
 	drop = {
 		max_items = 1,
 		items = {
@@ -448,8 +554,12 @@ minetest.register_node("sb_core:sapling_sana", {
 		type = "fixed",
 		fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 7 / 16, 4 / 16}
 	},
-	groups = {snappy = 2, dig_immediate = 3, flammable = 2,
-		attached_node = 1, sapling = 1},
+	groups = {
+		dig_immediate = 3,
+		flammable = 2,
+		attached_node = 1,
+		sapling = 1
+	},
 	sounds = sounds.node_sound_leaves_defaults(),
 
 	on_construct = function(pos)
@@ -487,7 +597,15 @@ minetest.register_node("sb_core:log_suntree", {
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
-	groups = {tree = 1, choppy = 12, oddly_breakable_by_hand = 16, flammable = 2},
+	groups = {
+		crumbly = mining.hardness(2, -1),
+		cracky = mining.hardness(2, -1),
+		choppy = mining.hardness(2, 0),
+		snappy = mining.hardness(2, -1),
+		oddly_breakable_by_hand = mining.hardness(2, 0),
+		tree = 1,
+		flammable = 2
+	},
 	sounds = sounds.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node,
 })
@@ -508,7 +626,15 @@ minetest.register_node("sb_core:stripped_log_suntree", {
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
-	groups = {tree = 1, choppy = 12, oddly_breakable_by_hand = 16, flammable = 2},
+	groups = {
+		crumbly = mining.hardness(2, -1),
+		cracky = mining.hardness(2, -1),
+		choppy = mining.hardness(2, 0),
+		snappy = mining.hardness(2, -1),
+		oddly_breakable_by_hand = mining.hardness(2, 0),
+		tree = 1,
+		flammable = 2
+	},
 	sounds = sounds.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node,
 })
@@ -524,7 +650,15 @@ minetest.register_node("sb_core:planks_suntree", {
 	description = "Suntree Planks",
 	tiles = {"planks_suntree.png"},
 	is_ground_content = false,
-	groups = {planks = 1, choppy = 12, oddly_breakable_by_hand = 16, flammable = 2},
+	groups = {
+		crumbly = mining.hardness(2, -1),
+		cracky = mining.hardness(2, -1),
+		choppy = mining.hardness(2, 0),
+		snappy = mining.hardness(2, -1),
+		oddly_breakable_by_hand = mining.hardness(2, 0),
+		planks = 1,
+		flammable = 2
+	},
 	sounds = sounds.node_sound_wood_defaults(),
 })
 
@@ -559,7 +693,16 @@ minetest.register_node("sb_core:leaves_suntree", {
 	special_tiles = {"leaves_suntree_simple.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, oddly_breakable_by_hand = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {
+		crumbly = mining.hardness(0.2, -1),
+		cracky = mining.hardness(0.2, -1),
+		choppy = mining.hardness(0.2, -1),
+		snappy = mining.hardness(0.2, 0),
+		oddly_breakable_by_hand = mining.hardness(0.2, 0),
+		leafdecay = 3,
+		flammable = 2,
+		leaves = 1
+	},
 	drop = {
 		max_items = 1,
 		items = {
@@ -601,8 +744,12 @@ minetest.register_node("sb_core:sapling_suntree", {
 		type = "fixed",
 		fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 7 / 16, 4 / 16}
 	},
-	groups = {snappy = 2, dig_immediate = 3, flammable = 2,
-		attached_node = 1, sapling = 1},
+	groups = {
+		dig_immediate = 3,
+		flammable = 2,
+		attached_node = 1,
+		sapling = 1
+	},
 	sounds = sounds.node_sound_leaves_defaults(),
 
 	on_construct = function(pos)
@@ -640,7 +787,15 @@ minetest.register_node("sb_core:log_taeda", {
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
-	groups = {tree = 1, choppy = 12, oddly_breakable_by_hand = 16, flammable = 2},
+	groups = {
+		crumbly = mining.hardness(2, -1),
+		cracky = mining.hardness(2, -1),
+		choppy = mining.hardness(2, 0),
+		snappy = mining.hardness(2, -1),
+		oddly_breakable_by_hand = mining.hardness(2, 0),
+		tree = 1,
+		flammable = 2
+	},
 	sounds = sounds.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node,
 })
@@ -661,7 +816,15 @@ minetest.register_node("sb_core:stripped_log_taeda", {
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
-	groups = {tree = 1, choppy = 12, oddly_breakable_by_hand = 16, flammable = 2},
+	groups = {
+		crumbly = mining.hardness(2, -1),
+		cracky = mining.hardness(2, -1),
+		choppy = mining.hardness(2, 0),
+		snappy = mining.hardness(2, -1),
+		oddly_breakable_by_hand = mining.hardness(2, 0),
+		tree = 1,
+		flammable = 2
+	},
 	sounds = sounds.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node,
 })
@@ -677,7 +840,15 @@ minetest.register_node("sb_core:planks_taeda", {
 	description = "Taeda Planks",
 	tiles = {"planks_taeda.png"},
 	is_ground_content = false,
-	groups = {planks = 1, choppy = 12, oddly_breakable_by_hand = 16, flammable = 2},
+	groups = {
+		crumbly = mining.hardness(2, -1),
+		cracky = mining.hardness(2, -1),
+		choppy = mining.hardness(2, 0),
+		snappy = mining.hardness(2, -1),
+		oddly_breakable_by_hand = mining.hardness(2, 0),
+		planks = 1,
+		flammable = 2
+	},
 	sounds = sounds.node_sound_wood_defaults(),
 })
 
@@ -712,7 +883,16 @@ minetest.register_node("sb_core:leaves_taeda", {
 	special_tiles = {"leaves_taeda_simple.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, oddly_breakable_by_hand = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {
+		crumbly = mining.hardness(0.2, -1),
+		cracky = mining.hardness(0.2, -1),
+		choppy = mining.hardness(0.2, -1),
+		snappy = mining.hardness(0.2, 0),
+		oddly_breakable_by_hand = mining.hardness(0.2, 0),
+		leafdecay = 3,
+		flammable = 2,
+		leaves = 1
+	},
 	drop = {
 		max_items = 1,
 		items = {
@@ -754,8 +934,12 @@ minetest.register_node("sb_core:sapling_taeda", {
 		type = "fixed",
 		fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 7 / 16, 4 / 16}
 	},
-	groups = {snappy = 2, dig_immediate = 3, flammable = 2,
-		attached_node = 1, sapling = 1},
+	groups = {
+		dig_immediate = 3,
+		flammable = 2,
+		attached_node = 1,
+		sapling = 1
+	},
 	sounds = sounds.node_sound_leaves_defaults(),
 
 	on_construct = function(pos)
@@ -793,7 +977,15 @@ minetest.register_node("sb_core:log_wungu", {
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
-	groups = {tree = 1, choppy = 12, oddly_breakable_by_hand = 16, flammable = 2},
+	groups = {
+		crumbly = mining.hardness(2, -1),
+		cracky = mining.hardness(2, -1),
+		choppy = mining.hardness(2, 0),
+		snappy = mining.hardness(2, -1),
+		oddly_breakable_by_hand = mining.hardness(2, 0),
+		tree = 1,
+		flammable = 2
+	},
 	sounds = sounds.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node,
 })
@@ -814,7 +1006,15 @@ minetest.register_node("sb_core:stripped_log_wungu", {
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
-	groups = {tree = 1, choppy = 12, oddly_breakable_by_hand = 16, flammable = 2},
+	groups = {
+		crumbly = mining.hardness(2, -1),
+		cracky = mining.hardness(2, -1),
+		choppy = mining.hardness(2, 0),
+		snappy = mining.hardness(2, -1),
+		oddly_breakable_by_hand = mining.hardness(2, 0),
+		tree = 1,
+		flammable = 2
+	},
 	sounds = sounds.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node,
 })
@@ -830,7 +1030,15 @@ minetest.register_node("sb_core:planks_wungu", {
 	description = "Wungu Planks",
 	tiles = {"planks_wungu.png"},
 	is_ground_content = false,
-	groups = {planks = 1, choppy = 12, oddly_breakable_by_hand = 16, flammable = 2},
+	groups = {
+		crumbly = mining.hardness(2, -1),
+		cracky = mining.hardness(2, -1),
+		choppy = mining.hardness(2, 0),
+		snappy = mining.hardness(2, -1),
+		oddly_breakable_by_hand = mining.hardness(2, 0),
+		planks = 1,
+		flammable = 2
+	},
 	sounds = sounds.node_sound_wood_defaults(),
 })
 
@@ -865,7 +1073,16 @@ minetest.register_node("sb_core:leaves_wungu", {
 	special_tiles = {"leaves_wungu_simple.png"},
 	paramtype = "light",
 	is_ground_content = false,
-	groups = {snappy = 3, oddly_breakable_by_hand = 3, leafdecay = 3, flammable = 2, leaves = 1},
+	groups = {
+		crumbly = mining.hardness(0.2, -1),
+		cracky = mining.hardness(0.2, -1),
+		choppy = mining.hardness(0.2, -1),
+		snappy = mining.hardness(0.2, 0),
+		oddly_breakable_by_hand = mining.hardness(0.2, 0),
+		leafdecay = 3,
+		flammable = 2,
+		leaves = 1
+	},
 	drop = {
 		max_items = 1,
 		items = {
@@ -912,8 +1129,12 @@ minetest.register_node("sb_core:sapling_wungu", {
 		type = "fixed",
 		fixed = {-4 / 16, -0.5, -4 / 16, 4 / 16, 7 / 16, 4 / 16}
 	},
-	groups = {snappy = 2, dig_immediate = 3, flammable = 2,
-		attached_node = 1, sapling = 1},
+	groups = {
+		dig_immediate = 3,
+		flammable = 2,
+		attached_node = 1,
+		sapling = 1
+	},
 	sounds = sounds.node_sound_leaves_defaults(),
 
 	on_construct = function(pos)
@@ -951,7 +1172,15 @@ minetest.register_node("sb_core:log_scorched", {
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
-	groups = {choppy = 14, oddly_breakable_by_hand = 19},
+	groups = {
+		crumbly = mining.hardness(4, -1),
+		cracky = mining.hardness(4, -1),
+		choppy = mining.hardness(4, 0),
+		snappy = mining.hardness(4, -1),
+		oddly_breakable_by_hand = mining.hardness(4, 0),
+		tree = 1,
+		flammable = 2
+	},
 	sounds = sounds.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node,
 })

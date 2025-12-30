@@ -13,7 +13,11 @@ minetest.register_node("sb_core:bedrock", {
 	on_destruct = function() end,
 	can_dig = function() return false end,
 	diggable = false,
-	groups = {immortal=1, unbreakable=1, not_in_creative_inventory=1},
+	groups = {
+		immortal=1,
+		unbreakable=1,
+		not_in_creative_inventory=1
+	},
 	drop = "",
 	sounds = sounds.node_sound_stone_defaults(),
 })

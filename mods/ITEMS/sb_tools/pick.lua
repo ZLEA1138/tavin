@@ -7,14 +7,10 @@ minetest.register_tool("sb_tools:pick_wood", {
 	inventory_image = "pick_wood.png",
 	tool_capabilities = {
 		full_punch_interval = 1.2,
-		max_drop_level=0,
+		max_drop_level=1,
 		groupcaps={
 			cracky = {
-				times = {
-					 [1]=0.05,  [2]=0.40,  [3]=0.60,  [4]=0.75,  [5]=0.95,
-					 [6]=1.15,  [7]=1.50,  [8]=1.90,  [9]=2.25, [10]=2.65,
-					[11]=3.75,
-				},
+				times = mining.max_time(75.00, 1),
 				uses=60,
 				maxlevel=1
 			},
@@ -22,7 +18,7 @@ minetest.register_tool("sb_tools:pick_wood", {
 		damage_groups = {fleshy=2},
 	},
 	sound = {breaks = "tool_breaks"},
-	groups = {pickaxe = 1, flammable = 2}
+	groups = {pickaxe = 1, pickaxe_level_1 = 1, flammable = 2}
 })
 
 core.register_craft({
@@ -46,14 +42,10 @@ minetest.register_tool("sb_tools:pick_stone", {
 	inventory_image = "pick_stone.png",
 	tool_capabilities = {
 		full_punch_interval = 1.3,
-		max_drop_level=0,
+		max_drop_level=2,
 		groupcaps={
 			cracky = {
-				times = {
-					 [1]=0.05,  [2]=0.20,  [3]=0.30,  [4]=0.40,  [5]=0.50,
-					 [6]=0.60,  [7]=0.75,  [8]=0.95,  [9]=1.15, [10]=1.35,
-					[11]=1.90,
-				},
+				times = mining.max_time(37.50, 2),
 				uses=132,
 				maxlevel=2
 			},
@@ -61,7 +53,7 @@ minetest.register_tool("sb_tools:pick_stone", {
 		damage_groups = {fleshy=3},
 	},
 	sound = {breaks = "tool_breaks"},
-	groups = {pickaxe = 1}
+	groups = {pickaxe = 1, pickaxe_level_1 = 1, pickaxe_level_2 = 1}
 })
 
 core.register_craft({
@@ -79,14 +71,10 @@ minetest.register_tool("sb_tools:pick_aereus", {
 	inventory_image = "pick_aereus.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
-		max_drop_level=1,
+		max_drop_level=3,
 		groupcaps={
 			cracky = {
-				times = {
-					 [1]=0.05,  [2]=0.17,  [3]=0.25,  [4]=0.30,  [5]=0.40,
-					 [6]=0.50,  [7]=0.60,  [8]=0.80,  [9]=0.95, [10]=0.10,
-					[11]=1.55, [12]=3.10, [13]=7.05,
-				},
+				times = mining.max_time(30.00, 3),
 				uses=260,
 				maxlevel=3
 			},
@@ -94,7 +82,7 @@ minetest.register_tool("sb_tools:pick_aereus", {
 		damage_groups = {fleshy=4},
 	},
 	sound = {breaks = "tool_breaks"},
-	groups = {pickaxe = 1}
+	groups = {pickaxe = 1, pickaxe_level_1 = 1, pickaxe_level_2 = 1, pickaxe_level_3 = 1}
 })
 
 core.register_craft({
@@ -112,14 +100,10 @@ minetest.register_tool("sb_tools:pick_ferrum", {
 	inventory_image = "pick_ferrum.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
-		max_drop_level=1,
+		max_drop_level=3,
 		groupcaps={
 			cracky = {
-				times = {
-					 [1]=0.05,  [2]=0.15,  [3]=0.20,  [4]=0.25,  [5]=0.35,
-					 [6]=0.40,  [7]=0.50,  [8]=0.65,  [9]=0.75, [10]=0.90,
-					[11]=1.25, [12]=2.50, [13]=5.65,
-				},
+				times = mining.max_time(25.00, 3),
 				uses=250,
 				maxlevel=3
 			},
@@ -127,7 +111,7 @@ minetest.register_tool("sb_tools:pick_ferrum", {
 		damage_groups = {fleshy=4},
 	},
 	sound = {breaks = "tool_breaks"},
-	groups = {pickaxe = 1}
+	groups = {pickaxe = 1, pickaxe_level_1 = 1, pickaxe_level_2 = 1, pickaxe_level_3 = 1}
 })
 
 core.register_craft({
@@ -148,11 +132,7 @@ minetest.register_tool("sb_tools:pick_aurem", {
 		max_drop_level=3,
 		groupcaps={
 			cracky = {
-				times = {
-					 [1]=0.05,  [2]=0.10,  [3]=0.10,  [4]=0.15,  [5]=0.20,
-					 [6]=0.20,  [7]=0.25,  [8]=0.35,  [9]=0.40, [10]=0.45,
-					[11]=0.65, [12]=1.25, [13]=2.85,
-				},
+				times = mining.max_time(12.50, 3),
 				uses=32,
 				maxlevel=3
 			},
@@ -160,7 +140,7 @@ minetest.register_tool("sb_tools:pick_aurem", {
 		damage_groups = {fleshy=2},
 	},
 	sound = {breaks = "tool_breaks"},
-	groups = {pickaxe = 1}
+	groups = {pickaxe = 1, pickaxe_level_1 = 1, pickaxe_level_2 = 1, pickaxe_level_3 = 1}
 })
 
 core.register_craft({
@@ -178,14 +158,10 @@ minetest.register_tool("sb_tools:pick_wolfram", {
 	inventory_image = "pick_wolfram.png",
 	tool_capabilities = {
 		full_punch_interval = 0.9,
-		max_drop_level=3,
+		max_drop_level=4,
 		groupcaps={
 			cracky = {
-				times = {
-					 [1]=0.05,  [2]=0.10,  [3]=0.15,  [4]=0.20,  [5]=0.25,
-					 [6]=0.30,  [7]=0.40,  [8]=0.50,  [9]=0.60, [10]=0.70,
-					[11]=0.95, [12]=1.90, [13]=4.25, [14]=9.40,
-				},
+				times = mining.max_time(19.00, 4),
 				uses=1562,
 				maxlevel=4
 			},
@@ -193,7 +169,7 @@ minetest.register_tool("sb_tools:pick_wolfram", {
 		damage_groups = {fleshy=5},
 	},
 	sound = {breaks = "tool_breaks"},
-	groups = {pickaxe = 1}
+	groups = {pickaxe = 1, pickaxe_level_1 = 1, pickaxe_level_2 = 1, pickaxe_level_3 = 1, pickaxe_level_4 = 1}
 })
 
 core.register_craft({

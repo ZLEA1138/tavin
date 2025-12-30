@@ -7,12 +7,10 @@ minetest.register_tool("sb_tools:sword_wood", {
 	inventory_image = "sword_wood.png",
 	tool_capabilities = {
 		full_punch_interval = 1.2,
-		max_drop_level=0,
+		max_drop_level=1,
 		groupcaps={
 			snappy = {
-				times = {
-					 [1]=0.05,  [2]=0.10,  [3]=0.20,  [4]=0.30,  [5]=0.40,
-				},
+				times = mining.max_time(75.00, 1),
 				uses=60,
 				maxlevel=1
 			},
@@ -20,7 +18,7 @@ minetest.register_tool("sb_tools:sword_wood", {
 		damage_groups = {fleshy=5},
 	},
 	sound = {breaks = "tool_breaks"},
-	groups = {sword = 1, flammable = 2}
+	groups = {sword = 1, sword_level_1 = 1, flammable = 2}
 })
 
 core.register_craft({
@@ -44,12 +42,10 @@ minetest.register_tool("sb_tools:sword_stone", {
 	inventory_image = "sword_stone.png",
 	tool_capabilities = {
 		full_punch_interval = 1.3,
-		max_drop_level=0,
+		max_drop_level=2,
 		groupcaps={
 			snappy = {
-				times = {
-					 [1]=0.05,  [2]=0.10,  [3]=0.20,  [4]=0.30,  [5]=0.40,
-				},
+				times = mining.max_time(37.50, 2),
 				uses=132,
 				maxlevel=2
 			},
@@ -57,7 +53,7 @@ minetest.register_tool("sb_tools:sword_stone", {
 		damage_groups = {fleshy=6},
 	},
 	sound = {breaks = "tool_breaks"},
-	groups = {sword = 1}
+	groups = {sword = 1, sword_level_1 = 1, sword_level_2 = 1}
 })
 
 core.register_craft({
@@ -75,12 +71,10 @@ minetest.register_tool("sb_tools:sword_aereus", {
 	inventory_image = "sword_aereus.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
-		max_drop_level=1,
+		max_drop_level=3,
 		groupcaps={
 			snappy = {
-				times = {
-					 [1]=0.05,  [2]=0.10,  [3]=0.20,  [4]=0.30,  [5]=0.40,
-				},
+				times = mining.max_time(30.00, 3),
 				uses=260,
 				maxlevel=3
 			},
@@ -88,7 +82,7 @@ minetest.register_tool("sb_tools:sword_aereus", {
 		damage_groups = {fleshy=7},
 	},
 	sound = {breaks = "tool_breaks"},
-	groups = {sword = 1}
+	groups = {sword = 1, sword_level_1 = 1, sword_level_2 = 1, sword_level_3 = 1}
 })
 
 core.register_craft({
@@ -106,12 +100,10 @@ minetest.register_tool("sb_tools:sword_ferrum", {
 	inventory_image = "sword_ferrum.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
-		max_drop_level=1,
+		max_drop_level=3,
 		groupcaps={
 			snappy = {
-				times = {
-					 [1]=0.05,  [2]=0.10,  [3]=0.20,  [4]=0.30,  [5]=0.40,
-				},
+				times = mining.max_time(25.00, 3),
 				uses=250,
 				maxlevel=3
 			},
@@ -119,7 +111,7 @@ minetest.register_tool("sb_tools:sword_ferrum", {
 		damage_groups = {fleshy=7},
 	},
 	sound = {breaks = "tool_breaks"},
-	groups = {sword = 1}
+	groups = {sword = 1, sword_level_1 = 1, sword_level_2 = 1, sword_level_3 = 1}
 })
 
 core.register_craft({
@@ -140,9 +132,7 @@ minetest.register_tool("sb_tools:sword_aurem", {
 		max_drop_level=3,
 		groupcaps={
 			snappy = {
-				times = {
-					 [1]=0.05,  [2]=0.10,  [3]=0.20,  [4]=0.30,  [5]=0.40,
-				},
+				times = mining.max_time(12.50, 3),
 				uses=32,
 				maxlevel=3
 			},
@@ -150,7 +140,7 @@ minetest.register_tool("sb_tools:sword_aurem", {
 		damage_groups = {fleshy=5},
 	},
 	sound = {breaks = "tool_breaks"},
-	groups = {sword = 1}
+	groups = {sword = 1, sword_level_1 = 1, sword_level_2 = 1, sword_level_3 = 1}
 })
 
 core.register_craft({
@@ -168,12 +158,10 @@ minetest.register_tool("sb_tools:sword_wolfram", {
 	inventory_image = "sword_wolfram.png",
 	tool_capabilities = {
 		full_punch_interval = 0.9,
-		max_drop_level=3,
+		max_drop_level=4,
 		groupcaps={
 			snappy = {
-				times = {
-					 [1]=0.05,  [2]=0.10,  [3]=0.20,  [4]=0.30,  [5]=0.40,
-				},
+				times = mining.max_time(19.00, 4),
 				uses=1562,
 				maxlevel=4
 			},
@@ -181,7 +169,7 @@ minetest.register_tool("sb_tools:sword_wolfram", {
 		damage_groups = {fleshy=8},
 	},
 	sound = {breaks = "tool_breaks"},
-	groups = {sword = 1}
+	groups = {sword = 1, sword_level_1 = 1, sword_level_2 = 1, sword_level_3 = 1, sword_level_4 = 1}
 })
 
 core.register_craft({

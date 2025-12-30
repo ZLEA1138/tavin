@@ -7,14 +7,10 @@ minetest.register_tool("sb_tools:axe_wood", {
 	inventory_image = "axe_wood.png",
 	tool_capabilities = {
 		full_punch_interval = 1.2,
-		max_drop_level=0,
+		max_drop_level=1,
 		groupcaps={
 			choppy = {
-				times = {
-					 [1]=0.05,  [2]=0.10,  [3]=0.15,  [4]=0.25,  [5]=0.30,
-					 [6]=0.40,  [7]=0.45,  [8]=0.55,  [9]=0.60, [10]=0.75,
-					[11]=1.15, [12]=1.50, [13]=1.90, [14]=2.25,
-				},
+				times = mining.max_time(75.00, 1),
 				uses=60,
 				maxlevel=1
 			},
@@ -22,7 +18,7 @@ minetest.register_tool("sb_tools:axe_wood", {
 		damage_groups = {fleshy=4},
 	},
 	sound = {breaks = "tool_breaks"},
-	groups = {axe = 1, flammable = 2},
+	groups = {axe = 1, axe_level_1 = 1, flammable = 2},
 	on_place = function(itemstack, user, pointed_thing)
 		if pointed_thing.type ~= "node" then
 			return
@@ -72,14 +68,10 @@ minetest.register_tool("sb_tools:axe_stone", {
 	inventory_image = "axe_stone.png",
 	tool_capabilities = {
 		full_punch_interval = 1.3,
-		max_drop_level=0,
+		max_drop_level=2,
 		groupcaps={
 			choppy = {
-				times = {
-					 [1]=0.05,  [2]=0.05,  [3]=0.10,  [4]=0.15,  [5]=0.15,
-					 [6]=0.20,  [7]=0.25,  [8]=0.30,  [9]=0.30, [10]=0.40,
-					[11]=0.60, [12]=0.75, [13]=0.95, [14]=1.15,
-				},
+				times = mining.max_time(37.50, 2),
 				uses=132,
 				maxlevel=2
 			},
@@ -87,7 +79,7 @@ minetest.register_tool("sb_tools:axe_stone", {
 		damage_groups = {fleshy=5},
 	},
 	sound = {breaks = "tool_breaks"},
-	groups = {axe = 1},
+	groups = {axe = 1, axe_level_1 = 1, axe_level_2 = 1},
 	on_place = function(itemstack, user, pointed_thing)
 		if pointed_thing.type ~= "node" then
 			return
@@ -131,14 +123,10 @@ minetest.register_tool("sb_tools:axe_aereus", {
 	inventory_image = "axe_aereus.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
-		max_drop_level=1,
+		max_drop_level=3,
 		groupcaps={
 			choppy = {
-				times = {
-					 [1]=0.05,  [2]=0.05,  [3]=0.05,  [4]=0.10,  [5]=0.10,
-					 [6]=0.15,  [7]=0.20,  [8]=0.25,  [9]=0.25, [10]=0.30,
-					[11]=0.50, [12]=0.60, [13]=0.80, [14]=0.95,
-				},
+				times = mining.max_time(30.00, 3),
 				uses=260,
 				maxlevel=3
 			},
@@ -146,7 +134,7 @@ minetest.register_tool("sb_tools:axe_aereus", {
 		damage_groups = {fleshy=6},
 	},
 	sound = {breaks = "tool_breaks"},
-	groups = {axe = 1},
+	groups = {axe = 1, axe_level_1 = 1, axe_level_2 = 1, axe_level_3 = 1},
 	on_place = function(itemstack, user, pointed_thing)
 		if pointed_thing.type ~= "node" then
 			return
@@ -190,14 +178,10 @@ minetest.register_tool("sb_tools:axe_ferrum", {
 	inventory_image = "axe_ferrum.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
-		max_drop_level=1,
+		max_drop_level=3,
 		groupcaps={
 			choppy = {
-				times = {
-					 [1]=0.05,  [2]=0.05,  [3]=0.05,  [4]=0.10,  [5]=0.10,
-					 [6]=0.15,  [7]=0.15,  [8]=0.20,  [9]=0.20, [10]=0.25,
-					[11]=0.40, [12]=0.50, [13]=0.65, [14]=0.75,
-				},
+				times = mining.max_time(25.00, 3),
 				uses=250,
 				maxlevel=3
 			},
@@ -205,7 +189,7 @@ minetest.register_tool("sb_tools:axe_ferrum", {
 		damage_groups = {fleshy=6},
 	},
 	sound = {breaks = "tool_breaks"},
-	groups = {axe = 1},
+	groups = {axe = 1, axe_level_1 = 1, axe_level_2 = 1, axe_level_3 = 1},
 	on_place = function(itemstack, user, pointed_thing)
 		if pointed_thing.type ~= "node" then
 			return
@@ -252,11 +236,7 @@ minetest.register_tool("sb_tools:axe_aurem", {
 		max_drop_level=3,
 		groupcaps={
 			choppy = {
-				times = {
-					 [1]=0.05,  [2]=0.05,  [3]=0.05,  [4]=0.05,  [5]=0.05,
-					 [6]=0.10,  [7]=0.10,  [8]=0.10,  [9]=0.10, [10]=0.15,
-					[11]=0.20, [12]=0.25, [13]=0.35, [14]=0.40,
-				},
+				times = mining.max_time(12.50, 3),
 				uses=32,
 				maxlevel=3
 			},
@@ -264,7 +244,7 @@ minetest.register_tool("sb_tools:axe_aurem", {
 		damage_groups = {fleshy=4},
 	},
 	sound = {breaks = "tool_breaks"},
-	groups = {axe = 1},
+	groups = {axe = 1, axe_level_1 = 1, axe_level_2 = 1, axe_level_3 = 1},
 	on_place = function(itemstack, user, pointed_thing)
 		if pointed_thing.type ~= "node" then
 			return
@@ -308,14 +288,10 @@ minetest.register_tool("sb_tools:axe_wolfram", {
 	inventory_image = "axe_wolfram.png",
 	tool_capabilities = {
 		full_punch_interval = 0.9,
-		max_drop_level=3,
+		max_drop_level=4,
 		groupcaps={
 			choppy = {
-				times = {
-					 [1]=0.05,  [2]=0.05,  [3]=0.05,  [4]=0.10,  [5]=0.10,
-					 [6]=0.10,  [7]=0.15,  [8]=0.15,  [9]=0.15, [10]=0.20,
-					[11]=0.30, [12]=0.40, [13]=0.50, [14]=0.60,
-				},
+				times = mining.max_time(19.00, 4),
 				uses=1562,
 				maxlevel=4
 			},
@@ -323,7 +299,7 @@ minetest.register_tool("sb_tools:axe_wolfram", {
 		damage_groups = {fleshy=7},
 	},
 	sound = {breaks = "tool_breaks"},
-	groups = {axe = 1},
+	groups = {axe = 1, axe_level_1 = 1, axe_level_2 = 1, axe_level_3 = 1, axe_level_4 = 1},
 	on_place = function(itemstack, user, pointed_thing)
 		if pointed_thing.type ~= "node" then
 			return

@@ -346,7 +346,22 @@ minetest.register_node("sb_furnace:furnace", apply_logger({
 		"furnace_side.png", "furnace_front.png"
 	},
 	paramtype2 = "facedir",
-	groups = {cracky=10},
+	drop = {
+        max_items = 1,
+        items = {
+            {
+				tool_groups = {"pickaxe"},
+                items = {"sb_furnace:furnace"},
+            },
+        },
+    },
+	groups = {
+		crumbly = mining.hardness(3.5, -2),
+		cracky = mining.hardness(3.5, 0),
+		choppy = mining.hardness(3.5, -2),
+		snappy = mining.hardness(3.5, -2),
+		oddly_breakable_by_hand = mining.hardness(3.5, -2),
+	},
 	legacy_facedir_simple = true,
 	is_ground_content = false,
 	sounds = sounds.node_sound_stone_defaults(),
@@ -397,7 +412,7 @@ minetest.register_node("sb_furnace:furnace_active", apply_logger({
 		"furnace_side.png", "furnace_side.png",
 		"furnace_side.png",
 		{
-			image = "furnace_front_active_anim.png",
+			name = "furnace_front_active_anim.png",
 			backface_culling = false,
 			animation = {
 				type = "vertical_frames",
@@ -409,8 +424,23 @@ minetest.register_node("sb_furnace:furnace_active", apply_logger({
 	},
 	paramtype2 = "facedir",
 	light_source = 8,
-	drop = "sb_furnace:furnace",
-	groups = {cracky=10, not_in_creative_inventory=1},
+	drop = {
+        max_items = 1,
+        items = {
+            {
+				tool_groups = {"pickaxe"},
+                items = {"sb_furnace:furnace"},
+            },
+        },
+    },
+	groups = {
+		crumbly = mining.hardness(3.5, -2),
+		cracky = mining.hardness(3.5, 0),
+		choppy = mining.hardness(3.5, -2),
+		snappy = mining.hardness(3.5, -2),
+		oddly_breakable_by_hand = mining.hardness(3.5, -2),
+		not_in_creative_inventory=1
+	},
 	legacy_facedir_simple = true,
 	is_ground_content = false,
 	sounds = sounds.node_sound_stone_defaults(),

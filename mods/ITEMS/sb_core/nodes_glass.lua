@@ -9,7 +9,14 @@ minetest.register_node("sb_core:glass", {
 	paramtype = "light",
 	sunlight_propagates = true,
 	is_ground_content = false,
-	groups = {oddly_breakable_by_hand = 5, glass = 1},
+	groups = {
+		crumbly = mining.hardness(0.3, -1),
+		cracky = mining.hardness(0.3, -1),
+		choppy = mining.hardness(0.3, -1),
+		snappy = mining.hardness(0.3, -1),
+		oddly_breakable_by_hand = mining.hardness(0.3, 0),
+		glass = 1
+	},
 	sounds = sounds.node_sound_glass_defaults(),
 })
 
@@ -33,7 +40,14 @@ for i = 1, #dyes do
 		paramtype = "light",
 		sunlight_propagates = true,
 		is_ground_content = false,
-		groups = {oddly_breakable_by_hand = 5, glass = 1},
+		groups = {
+		crumbly = mining.hardness(0.3, -1),
+		cracky = mining.hardness(0.3, -1),
+		choppy = mining.hardness(0.3, -1),
+		snappy = mining.hardness(0.3, -1),
+		oddly_breakable_by_hand = mining.hardness(0.3, 0),
+		glass = 1
+	},
 		sounds = sounds.node_sound_glass_defaults(),
 	})
 	
@@ -51,7 +65,14 @@ functions.register_pane("sb_core:glass_pane", {
 	inventory_image = "glass.png",
 	wield_image = "glass.png",
 	sounds = sounds.node_sound_glass_defaults(),
-	groups = {oddly_breakable_by_hand=5, glass_pane = 1},
+	groups = {
+		crumbly = mining.hardness(0.3, -1),
+		cracky = mining.hardness(0.3, -1),
+		choppy = mining.hardness(0.3, -1),
+		snappy = mining.hardness(0.3, -1),
+		oddly_breakable_by_hand = mining.hardness(0.3, 0),
+		glass = 1
+	},
 	recipe = {
 		{"sb_core:glass", "sb_core:glass", "sb_core:glass"},
 		{"sb_core:glass", "sb_core:glass", "sb_core:glass"}
@@ -69,7 +90,14 @@ for i = 1, #dyes do
 		textures = {"glass_" .. name .. ".png", "", "glass_" .. name .. "_edge.png"},
 		inventory_image = "glass_" .. name .. ".png",
 		wield_image = "glass_" .. name .. ".png",
-		groups = {oddly_breakable_by_hand = 5, glass_pane = 1},
+		groups = {
+			crumbly = mining.hardness(0.3, -1),
+			cracky = mining.hardness(0.3, -1),
+			choppy = mining.hardness(0.3, -1),
+			snappy = mining.hardness(0.3, -1),
+			oddly_breakable_by_hand = mining.hardness(0.3, 0),
+			glass = 1
+		},
 		sounds = sounds.node_sound_glass_defaults(),
 		recipe = {
 			{"sb_core:glass_" .. name, "sb_core:glass_" .. name, "sb_core:glass_" .. name},

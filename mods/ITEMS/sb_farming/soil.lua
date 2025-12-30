@@ -18,8 +18,16 @@ minetest.register_node("sb_farming:soil", {
 	},
 	drop = "sb_core:dirt",
 	groups = {
-		crumbly = 6, oddly_breakable_by_hand = 9, not_in_creative_inventory = 1,
-		soil = 2, grassland = 1, field = 1, dirtifies_below_solid = 1
+		crumbly = mining.hardness(0.8, 0),
+		cracky = mining.hardness(0.8, -1),
+		choppy = mining.hardness(0.8, -1),
+		snappy = mining.hardness(0.8, -1),
+		oddly_breakable_by_hand = mining.hardness(0.8, 0),
+		not_in_creative_inventory = 1,
+		soil = 2,
+		grassland = 1,
+		field = 1,
+		dirtifies_below_solid = 1
 	},
 	is_ground_content = false,
 	sounds = sounds.node_sound_dirt_defaults(),
@@ -49,8 +57,16 @@ minetest.register_node("sb_farming:soil_wet", {
 	},
 	drop = "sb_core:dirt",
 	groups = {
-		crumbly = 6, oddly_breakable_by_hand = 9, not_in_creative_inventory = 1,
-		soil = 3, grassland = 1, field = 1, dirtifies_below_solid = 1
+		crumbly = mining.hardness(0.8, 0),
+		cracky = mining.hardness(0.8, -1),
+		choppy = mining.hardness(0.8, -1),
+		snappy = mining.hardness(0.8, -1),
+		oddly_breakable_by_hand = mining.hardness(0.8, 0),
+		not_in_creative_inventory = 1,
+		soil = 3,
+		grassland = 1,
+		field = 1,
+		dirtifies_below_solid = 1
 	},
 	is_ground_content = false,
 	sounds = sounds.node_sound_dirt_defaults(),

@@ -9,8 +9,16 @@ for i = 1, #dyes do
 		description = desc .. " Cloth",
 		tiles = {"cloth_" .. name .. ".png"},
 		is_ground_content = false,
-		groups = {oddly_breakable_by_hand = 13,
-				flammable = 3, cloth = 1, [color_group] = 1},
+		groups = {
+			crumbly = mining.hardness(0.8, 0),
+			cracky = mining.hardness(0.8, -1),
+			choppy = mining.hardness(0.8, -1),
+			snappy = mining.hardness(0.8, -1),
+			oddly_breakable_by_hand = mining.hardness(0.8, 0),
+			flammable = 3,
+			cloth = 1,
+			[color_group] = 1
+		},
 		sounds = sounds.node_sound_defaults(),
 	})
 	

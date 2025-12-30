@@ -61,11 +61,15 @@ minetest.register_ore({
 	},
 	-- Only where sb_core:dirt is present as surface material
 	biomes = {
-		"tundra_highland", "tundra", "tundra_beach", "tundra_ocean",
-		"plains", "plains_dunes", "plains_ocean",
-		"forest", "forest_dunes", "forest_ocean",
-		"pine_forest", "pine_forest_shore", "pine_forest_ocean",
-		"savanna", "savanna_shore", "savanna_ocean",
+		"tavin_plains_snowcap", "tavin_plains", "tavin_plains_dunes", "tavin_plains_ocean",
+		"tavin_prairie", "tavin_prairie_ocean",
+		"tavin_fungusland", "tavin_fungusland_ocean",
+		"tavin_forest_snowcap", "tavin_forest", "tavin_forest_dunes", "tavin_forest_ocean",
+		"tavin_taeda_forest_snowcap", "tavin_taeda_forest", "tavin_taeda_forest_shore", "tavin_taeda_forest_ocean",
+		"tavin_oki_forest", "tavin_oki_forest_dunes", "tavin_oki_forest_ocean",
+		"tavin_savanna", "tavin_savanna_shore", "tavin_savanna_ocean",
+		"tavin_swamp", "tavin_swamp_shore", "tavin_swamp_ocean",
+		"tavin_scorched_wastes", "tavin_scorched_wastes_shore", "tavin_scorched_wastes_ocean",
 	}
 })
 

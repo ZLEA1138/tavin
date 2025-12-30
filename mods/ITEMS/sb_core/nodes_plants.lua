@@ -22,8 +22,14 @@ minetest.register_node("sb_core:grass_1", {
 			{items = {"sb_core:grass_1"}}
 		}
 	},
-	groups = {snappy = 1, oddly_breakable_by_hand = 1, flora = 1, attached_node = 1,
-		grass = 1, normal_grass = 1, flammable = 1},
+	groups = {
+		dig_immediate = 3,
+		flora = 1,
+		attached_node = 1,
+		grass = 1,
+		normal_grass = 1,
+		flammable = 1
+	},
 	sounds = sounds.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
@@ -58,9 +64,15 @@ for i = 2, 5 do
 				{items = {"sb_core:grass_1"}}
 			}
 		},
-		groups = {snappy = 1, oddly_breakable_by_hand = 1, flora = 1, attached_node = 1,
-			not_in_creative_inventory = 1, grass = 1,
-			normal_grass = 1, flammable = 1},
+		groups = {
+			dig_immediate = 3,
+			flora = 1,
+			attached_node = 1,
+			not_in_creative_inventory = 1,
+			grass = 1,
+			normal_grass = 1,
+			flammable = 1
+		},
 		sounds = sounds.node_sound_leaves_defaults(),
 		selection_box = {
 			type = "fixed",
@@ -81,8 +93,14 @@ minetest.register_node("sb_core:seagrass_1", {
 	sunlight_propagates = true,
 	walkable = false,
 	buildable_to = true,
-	groups = {snappy = 1, oddly_breakable_by_hand = 1, flammable = 3, flora = 1, grass = 1,
-		seagrass = 1, attached_node = 1},
+	groups = {
+		dig_immediate = 3,
+		flammable = 3,
+		flora = 1,
+		grass = 1,
+		seagrass = 1,
+		attached_node = 1
+	},
 	sounds = sounds.node_sound_leaves_defaults(),
 	selection_box = {
 		type = "fixed",
@@ -110,8 +128,15 @@ for i = 2, 3 do
 		sunlight_propagates = true,
 		walkable = false,
 		buildable_to = true,
-		groups = {snappy = 1, oddly_breakable_by_hand = 1, flammable = 3, flora = 1,
-			attached_node = 1, grass = 1, seagrass = 1, not_in_creative_inventory = 1},
+		groups = {
+			dig_immediate = 3,
+			flammable = 3,
+			flora = 1,
+			attached_node = 1,
+			grass = 1,
+			seagrass = 1,
+			not_in_creative_inventory = 1
+		},
 		drop = "sb_core:seagrass_1",
 		sounds = sounds.node_sound_leaves_defaults(),
 		selection_box = {
@@ -135,7 +160,10 @@ minetest.register_node("sb_core:reeds", {
 		type = "fixed",
 		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 0.5, 6 / 16},
 	},
-	groups = {snappy = 3, flammable = 2},
+	groups = {
+		dig_immediate = 3,
+		flammable = 2
+	},
 	sounds = sounds.node_sound_leaves_defaults(),
 
 	after_dig_node = function(pos, node, metadata, digger)

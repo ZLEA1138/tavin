@@ -15,7 +15,7 @@ local S = minetest.get_translator("flowers")
 
 local function add_simple_flower(name, desc, box, f_groups)
 	-- Common flowers' groups
-	f_groups.snappy = 3
+	f_groups.dig_immediate = 3
 	f_groups.flower = 1
 	f_groups.flora = 1
 	f_groups.attached_node = 1
@@ -154,7 +154,12 @@ minetest.register_node("sb_flowers:mushroom_red", {
 	sunlight_propagates = true,
 	walkable = false,
 	buildable_to = true,
-	groups = {mushroom = 1, snappy = 3, attached_node = 1, flammable = 1},
+	groups = {
+		mushroom = 1,
+		dig_immediate = 3,
+		attached_node = 1,
+		flammable = 1
+	},
 	sounds = sounds.node_sound_leaves_defaults(),
 	on_use = minetest.item_eat(-5),
 	selection_box = {
@@ -173,7 +178,13 @@ minetest.register_node("sb_flowers:mushroom_brown", {
 	sunlight_propagates = true,
 	walkable = false,
 	buildable_to = true,
-	groups = {mushroom = 1, food_mushroom = 1, snappy = 3, attached_node = 1, flammable = 1},
+	groups = {
+		mushroom = 1,
+		food_mushroom = 1,
+		dig_immediate = 3,
+		attached_node = 1,
+		flammable = 1
+	},
 	sounds = sounds.node_sound_leaves_defaults(),
 	on_use = minetest.item_eat(1),
 	selection_box = {
@@ -192,7 +203,13 @@ minetest.register_node("sb_flowers:mushroom_white", {
 	sunlight_propagates = true,
 	walkable = false,
 	buildable_to = true,
-	groups = {mushroom = 1, food_mushroom = 1, snappy = 3, attached_node = 1, flammable = 1},
+	groups = {
+		mushroom = 1,
+		food_mushroom = 1,
+		dig_immediate = 3,
+		attached_node = 1,
+		flammable = 1
+	},
 	sounds = sounds.node_sound_leaves_defaults(),
 	on_use = minetest.item_eat(1),
 	selection_box = {
@@ -253,7 +270,11 @@ local waterlily_def = {
 	walkable = false,
 	buildable_to = true,
 	floodable = true,
-	groups = {snappy = 3, flower = 1, flammable = 1},
+	groups = {
+		dig_immediate = 3,
+		flower = 1,
+		flammable = 1
+	},
 	sounds = sounds.node_sound_leaves_defaults(),
 	node_placement_prediction = "",
 	node_box = {

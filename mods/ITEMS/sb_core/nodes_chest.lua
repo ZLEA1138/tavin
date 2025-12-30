@@ -300,7 +300,13 @@ sb_core.chest.register_chest("sb_core:chest", {
 	sounds = sounds.node_sound_wood_defaults(),
 	sound_open = "chest_open",
 	sound_close = "chest_close",
-	groups = {choppy = 2, oddly_breakable_by_hand = 2},
+	groups = {
+		crumbly = mining.hardness(2.5, -1),
+		cracky = mining.hardness(2.5, -1),
+		choppy = mining.hardness(2.5, 0),
+		snappy = mining.hardness(2.5, -1),
+		oddly_breakable_by_hand = mining.hardness(2.5, 0),
+	},
 })
 
 sb_core.chest.register_chest("sb_core:chest_locked", {
@@ -316,7 +322,13 @@ sb_core.chest.register_chest("sb_core:chest_locked", {
 	sounds = sounds.node_sound_wood_defaults(),
 	sound_open = "chest_open",
 	sound_close = "chest_close",
-	groups = {choppy = 2, oddly_breakable_by_hand = 2},
+	groups = {
+		crumbly = mining.hardness(2.5, -1),
+		cracky = mining.hardness(2.5, -1),
+		choppy = mining.hardness(2.5, 0),
+		snappy = mining.hardness(2.5, -1),
+		oddly_breakable_by_hand = mining.hardness(2.5, 0),
+	},
 	protected = true,
 })
 

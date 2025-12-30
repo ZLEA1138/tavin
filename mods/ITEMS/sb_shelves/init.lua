@@ -53,7 +53,14 @@ local bookshelf_def = {
 		"planks_wungu.png", "bookshelf.png", "bookshelf.png"},
 	paramtype2 = "facedir",
 	is_ground_content = false,
-	groups = {choppy = 3, oddly_breakable_by_hand = 2, flammable = 3},
+	groups = {
+		crumbly = mining.hardness(1.5, -1),
+		cracky = mining.hardness(1.5, -1),
+		choppy = mining.hardness(1.5, 0),
+		snappy = mining.hardness(1.5, -1),
+		oddly_breakable_by_hand = mining.hardness(1.5, -1),
+		flammable = 3
+	},
 	sounds = sounds.node_sound_wood_defaults(),
 
 	on_construct = function(pos)

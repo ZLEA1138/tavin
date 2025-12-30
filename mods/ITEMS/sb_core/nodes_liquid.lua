@@ -41,7 +41,13 @@ minetest.register_node("sb_core:water_source", {
     liquid_alternative_flowing = "sb_core:water_flowing",
 	liquid_viscosity = 1,
 	post_effect_color = {a = 103, r = 30, g = 60, b = 90},
-	groups = {water_source = 1, liquid = 1, water = 1, flowing = 0, cools_lava = 1},
+	groups = {
+		water_source = 1,
+		liquid = 1,
+		water = 1,
+		flowing = 0,
+		cools_lava = 1
+	},
 	sounds = sounds.node_sound_water_defaults(),
   })
 
@@ -86,7 +92,14 @@ minetest.register_node("sb_core:water_source", {
 	liquid_alternative_source = "sb_core:water_source",
 	liquid_viscosity = 1,
 	post_effect_color = {a = 103, r = 30, g = 60, b = 90},
-    groups = {water_flowing = 1, liquid = 1, water = 1, flowing = 1, not_in_creative_inventory = 1, cools_lava = 1},
+    groups = {
+		water_flowing = 1,
+		liquid = 1,
+		water = 1,
+		flowing = 1,
+		not_in_creative_inventory = 1,
+		cools_lava = 1
+	},
 	sounds = sounds.node_sound_water_defaults(),
 })
 
@@ -97,8 +110,44 @@ minetest.register_node("sb_core:ice", {
 	-- 'is ground content = false' to avoid tunnels in sea ice or ice rivers
 	is_ground_content = false,
 	paramtype = "light",
-	groups = {cracky = 2, oddly_breakable_by_hand = 8, cools_lava = 1, slippery = 3},
+	groups = {
+		crumbly = mining.hardness(0.5, -1),
+		cracky = mining.hardness(0.5, -1),
+		choppy = mining.hardness(0.5, 0),
+		snappy = mining.hardness(0.5, -1),
+		oddly_breakable_by_hand = mining.hardness(0.5, 0),
+		cools_lava = 1,
+		slippery = 3
+	},
 	sounds = sounds.node_sound_ice_defaults(),
+})
+
+-- Packed Ice
+minetest.register_node("sb_core:packed_ice", {
+	description = "Packed Ice",
+	tiles = {"packed_ice.png"},
+	-- 'is ground content = false' to avoid tunnels in sea ice or ice rivers
+	is_ground_content = false,
+	paramtype = "light",
+	groups = {
+		crumbly = mining.hardness(0.5, -1),
+		cracky = mining.hardness(0.5, -1),
+		choppy = mining.hardness(0.5, 0),
+		snappy = mining.hardness(0.5, -1),
+		oddly_breakable_by_hand = mining.hardness(0.5, 0),
+		cools_lava = 1,
+		slippery = 3
+	},
+	sounds = sounds.node_sound_ice_defaults(),
+})
+
+core.register_craft({
+    output = "sb_core:packed_ice",
+    recipe = {
+        {"sb_core:ice", "sb_core:ice", "sb_core:ice"},
+        {"sb_core:ice", "sb_core:ice", "sb_core:ice"},
+		{"sb_core:ice", "sb_core:ice", "sb_core:ice"}
+    }
 })
 
 -- Snow
@@ -123,30 +172,54 @@ minetest.register_node("sb_core:snow", {
 			{-0.5, -0.5, -0.5, 0.5, -6 / 16, 0.5},
 		},
 	},
-	groups = {crumbly = 2, falling_node = 1, snowy = 1},
+	groups = {
+		crumbly = mining.hardness(0.1, 0),
+		cracky = mining.hardness(0.1, -1),
+		choppy = mining.hardness(0.1, -1),
+		snappy = mining.hardness(0.1, -1),
+		oddly_breakable_by_hand = mining.hardness(0.1, 0),
+		falling_node = 1,
+		snowy = 1
+	},
+	drop = {
+        max_items = 1,
+        items = {
+            {
+				tool_groups = {"shovel"},
+                items = {"sb_core:snow"},
+            },
+        },
+    },
 	sounds = sounds.node_sound_snow_defaults(),
-
-	--on_construct = function(pos)
-		--pos.y = pos.y - 1
-		--if minetest.get_node(pos).name == "sb_core:dirt_with_grass" then
-			--minetest.set_node(pos, {name = "sb_core:dirt_with_snow"})
-		--end
-	--end,
+	on_construct = functions.freeze_grass,
+	after_destruct = functions.thaw_grass
 })
 
 -- Snow Block
 minetest.register_node("sb_core:snow_block", {
 	description = "Snow Block",
 	tiles = {"snow.png"},
-	groups = {crumbly = 3, cools_lava = 1, snowy = 1},
+	groups = {
+		crumbly = mining.hardness(0.2, 0),
+		cracky = mining.hardness(0.2, -1),
+		choppy = mining.hardness(0.2, -1),
+		snappy = mining.hardness(0.2, -1),
+		oddly_breakable_by_hand = mining.hardness(0.2, 0),
+		cools_lava = 1,
+		snowy = 1
+	},
+	drop = {
+        max_items = 1,
+        items = {
+            {
+				tool_groups = {"shovel"},
+                items = {"sb_core:snow 9"},
+            },
+        },
+    },
 	sounds = sounds.node_sound_snow_defaults(),
-
-	--on_construct = function(pos)
-		--pos.y = pos.y - 1
-		--if minetest.get_node(pos).name == "default:dirt_with_grass" then
-			--minetest.set_node(pos, {name = "default:dirt_with_snow"})
-		--end
-	--end,
+	on_construct = functions.freeze_grass,
+	after_destruct = functions.thaw_grass
 })
 
 -- Lava
@@ -176,7 +249,7 @@ minetest.register_node("sb_core:lava_source", {
 		},
 	},
 	paramtype = "light",
-	light_source = 15,
+	light_source = 14,
 	walkable = false,
 	pointable = false,
 	diggable = false,
@@ -191,7 +264,11 @@ minetest.register_node("sb_core:lava_source", {
 	liquid_renewable = false,
 	damage_per_second = 4 * 2,
 	post_effect_color = {a = 191, r = 255, g = 64, b = 0},
-	groups = {lava = 3, liquid = 2, igniter = 1},
+	groups = {
+		lava = 3,
+		liquid = 2,
+		igniter = 1
+	},
 })
 
 minetest.register_node("sb_core:lava_flowing", {
@@ -222,7 +299,7 @@ minetest.register_node("sb_core:lava_flowing", {
 	},
 	paramtype = "light",
 	paramtype2 = "flowingliquid",
-	light_source = 15,
+	light_source = 14,
 	walkable = false,
 	pointable = false,
 	diggable = false,
@@ -237,6 +314,10 @@ minetest.register_node("sb_core:lava_flowing", {
 	liquid_renewable = false,
 	damage_per_second = 4 * 2,
 	post_effect_color = {a = 191, r = 255, g = 64, b = 0},
-	groups = {lava = 3, liquid = 2, igniter = 1,
-		not_in_creative_inventory = 1},
+	groups = {
+		lava = 3,
+		liquid = 2,
+		igniter = 1,
+		not_in_creative_inventory = 1
+	},
 })

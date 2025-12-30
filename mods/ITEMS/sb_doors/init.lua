@@ -480,7 +480,15 @@ sb_doors.register("door_wood_marshtree", {
 		tiles = {{ name = "door_wood_marshtree.png", backface_culling = true }},
 		description = "Marshtree Door",
 		inventory_image = "door_wood_marshtree_inv.png",
-		groups = {node = 1, choppy = 14, oddly_breakable_by_hand = 19, flammable = 2},
+		groups = {
+			node = 1,
+			crumbly = mining.hardness(3, -1),
+			cracky = mining.hardness(3, -1),
+			choppy = mining.hardness(3, 0),
+			snappy = mining.hardness(3, -1),
+			oddly_breakable_by_hand = mining.hardness(3, 0),
+			flammable = 2
+		},
 		gain_open = 0.06,
 		gain_close = 0.13,
 		recipe = {
@@ -501,7 +509,15 @@ sb_doors.register("door_wood_oki", {
 		tiles = {{ name = "door_wood_oki.png", backface_culling = true }},
 		description = "Oki Door",
 		inventory_image = "door_wood_oki_inv.png",
-		groups = {node = 1, choppy = 14, oddly_breakable_by_hand = 19, flammable = 2},
+		groups = {
+			node = 1,
+			crumbly = mining.hardness(3, -1),
+			cracky = mining.hardness(3, -1),
+			choppy = mining.hardness(3, 0),
+			snappy = mining.hardness(3, -1),
+			oddly_breakable_by_hand = mining.hardness(3, 0),
+			flammable = 2
+		},
 		gain_open = 0.06,
 		gain_close = 0.13,
 		recipe = {
@@ -522,7 +538,15 @@ sb_doors.register("door_wood_sana", {
 		tiles = {{ name = "door_wood_sana.png", backface_culling = true }},
 		description = "Sana Door",
 		inventory_image = "door_wood_sana_inv.png",
-		groups = {node = 1, choppy = 14, oddly_breakable_by_hand = 19, flammable = 2},
+		groups = {
+			node = 1,
+			crumbly = mining.hardness(3, -1),
+			cracky = mining.hardness(3, -1),
+			choppy = mining.hardness(3, 0),
+			snappy = mining.hardness(3, -1),
+			oddly_breakable_by_hand = mining.hardness(3, 0),
+			flammable = 2
+		},
 		gain_open = 0.06,
 		gain_close = 0.13,
 		recipe = {
@@ -543,7 +567,15 @@ sb_doors.register("door_wood_suntree", {
 		tiles = {{ name = "door_wood_suntree.png", backface_culling = true }},
 		description = "Suntree Door",
 		inventory_image = "door_wood_suntree_inv.png",
-		groups = {node = 1, choppy = 14, oddly_breakable_by_hand = 19, flammable = 2},
+		groups = {
+			node = 1,
+			crumbly = mining.hardness(3, -1),
+			cracky = mining.hardness(3, -1),
+			choppy = mining.hardness(3, 0),
+			snappy = mining.hardness(3, -1),
+			oddly_breakable_by_hand = mining.hardness(3, 0),
+			flammable = 2
+		},
 		gain_open = 0.06,
 		gain_close = 0.13,
 		recipe = {
@@ -564,7 +596,15 @@ sb_doors.register("door_wood_taeda", {
 		tiles = {{ name = "door_wood_taeda.png", backface_culling = true }},
 		description = "Taeda Door",
 		inventory_image = "door_wood_taeda_inv.png",
-		groups = {node = 1, choppy = 14, oddly_breakable_by_hand = 19, flammable = 2},
+		groups = {
+			node = 1,
+			crumbly = mining.hardness(3, -1),
+			cracky = mining.hardness(3, -1),
+			choppy = mining.hardness(3, 0),
+			snappy = mining.hardness(3, -1),
+			oddly_breakable_by_hand = mining.hardness(3, 0),
+			flammable = 2
+		},
 		gain_open = 0.06,
 		gain_close = 0.13,
 		recipe = {
@@ -585,7 +625,15 @@ sb_doors.register("door_wood_wungu", {
 		tiles = {{ name = "door_wood_wungu.png", backface_culling = true }},
 		description = "Wungu Door",
 		inventory_image = "door_wood_wungu_inv.png",
-		groups = {node = 1, choppy = 14, oddly_breakable_by_hand = 19, flammable = 2},
+		groups = {
+			node = 1,
+			crumbly = mining.hardness(3, -1),
+			cracky = mining.hardness(3, -1),
+			choppy = mining.hardness(3, 0),
+			snappy = mining.hardness(3, -1),
+			oddly_breakable_by_hand = mining.hardness(3, 0),
+			flammable = 2
+		},
 		gain_open = 0.06,
 		gain_close = 0.13,
 		recipe = {
@@ -607,7 +655,14 @@ sb_doors.register("door_ferrum", {
 		description = "Ferrum Door",
 		inventory_image = "door_ferrum_inv.png",
 		protected = true,
-		groups = {node = 1, cracky = 11, level = 2},
+		groups = {
+			node = 1,
+			crumbly = mining.hardness(5, -2),
+			cracky = mining.hardness(5, 2),
+			choppy = mining.hardness(5, -2),
+			snappy = mining.hardness(5, -2),
+			oddly_breakable_by_hand = mining.hardness(5, -2),
+		},
 		sounds = sounds.node_sound_metal_defaults(),
 		sound_open = "ferrum_door_open",
 		sound_close = "ferrum_door_close",
@@ -796,7 +851,15 @@ sb_doors.register_trapdoor("sb_doors:trapdoor_wood_marshtree", {
 	tile_side = "trapdoor_wood_marshtree_side.png",
 	gain_open = 0.06,
 	gain_close = 0.13,
-	groups = {choppy = 14, oddly_breakable_by_hand = 19, flammable = 2, door = 1},
+	groups = {
+		crumbly = mining.hardness(3, -1),
+		cracky = mining.hardness(3, -1),
+		choppy = mining.hardness(3, 0),
+		snappy = mining.hardness(3, -1),
+		oddly_breakable_by_hand = mining.hardness(3, 0),
+		flammable = 2,
+		door = 1
+	},
 })
 
 minetest.register_craft({
@@ -822,7 +885,15 @@ sb_doors.register_trapdoor("sb_doors:trapdoor_wood_oki", {
 	tile_side = "trapdoor_wood_oki_side.png",
 	gain_open = 0.06,
 	gain_close = 0.13,
-	groups = {choppy = 14, oddly_breakable_by_hand = 19, flammable = 2, door = 1},
+	groups = {
+		crumbly = mining.hardness(3, -1),
+		cracky = mining.hardness(3, -1),
+		choppy = mining.hardness(3, 0),
+		snappy = mining.hardness(3, -1),
+		oddly_breakable_by_hand = mining.hardness(3, 0),
+		flammable = 2,
+		door = 1
+	},
 })
 
 minetest.register_craft({
@@ -848,7 +919,15 @@ sb_doors.register_trapdoor("sb_doors:trapdoor_wood_sana", {
 	tile_side = "trapdoor_wood_sana_side.png",
 	gain_open = 0.06,
 	gain_close = 0.13,
-	groups = {choppy = 14, oddly_breakable_by_hand = 19, flammable = 2, door = 1},
+	groups = {
+		crumbly = mining.hardness(3, -1),
+		cracky = mining.hardness(3, -1),
+		choppy = mining.hardness(3, 0),
+		snappy = mining.hardness(3, -1),
+		oddly_breakable_by_hand = mining.hardness(3, 0),
+		flammable = 2,
+		door = 1
+	},
 })
 
 minetest.register_craft({
@@ -874,7 +953,15 @@ sb_doors.register_trapdoor("sb_doors:trapdoor_wood_suntree", {
 	tile_side = "trapdoor_wood_suntree_side.png",
 	gain_open = 0.06,
 	gain_close = 0.13,
-	groups = {choppy = 14, oddly_breakable_by_hand = 19, flammable = 2, door = 1},
+	groups = {
+		crumbly = mining.hardness(3, -1),
+		cracky = mining.hardness(3, -1),
+		choppy = mining.hardness(3, 0),
+		snappy = mining.hardness(3, -1),
+		oddly_breakable_by_hand = mining.hardness(3, 0),
+		flammable = 2,
+		door = 1
+	},
 })
 
 minetest.register_craft({
@@ -900,7 +987,15 @@ sb_doors.register_trapdoor("sb_doors:trapdoor_wood_taeda", {
 	tile_side = "trapdoor_wood_taeda_side.png",
 	gain_open = 0.06,
 	gain_close = 0.13,
-	groups = {choppy = 14, oddly_breakable_by_hand = 19, flammable = 2, door = 1},
+	groups = {
+		crumbly = mining.hardness(3, -1),
+		cracky = mining.hardness(3, -1),
+		choppy = mining.hardness(3, 0),
+		snappy = mining.hardness(3, -1),
+		oddly_breakable_by_hand = mining.hardness(3, 0),
+		flammable = 2,
+		door = 1
+	},
 })
 
 minetest.register_craft({
@@ -926,7 +1021,15 @@ sb_doors.register_trapdoor("sb_doors:trapdoor_wood_wungu", {
 	tile_side = "trapdoor_wood_wungu_side.png",
 	gain_open = 0.06,
 	gain_close = 0.13,
-	groups = {choppy = 14, oddly_breakable_by_hand = 19, flammable = 2, door = 1},
+	groups = {
+		crumbly = mining.hardness(3, -1),
+		cracky = mining.hardness(3, -1),
+		choppy = mining.hardness(3, 0),
+		snappy = mining.hardness(3, -1),
+		oddly_breakable_by_hand = mining.hardness(3, 0),
+		flammable = 2,
+		door = 1
+	},
 })
 
 minetest.register_craft({
@@ -956,7 +1059,14 @@ sb_doors.register_trapdoor("sb_doors:trapdoor_ferrum", {
 	sound_close = "ferrum_door_close",
 	gain_open = 0.2,
 	gain_close = 0.2,
-	groups = {cracky = 11, level = 2, door = 1},
+	groups = {
+		crumbly = mining.hardness(5, -2),
+		cracky = mining.hardness(5, 2),
+		choppy = mining.hardness(5, -2),
+		snappy = mining.hardness(5, -2),
+		oddly_breakable_by_hand = mining.hardness(5, -2),
+		door = 1
+	},
 })
 
 minetest.register_craft({

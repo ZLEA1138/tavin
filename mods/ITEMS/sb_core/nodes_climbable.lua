@@ -6,7 +6,14 @@ minetest.register_node("sb_core:chain_ferrum", {
 	description = "Ferrum Chain",
 	inventory_image = "chain_ferrum.png",
 	tiles = {"chain_ferrum.png"},
-	groups = {cracky = 11, level = 2, chain = 1},
+	groups = {
+		crumbly = mining.hardness(5, -2),
+		cracky = mining.hardness(5, 2),
+		choppy = mining.hardness(5, -2),
+		snappy = mining.hardness(5, -2),
+		oddly_breakable_by_hand = mining.hardness(5, -2),
+		chain = 1
+	},
 	drawtype = "plantlike",
 	paramtype = "light",
 	walkable = false,
@@ -20,6 +27,15 @@ minetest.register_node("sb_core:chain_ferrum", {
 		type = "fixed",
 		fixed = {-1/16, -8/16, -1/16, 1/16, 8/16, 1/16}
 	},
+	drop = {
+        max_items = 1,
+        items = {
+            {
+				tool_groups = {"pickaxe_level_2"},
+                items = {"sb_core:chain_ferrum"},
+            },
+        },
+    },
 	sounds = sounds.node_sound_metal_defaults(),
 	on_place = minetest.rotate_node,
 })
@@ -53,7 +69,23 @@ minetest.register_node("sb_core:ladder_ferrum", {
 		--wall_bottom = = <default>
 		--wall_side = = <default>
 	},
-	groups = {cracky = 10},
+	groups = {
+		crumbly = mining.hardness(5, -2),
+		cracky = mining.hardness(5, 2),
+		choppy = mining.hardness(5, -2),
+		snappy = mining.hardness(5, -2),
+		oddly_breakable_by_hand = mining.hardness(5, -2),
+		chain = 1
+	},
+	drop = {
+        max_items = 1,
+        items = {
+            {
+				tool_groups = {"pickaxe_level_2"},
+                items = {"sb_core:ladder_ferrum"},
+            },
+        },
+    },
 	sounds = sounds.node_sound_metal_defaults(),
 })
 
@@ -76,7 +108,14 @@ minetest.register_node("sb_core:ladder_wood", {
 		--wall_bottom = = <default>
 		--wall_side = = <default>
 	},
-	groups = {choppy = 11, oddly_breakable_by_hand = 3, flammable = 2},
+	groups = {
+		crumbly = mining.hardness(0.4, -1),
+		cracky = mining.hardness(0.4, -1),
+		choppy = mining.hardness(0.4, 0),
+		snappy = mining.hardness(0.4, -1),
+		oddly_breakable_by_hand = mining.hardness(0.4, 0),
+		flammable = 2
+	},
 	legacy_wallmounted = true,
 	sounds = sounds.node_sound_wood_defaults(),
 })
@@ -94,7 +133,14 @@ minetest.register_node("sb_core:vines", {
 	climbable = true,
 	is_ground_content = false,
 	selection_box = {type = "wallmounted"},
-	groups = {choppy = 3, oddly_breakable_by_hand = 3, flammable = 2},
+	groups = {
+		crumbly = mining.hardness(0.2, -1),
+		cracky = mining.hardness(0.2, -1),
+		choppy = mining.hardness(0.2, 0),
+		snappy = mining.hardness(0.2, -1),
+		oddly_breakable_by_hand = mining.hardness(0.2, 0),
+		flammable = 2
+	},
 	legacy_wallmounted = true,
 	sounds = sounds.node_sound_leaves_defaults()
 })

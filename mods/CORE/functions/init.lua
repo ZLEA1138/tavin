@@ -958,3 +958,25 @@ if minetest.settings:get_bool("enable_lavacooling") ~= false then
 		end,
 	})
 end
+
+--
+-- Snow cover
+--
+
+functions.freeze_grass = function(pos)
+	pos.y = pos.y - 1
+	local node_name = minetest.get_node(pos).name
+	
+	if minetest.registered_nodes[node_name .. "_snow"] then
+		minetest.set_node(pos, {name = node_name .. "_snow"})
+	end
+end
+
+functions.thaw_grass = function(pos)
+	pos.y = pos.y - 1
+	local node_name = string.gsub(minetest.get_node(pos).name, "_snow", "")
+	
+	if minetest.registered_nodes[node_name] then
+		minetest.set_node(pos, {name = node_name})
+	end
+end

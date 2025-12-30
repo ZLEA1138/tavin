@@ -82,13 +82,10 @@ minetest.register_tool("sb_tools:shovel_wood", {
 	wield_image = "shovel_wood.png^[transformR90",
 	tool_capabilities = {
 		full_punch_interval = 1.2,
-		max_drop_level=0,
+		max_drop_level=1,
 		groupcaps={
 			crumbly = {
-				times = {
-					 [1]=0.05,  [2]=0.10,  [3]=0.15,  [4]=0.20,  [5]=0.40,
-					 [6]=0.45,  [7]=0.50,  [8]=0.55,
-				},
+				times = mining.max_time(75.00, 1),
 				uses=60,
 				maxlevel=1
 			},
@@ -96,7 +93,7 @@ minetest.register_tool("sb_tools:shovel_wood", {
 		damage_groups = {fleshy=2},
 	},
 	sound = {breaks = "tool_breaks"},
-	groups = {shovel = 1, flammable = 2},
+	groups = {shovel = 1, shovel_level_1 = 1, flammable = 2},
 	on_place = shovel_on_place
 })
 
@@ -122,13 +119,10 @@ minetest.register_tool("sb_tools:shovel_stone", {
 	wield_image = "shovel_stone.png^[transformR90",
 	tool_capabilities = {
 		full_punch_interval = 1.3,
-		max_drop_level=0,
+		max_drop_level=2,
 		groupcaps={
 			crumbly = {
-				times = {
-					 [1]=0.05,  [2]=0.05,  [3]=0.10,  [4]=0.10,  [5]=0.20,
-					 [6]=0.25,  [7]=0.25,  [8]=0.30,
-				},
+				times = mining.max_time(37.50, 2),
 				uses=132,
 				maxlevel=2
 			},
@@ -136,7 +130,7 @@ minetest.register_tool("sb_tools:shovel_stone", {
 		damage_groups = {fleshy=3},
 	},
 	sound = {breaks = "tool_breaks"},
-	groups = {shovel = 1},
+	groups = {shovel = 1, shovel_level_1 = 1, shovel_level_2 = 1},
 	on_place = shovel_on_place
 })
 
@@ -156,13 +150,10 @@ minetest.register_tool("sb_tools:shovel_aereus", {
 	wield_image = "shovel_aereus.png^[transformR90",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
-		max_drop_level=1,
+		max_drop_level=3,
 		groupcaps={
 			crumbly = {
-				times = {
-					 [1]=0.05,  [2]=0.05,  [3]=0.05,  [4]=0.10,  [5]=0.15,
-					 [6]=0.20,  [7]=0.20,  [8]=0.25,
-				},
+				times = mining.max_time(30.00, 3),
 				uses=260,
 				maxlevel=3
 			},
@@ -170,7 +161,7 @@ minetest.register_tool("sb_tools:shovel_aereus", {
 		damage_groups = {fleshy=4},
 	},
 	sound = {breaks = "tool_breaks"},
-	groups = {shovel = 1},
+	groups = {shovel = 1, shovel_level_1 = 1, shovel_level_2 = 1, shovel_level_3 = 1},
 	on_place = shovel_on_place
 })
 
@@ -190,13 +181,10 @@ minetest.register_tool("sb_tools:shovel_ferrum", {
 	wield_image = "shovel_ferrum.png^[transformR90",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
-		max_drop_level=1,
+		max_drop_level=3,
 		groupcaps={
 			crumbly = {
-				times = {
-					 [1]=0.05,  [2]=0.05,  [3]=0.05,  [4]=0.10,  [5]=0.15,
-					 [6]=0.15,  [7]=0.20,  [8]=0.20,
-				},
+				times = mining.max_time(25.00, 3),
 				uses=250,
 				maxlevel=3
 			},
@@ -204,7 +192,7 @@ minetest.register_tool("sb_tools:shovel_ferrum", {
 		damage_groups = {fleshy=4},
 	},
 	sound = {breaks = "tool_breaks"},
-	groups = {shovel = 1},
+	groups = {shovel = 1, shovel_level_1 = 1, shovel_level_2 = 1, shovel_level_3 = 1},
 	on_place = shovel_on_place
 })
 
@@ -227,10 +215,7 @@ minetest.register_tool("sb_tools:shovel_aurem", {
 		max_drop_level=3,
 		groupcaps={
 			crumbly = {
-				times = {
-					 [1]=0.05,  [2]=0.05,  [3]=0.05,  [4]=0.05,  [5]=0.10,
-					 [6]=0.10,  [7]=0.10,  [8]=0.10,
-				},
+				times = mining.max_time(12.50, 3),
 				uses=32,
 				maxlevel=3
 			},
@@ -238,7 +223,7 @@ minetest.register_tool("sb_tools:shovel_aurem", {
 		damage_groups = {fleshy=2},
 	},
 	sound = {breaks = "tool_breaks"},
-	groups = {shovel = 1},
+	groups = {shovel = 1, shovel_level_1 = 1, shovel_level_2 = 1, shovel_level_3 = 1},
 	on_place = shovel_on_place
 })
 
@@ -258,13 +243,10 @@ minetest.register_tool("sb_tools:shovel_wolfram", {
 	wield_image = "shovel_wolfram.png^[transformR90",
 	tool_capabilities = {
 		full_punch_interval = 0.9,
-		max_drop_level=3,
+		max_drop_level=4,
 		groupcaps={
 			crumbly = {
-				times = {
-					 [1]=0.05,  [2]=0.05,  [3]=0.05,  [4]=0.05,  [5]=0.10,
-					 [6]=0.15,  [7]=0.15,  [8]=0.15,
-				},
+				times = mining.max_time(19.00, 4),
 				uses=1562,
 				maxlevel=4
 			},
@@ -272,7 +254,7 @@ minetest.register_tool("sb_tools:shovel_wolfram", {
 		damage_groups = {fleshy=5},
 	},
 	sound = {breaks = "tool_breaks"},
-	groups = {shovel = 1},
+	groups = {shovel = 1, shovel_level_1 = 1, shovel_level_2 = 1, shovel_level_3 = 1, shovel_level_4 = 1},
 	on_place = shovel_on_place
 })
 

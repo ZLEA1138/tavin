@@ -18,23 +18,28 @@ function mapgen.register_biomes()
 	
 	-- Tundra
 	minetest.register_biome({
-		name = "tundra_highland",
-		node_dust = "sb_core:dirt_grass_snow",
-		node_riverbed = "sb_core:sand",
+		name = "tavin_tundra_highland",
+		node_dust = "sb_core:snow",
+		node_top = "sb_core:snow_block",
+		depth_top = 1,
+		node_filler = "sb_core:packed_ice",
+		depth_filler = 3,
+		node_riverbed = "sb_core:gravel",
 		depth_riverbed = 2,
-		y_max = 31000,
+		y_max = 871,
 		y_min = 47,
 		heat_point = 0,
 		humidity_point = 40,
 	})
 	
 	minetest.register_biome({
-		name = "tundra",
-		node_top = "sb_core:dirt_grass_snow",
+		name = "tavin_tundra",
+		node_dust = "sb_core:snow",
+		node_top = "sb_core:snow_block",
 		depth_top = 1,
-		node_filler = "sb_core:dirt",
+		node_filler = "sb_core:packed_ice",
 		depth_filler = 3,
-		node_riverbed = "sb_core:sand",
+		node_riverbed = "sb_core:gravel",
 		depth_riverbed = 2,
 		vertical_blend = 4,
 		y_max = 46,
@@ -44,12 +49,13 @@ function mapgen.register_biomes()
 	})
 	
 	minetest.register_biome({
-		name = "tundra_beach",
-		node_top = "sb_core:dirt_grass_snow",
+		name = "tavin_tundra_beach",
+		node_dust = "sb_core:snow",
+		node_top = "sb_core:snow_block",
 		depth_top = 1,
-		node_filler = "sb_core:dirt",
+		node_filler = "sb_core:gravel",
 		depth_filler = 2,
-		node_riverbed = "sb_core:sand",
+		node_riverbed = "sb_core:gravel",
 		depth_riverbed = 2,
 		vertical_blend = 1,
 		y_max = 1,
@@ -59,12 +65,14 @@ function mapgen.register_biomes()
 	})
 	
 	minetest.register_biome({
-		name = "tundra_ocean",
-		node_top = "sb_core:sand",
+		name = "tavin_tundra_ocean",
+		node_top = "sb_core:gravel",
 		depth_top = 1,
-		node_filler = "sb_core:sand",
+		node_filler = "sb_core:gravel",
 		depth_filler = 3,
-		node_riverbed = "sb_core:sand",
+		node_water_top = "sb_core:ice",
+		depth_water_top = 1,
+		node_riverbed = "sb_core:gravel",
 		depth_riverbed = 2,
 		node_cave_liquid = "sb_core:water_source",
 		vertical_blend = 1,
@@ -77,21 +85,36 @@ function mapgen.register_biomes()
 	
 	-- Plains
 	minetest.register_biome({
-		name = "plains",
+		name = "tavin_plains_snowcap",
+		node_dust = "sb_core:snow",
+		node_top = "sb_core:dirt_grass_plains_snow",
+		depth_top = 1,
+		node_filler = "sb_core:dirt",
+		depth_filler = 3,
+		node_riverbed = "sb_core:sand",
+		depth_riverbed = 2,
+		y_max = 871,
+		y_min = 120,
+		heat_point = 50,
+		humidity_point = 35,
+	})
+	
+	minetest.register_biome({
+		name = "tavin_plains",
 		node_top = "sb_core:dirt_grass_plains",
 		depth_top = 1,
 		node_filler = "sb_core:dirt",
 		depth_filler = 3,
 		node_riverbed = "sb_core:sand",
 		depth_riverbed = 2,
-		y_max = 31000,
+		y_max = 119,
 		y_min = 6,
 		heat_point = 50,
 		humidity_point = 35,
 	})
 	
 	minetest.register_biome({
-		name = "plains_dunes",
+		name = "tavin_plains_dunes",
 		node_top = "sb_core:sand",
 		depth_top = 1,
 		node_filler = "sb_core:sand",
@@ -106,7 +129,7 @@ function mapgen.register_biomes()
 	})
 	
 	minetest.register_biome({
-		name = "plains_ocean",
+		name = "tavin_plains_ocean",
 		node_top = "sb_core:sand",
 		depth_top = 1,
 		node_filler = "sb_core:sand",
@@ -123,7 +146,7 @@ function mapgen.register_biomes()
 	
 	-- Prairie
 	minetest.register_biome({
-		name = "prairie",
+		name = "tavin_prairie",
 		node_top = "sb_core:dirt_grass_prairie",
 		depth_top = 1,
 		node_filler = "sb_core:dirt",
@@ -137,7 +160,7 @@ function mapgen.register_biomes()
 	})
 	
 	minetest.register_biome({
-		name = "prairie_ocean",
+		name = "tavin_prairie_ocean",
 		node_top = "sb_core:sand",
 		depth_top = 1,
 		node_filler = "sb_core:sand",
@@ -155,7 +178,7 @@ function mapgen.register_biomes()
 	
 	-- Fungusland
 	minetest.register_biome({
-		name = "fungusland",
+		name = "tavin_fungusland",
 		node_top = "sb_core:dirt_mycelium",
 		depth_top = 1,
 		node_filler = "sb_core:dirt",
@@ -169,7 +192,7 @@ function mapgen.register_biomes()
 	})
 	
 	minetest.register_biome({
-		name = "fungusland_ocean",
+		name = "tavin_fungusland_ocean",
 		node_top = "sb_core:sand",
 		depth_top = 1,
 		node_filler = "sb_core:sand",
@@ -187,21 +210,36 @@ function mapgen.register_biomes()
 	
 	-- Forest
 	minetest.register_biome({
-		name = "forest",
+		name = "tavin_forest_snowcap",
+		node_dust = "sb_core:snow",
+		node_top = "sb_core:dirt_grass_forest_snow",
+		depth_top = 1,
+		node_filler = "sb_core:dirt",
+		depth_filler = 3,
+		node_riverbed = "sb_core:sand",
+		depth_riverbed = 2,
+		y_max = 871,
+		y_min = 120,
+		heat_point = 45,
+		humidity_point = 70,
+	})
+	
+	minetest.register_biome({
+		name = "tavin_forest",
 		node_top = "sb_core:dirt_grass_forest",
 		depth_top = 1,
 		node_filler = "sb_core:dirt",
 		depth_filler = 3,
 		node_riverbed = "sb_core:sand",
 		depth_riverbed = 2,
-		y_max = 31000,
+		y_max = 119,
 		y_min = 6,
 		heat_point = 45,
 		humidity_point = 70,
 	})
 	
 	minetest.register_biome({
-		name = "forest_dunes",
+		name = "tavin_forest_dunes",
 		node_top = "sb_core:sand",
 		depth_top = 1,
 		node_filler = "sb_core:sand",
@@ -216,7 +254,7 @@ function mapgen.register_biomes()
 	})
 	
 	minetest.register_biome({
-		name = "forest_ocean",
+		name = "tavin_forest_ocean",
 		node_top = "sb_core:sand",
 		depth_top = 1,
 		node_filler = "sb_core:sand",
@@ -233,35 +271,50 @@ function mapgen.register_biomes()
 	
 	-- Taeda forest
 	minetest.register_biome({
-		name = "taeda_forest",
-		node_top = "sb_core:dirt_grass_snow",
+		name = "tavin_taeda_forest_snowcap",
+		node_dust = "sb_core:snow",
+		node_top = "sb_core:dirt_grass_forest_snow",
 		depth_top = 1,
 		node_filler = "sb_core:dirt",
 		depth_filler = 3,
 		node_riverbed = "sb_core:sand",
 		depth_riverbed = 2,
-		y_max = 31000,
-		y_min = 4,
+		y_max = 871,
+		y_min = 120,
 		heat_point = 25,
 		humidity_point = 70,
 	})
 	
 	minetest.register_biome({
-		name = "taeda_forest_shore",
+		name = "tavin_taeda_forest",
+		node_top = "sb_core:dirt_grass_forest",
+		depth_top = 1,
+		node_filler = "sb_core:dirt",
+		depth_filler = 3,
+		node_riverbed = "sb_core:sand",
+		depth_riverbed = 2,
+		y_max = 119,
+		y_min = 6,
+		heat_point = 25,
+		humidity_point = 70,
+	})
+	
+	minetest.register_biome({
+		name = "tavin_taeda_forest_shore",
 		node_top = "sb_core:sand",
 		depth_top = 1,
 		node_filler = "sb_core:sand",
 		depth_filler = 3,
 		node_riverbed = "sb_core:sand",
 		depth_riverbed = 2,
-		y_max = 3,
+		y_max = 5,
 		y_min = 4,
 		heat_point = 25,
 		humidity_point = 70,
 	})
 	
 	minetest.register_biome({
-		name = "taeda_forest_ocean",
+		name = "tavin_taeda_forest_ocean",
 		node_top = "sb_core:sand",
 		depth_top = 1,
 		node_filler = "sb_core:sand",
@@ -277,23 +330,23 @@ function mapgen.register_biomes()
 	})
 	
 	
-	-- Oki Forest
+	-- Oki forest
 	minetest.register_biome({
-		name = "oki_forest",
+		name = "tavin_oki_forest",
 		node_top = "sb_core:dirt_grass_forest",
 		depth_top = 1,
 		node_filler = "sb_core:dirt",
 		depth_filler = 3,
 		node_riverbed = "sb_core:sand",
 		depth_riverbed = 2,
-		y_max = 31000,
+		y_max = 30,
 		y_min = 6,
-		heat_point = 25,
+		heat_point = 40,
 		humidity_point = 70,
 	})
 	
 	minetest.register_biome({
-		name = "oki_forest_dunes",
+		name = "tavin_oki_forest_dunes",
 		node_top = "sb_core:sand",
 		depth_top = 1,
 		node_filler = "sb_core:sand",
@@ -303,12 +356,12 @@ function mapgen.register_biomes()
 		vertical_blend = 1,
 		y_max = 5,
 		y_min = 4,
-		heat_point = 25,
+		heat_point = 40,
 		humidity_point = 70,
 	})
 	
 	minetest.register_biome({
-		name = "oki_forest_ocean",
+		name = "tavin_oki_forest_ocean",
 		node_top = "sb_core:sand",
 		depth_top = 1,
 		node_filler = "sb_core:sand",
@@ -318,14 +371,14 @@ function mapgen.register_biomes()
 		node_cave_liquid = "sb_core:water_source",
 		y_max = 3,
 		y_min = -128,
-		heat_point = 25,
+		heat_point = 40,
 		humidity_point = 70,
 	})
 	
 	
 	-- Desert
 	minetest.register_biome({
-		name = "desert",
+		name = "tavin_desert",
 		node_top = "sb_core:sand_desert",
 		depth_top = 4,
 		node_filler = "sb_core:sandstone_desert",
@@ -333,14 +386,14 @@ function mapgen.register_biomes()
 		node_stone = "sb_core:stone",
 		node_riverbed = "sb_core:sand",
 		depth_riverbed = 2,
-		y_max = 31000,
+		y_max = 871,
 		y_min = 4,
 		heat_point = 92,
 		humidity_point = 16,
 	})
 	
 	minetest.register_biome({
-		name = "desert_ocean",
+		name = "tavin_desert_ocean",
 		node_top = "sb_core:sand",
 		depth_top = 1,
 		node_filler = "sb_core:sand",
@@ -359,21 +412,21 @@ function mapgen.register_biomes()
 	
 	-- Savanna
 	minetest.register_biome({
-		name = "savanna",
+		name = "tavin_savanna",
 		node_top = "sb_core:dirt_grass_savanna",
 		depth_top = 1,
 		node_filler = "sb_core:dirt",
 		depth_filler = 3,
 		node_riverbed = "sb_core:sand",
 		depth_riverbed = 2,
-		y_max = 31000,
+		y_max = 871,
 		y_min = 1,
 		heat_point = 89,
 		humidity_point = 42,
 	})
 	
 	minetest.register_biome({
-		name = "savanna_shore",
+		name = "tavin_savanna_shore",
 		node_top = "sb_core:sand",
 		depth_top = 1,
 		node_filler = "sb_core:sand",
@@ -387,7 +440,7 @@ function mapgen.register_biomes()
 	})
 	
 	minetest.register_biome({
-		name = "savanna_ocean",
+		name = "tavin_savanna_ocean",
 		node_top = "sb_core:sand",
 		depth_top = 1,
 		node_filler = "sb_core:sand",
@@ -405,7 +458,7 @@ function mapgen.register_biomes()
 	
 	-- Swamp
 	minetest.register_biome({
-		name = "swamp",
+		name = "tavin_swamp",
 		node_top = "sb_core:dirt_grass_swamp",
 		depth_top = 1,
 		node_filler = "sb_core:dirt",
@@ -419,7 +472,7 @@ function mapgen.register_biomes()
 	})
 	
 	minetest.register_biome({
-		name = "swamp_shore",
+		name = "tavin_swamp_shore",
 		node_top = "sb_core:sand",
 		depth_top = 1,
 		node_filler = "sb_core:sand",
@@ -433,7 +486,7 @@ function mapgen.register_biomes()
 	})
 	
 	minetest.register_biome({
-		name = "swamp_ocean",
+		name = "tavin_swamp_ocean",
 		node_top = "sb_core:sand",
 		depth_top = 1,
 		node_filler = "sb_core:sand",
@@ -449,23 +502,23 @@ function mapgen.register_biomes()
 	})
 	
 	
-	-- Scorched Wastes
+	-- Scorched wastes
 	minetest.register_biome({
-		name = "scorched_wastes",
+		name = "tavin_scorched_wastes",
 		node_top = "sb_core:dirt_scorched",
 		depth_top = 1,
 		node_filler = "sb_core:dirt_dry",
 		depth_filler = 3,
 		node_riverbed = "sb_core:sand",
 		depth_riverbed = 2,
-		y_max = 31000,
+		y_max = 871,
 		y_min = 1,
 		heat_point = 80,
 		humidity_point = 10,
 	})
 	
 	minetest.register_biome({
-		name = "scorched_wastes_shore",
+		name = "tavin_scorched_wastes_shore",
 		node_top = "sb_core:sand",
 		depth_top = 1,
 		node_filler = "sb_core:sand",
@@ -479,7 +532,7 @@ function mapgen.register_biomes()
 	})
 	
 	minetest.register_biome({
-		name = "scorched_wastes_ocean",
+		name = "tavin_scorched_wastes_ocean",
 		node_top = "sb_core:sand",
 		depth_top = 1,
 		node_filler = "sb_core:sand",
@@ -504,7 +557,7 @@ function mapgen.register_decorations()
 		deco_type = "schematic",
 		place_on = {"sb_core:dirt_grass_swamp"},
 		fill_ratio = 0.02,
-		biomes = {"swamp"},
+		biomes = {"tavin_swamp"},
 		place_offset_y = 1,
 		schematic = minetest.get_modpath("mapgen") .. "/schematics/marshtree_1.mts",
 		flags = "place_center_x, place_center_z",
@@ -518,7 +571,7 @@ function mapgen.register_decorations()
 		deco_type = "schematic",
 		place_on = {"sb_core:dirt_grass_forest"},
 		fill_ratio = 0.0025,
-		biomes = {"oki_forest"},
+		biomes = {"tavin_oki_forest"},
 		place_offset_y = 1,
 		schematic = minetest.get_modpath("mapgen") .. "/schematics/oki_tree_1.mts",
 		flags = "place_center_x, place_center_z",
@@ -532,7 +585,7 @@ function mapgen.register_decorations()
 		deco_type = "schematic",
 		place_on = {"sb_core:dirt_grass_savanna"},
 		fill_ratio = 0.004,
-		biomes = {"savanna"},
+		biomes = {"tavin_savanna"},
 		place_offset_y = 1,
 		schematic = minetest.get_modpath("mapgen") .. "/schematics/sana_tree_1.mts",
 		flags = "place_center_x, place_center_z",
@@ -546,7 +599,7 @@ function mapgen.register_decorations()
 		deco_type = "simple",
 		place_on = {"sb_core:dirt_scorched"},
 		fill_ratio = 0.005,
-		biomes = {"scorched_wastes"},
+		biomes = {"tavin_scorched_wastes"},
 		decoration = "sb_core:log_scorched",
 		height = 4,
 	        height_max = 6,
@@ -562,9 +615,9 @@ function mapgen.register_decorations()
 		y_min = 1,
 		y_max = 1,
 		biomes = {
-			"plains_ocean", "prairie_ocean", "fungusland_ocean",
-			"forest_ocean", "taeda_forest_ocean", "desert_ocean",
-			"savanna_ocean", "swamp_ocean"
+			"tavin_plains_ocean", "tavin_prairie_ocean", "tavin_fungusland_ocean",
+			"tavin_forest_ocean", "tavin_taeda_forest_ocean", "tavin_desert_ocean",
+			"tavin_savanna_ocean", "tavin_swamp_ocean"
 		},
 		place_offset_y = 1,
 		schematic = minetest.get_modpath("mapgen") .. "/schematics/suntree_1.mts",
@@ -579,7 +632,7 @@ function mapgen.register_decorations()
 		deco_type = "schematic",
 		place_on = {"sb_core:dirt_grass_snow"},
 		fill_ratio = 0.02,
-		biomes = {"taeda_forest"},
+		biomes = {"tavin_taeda_forest"},
 		place_offset_y = 1,
 		schematic = minetest.get_modpath("mapgen") .. "/schematics/taeda_tree_1.mts",
 		flags = "place_center_x, place_center_z",
@@ -590,7 +643,7 @@ function mapgen.register_decorations()
 		deco_type = "schematic",
 		place_on = {"sb_core:dirt_grass_snow"},
 		fill_ratio = 0.0001,
-		biomes = {"taeda_forest"},
+		biomes = {"tavin_taeda_forest"},
 		place_offset_y = 1,
 		schematic = minetest.get_modpath("mapgen") .. "/schematics/taeda_tree_2.mts",
 		flags = "place_center_x, place_center_z",
@@ -601,7 +654,7 @@ function mapgen.register_decorations()
 		deco_type = "schematic",
 		place_on = {"sb_core:dirt_grass_snow"},
 		fill_ratio = 0.005,
-		biomes = {"taeda_forest"},
+		biomes = {"tavin_taeda_forest"},
 		place_offset_y = 1,
 		schematic = minetest.get_modpath("mapgen") .. "/schematics/taeda_tree_3.mts",
 		flags = "place_center_x, place_center_z",
@@ -614,7 +667,7 @@ function mapgen.register_decorations()
 		deco_type = "schematic",
 		place_on = {"sb_core:dirt_grass_forest"},
 		fill_ratio = 0.02,
-		biomes = {"forest"},
+		biomes = {"tavin_forest"},
 		place_offset_y = 1,
 		schematic = minetest.get_modpath("mapgen") .. "/schematics/wungu_tree_1.mts",
 		flags = "place_center_x, place_center_z",
@@ -625,7 +678,7 @@ function mapgen.register_decorations()
 		deco_type = "schematic",
 		place_on = {"sb_core:dirt_grass_forest"},
 		fill_ratio = 0.005,
-		biomes = {"forest"},
+		biomes = {"tavin_forest"},
 		place_offset_y = 1,
 		schematic = minetest.get_modpath("mapgen") .. "/schematics/wungu_tree_2.mts",
 		flags = "place_center_x, place_center_z",
