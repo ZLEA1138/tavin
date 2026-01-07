@@ -205,6 +205,8 @@ minetest.register_node("sb_core:dirt", {
     sounds = sounds.node_sound_dirt_defaults(),
 })
 
+core.register_alias("dirt", "sb_core:dirt")
+
 -- DRY DIRT
 minetest.register_node("sb_core:dirt_dry", {
 	description = "Dry Dirt",
