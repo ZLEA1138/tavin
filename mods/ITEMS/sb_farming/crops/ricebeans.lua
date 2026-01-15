@@ -9,12 +9,16 @@ minetest.register_craftitem("sb_farming:seed_ricebean", {
 	end
 })
 
+core.register_alias("seed_ricebean", "sb_farming:seed_ricebean")
+
 -- Ricebeans
 minetest.register_craftitem("sb_farming:ricebeans", {
 	description = "Ricebeans",
 	inventory_image = "ricebeans.png",
 	groups = {seed = 2, food_ricebean = 1, flammable = 2, compostability = 65},
 })
+
+core.register_alias("ricebeans", "sb_farming:ricebeans")
 
 -- dry ricebean seed to give edible ricebean
 minetest.register_craft({

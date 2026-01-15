@@ -97,6 +97,8 @@ minetest.register_tool("sb_tools:shovel_wood", {
 	on_place = shovel_on_place
 })
 
+core.register_alias("shovel_wood", "sb_tools:shovel_wood")
+
 core.register_craft({
     output = "sb_tools:shovel_wood",
     recipe = {
@@ -134,6 +136,8 @@ minetest.register_tool("sb_tools:shovel_stone", {
 	on_place = shovel_on_place
 })
 
+core.register_alias("shovel_stone", "sb_tools:shovel_stone")
+
 core.register_craft({
     output = "sb_tools:shovel_stone",
     recipe = {
@@ -164,6 +168,8 @@ minetest.register_tool("sb_tools:shovel_aereus", {
 	groups = {shovel = 1, shovel_level_1 = 1, shovel_level_2 = 1, shovel_level_3 = 1},
 	on_place = shovel_on_place
 })
+
+core.register_alias("shovel_aereus", "sb_tools:shovel_aereus")
 
 core.register_craft({
     output = "sb_tools:shovel_aereus",
@@ -196,6 +202,8 @@ minetest.register_tool("sb_tools:shovel_ferrum", {
 	on_place = shovel_on_place
 })
 
+core.register_alias("shovel_ferrum", "sb_tools:shovel_ferrum")
+
 core.register_craft({
     output = "sb_tools:shovel_ferrum",
     recipe = {
@@ -227,6 +235,8 @@ minetest.register_tool("sb_tools:shovel_aurem", {
 	on_place = shovel_on_place
 })
 
+core.register_alias("shovel_aurem", "sb_tools:shovel_aurem")
+
 core.register_craft({
     output = "sb_tools:shovel_aurem",
     recipe = {
@@ -257,6 +267,8 @@ minetest.register_tool("sb_tools:shovel_wolfram", {
 	groups = {shovel = 1, shovel_level_1 = 1, shovel_level_2 = 1, shovel_level_3 = 1, shovel_level_4 = 1},
 	on_place = shovel_on_place
 })
+
+core.register_alias("shovel_wolfram", "sb_tools:shovel_wolfram")
 
 core.register_craft({
     output = "sb_tools:shovel_wolfram",

@@ -10,6 +10,8 @@ minetest.register_craftitem("sb_farming:pringshoot", {
 	end
 })
 
+core.register_alias("pringshoot", "sb_farming:pringshoot")
+
 sb_farming.add_eatable("sb_farming:pringshoot", 4)
 
 -- Pring Shoot Crop

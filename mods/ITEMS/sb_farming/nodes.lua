@@ -14,3 +14,5 @@ minetest.register_node("sb_farming:hay_bale", {
 	},
 	sounds = sounds.node_sound_leaves_defaults(),
 })
+
+core.register_alias("sb_farming", "sb_farming:hay_bale")

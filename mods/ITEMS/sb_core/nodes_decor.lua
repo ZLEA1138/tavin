@@ -29,3 +29,5 @@ functions.register_pane("sb_core:bars_ferrum", {
 		{"sb_minerals:ferrum_ingot", "sb_minerals:ferrum_ingot", "sb_minerals:ferrum_ingot"}
 	}
 })
+
+core.register_alias("bars_ferrum", "sb_core:bars_ferrum")

@@ -43,7 +43,7 @@ function sb_carpets.register(material, def)
 		node.tiles = table.copy(material_def.tiles)
 	end
 
-	local name = "sb_carpets:" .. (node.name or material:gsub(":", "_"))
+	local name = "sb_carpets:" .. (node.name or material:gsub("sb_cloth:", ""))
 	node.name = nil
 
 	minetest.register_node(":" .. name, node)

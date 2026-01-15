@@ -24,3 +24,20 @@ if minetest.get_modpath("sb_cloth") then
 		sb_carpets.register(node.name, {description=node.description})
 	end
 end
+
+core.register_alias("carpet_white", "sb_carpets:white")
+core.register_alias("carpet_light_gray", "sb_carpets:light_gray")
+core.register_alias("carpet_gray", "sb_carpets:gray")
+core.register_alias("carpet_black", "sb_carpets:black")
+core.register_alias("carpet_brown", "sb_carpets:brown")
+core.register_alias("carpet_red", "sb_carpets:red")
+core.register_alias("carpet_orange", "sb_carpets:orange")
+core.register_alias("carpet_yellow", "sb_carpets:yellow")
+core.register_alias("carpet_light_green", "sb_carpets:light_green")
+core.register_alias("carpet_green", "sb_carpets:green")
+core.register_alias("carpet_cyan", "sb_carpets:cyan")
+core.register_alias("carpet_light_blue", "sb_carpets:light_blue")
+core.register_alias("carpet_blue", "sb_carpets:blue")
+core.register_alias("carpet_purple", "sb_carpets:purple")
+core.register_alias("carpet_magenta", "sb_carpets:magenta")
+core.register_alias("carpet_pink", "sb_carpets:pink")

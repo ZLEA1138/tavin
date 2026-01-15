@@ -49,9 +49,11 @@ minetest.register_node("sb_core:water_source", {
 		cools_lava = 1
 	},
 	sounds = sounds.node_sound_water_defaults(),
-  })
+})
 
-  minetest.register_node("sb_core:water_flowing", {
+core.register_alias("water_source", "sb_core:water_source")
+
+minetest.register_node("sb_core:water_flowing", {
     description = "Water Flowing",
 	drawtype = "flowingliquid",
 	waving = 3,
@@ -103,6 +105,8 @@ minetest.register_node("sb_core:water_source", {
 	sounds = sounds.node_sound_water_defaults(),
 })
 
+core.register_alias("water_flowing", "sb_core:water_flowing")
+
 -- Ice
 minetest.register_node("sb_core:ice", {
 	description = "Ice",
@@ -122,6 +126,8 @@ minetest.register_node("sb_core:ice", {
 	sounds = sounds.node_sound_ice_defaults(),
 })
 
+core.register_alias("ice", "sb_core:ice")
+
 -- Packed Ice
 minetest.register_node("sb_core:packed_ice", {
 	description = "Packed Ice",
@@ -140,6 +146,8 @@ minetest.register_node("sb_core:packed_ice", {
 	},
 	sounds = sounds.node_sound_ice_defaults(),
 })
+
+core.register_alias("packed_ice", "sb_core:packed_ice")
 
 core.register_craft({
     output = "sb_core:packed_ice",
@@ -195,6 +203,8 @@ minetest.register_node("sb_core:snow", {
 	after_destruct = functions.thaw_grass
 })
 
+core.register_alias("snow", "sb_core:snow")
+
 -- Snow Block
 minetest.register_node("sb_core:snow_block", {
 	description = "Snow Block",
@@ -221,6 +231,8 @@ minetest.register_node("sb_core:snow_block", {
 	on_construct = functions.freeze_grass,
 	after_destruct = functions.thaw_grass
 })
+
+core.register_alias("snow_block", "sb_core:snow_block")
 
 -- Lava
 minetest.register_node("sb_core:lava_source", {
@@ -270,6 +282,8 @@ minetest.register_node("sb_core:lava_source", {
 		igniter = 1
 	},
 })
+
+core.register_alias("lava_source", "sb_core:lava_source")
 
 minetest.register_node("sb_core:lava_flowing", {
 	description = "Flowing Lava",
@@ -321,3 +335,5 @@ minetest.register_node("sb_core:lava_flowing", {
 		not_in_creative_inventory = 1
 	},
 })
+
+core.register_alias("lava_flowing", "sb_core:lava_flowing")

@@ -7,25 +7,35 @@ minetest.register_craftitem("sb_minerals:adamas_crystal_blue", {
 	inventory_image = "adamas_crystal_blue.png"
 })
 
+core.register_alias("adamas_crystal_blue", "sb_minerals:adamas_crystal_blue")
+
 minetest.register_craftitem("sb_minerals:adamas_crystal_green", {
 	description = "Green Adamas Crystal",
 	inventory_image = "adamas_crystal_green.png"
 })
+
+core.register_alias("adamas_crystal_green", "sb_minerals:adamas_crystal_green")
 
 minetest.register_craftitem("sb_minerals:adamas_crystal_purple", {
 	description = "Purple Adamas Crystal",
 	inventory_image = "adamas_crystal_purple.png"
 })
 
+core.register_alias("adamas_crystal_purple", "sb_minerals:adamas_crystal_purple")
+
 minetest.register_craftitem("sb_minerals:adamas_crystal_red", {
 	description = "Red Adamas Crystal",
 	inventory_image = "adamas_crystal_red.png"
 })
 
+core.register_alias("adamas_crystal_red", "sb_minerals:adamas_crystal_red")
+
 minetest.register_craftitem("sb_minerals:adamas_crystal_yellow", {
 	description = "Yellow Adamas Crystal",
 	inventory_image = "adamas_crystal_yellow.png"
 })
+
+core.register_alias("adamas_crystal_yellow", "sb_minerals:adamas_crystal_yellow")
 
 core.register_craft({
     type = "cooking",
@@ -39,6 +49,8 @@ minetest.register_craftitem("sb_minerals:aereus_ingot", {
 	description = "Aereus Ingot",
 	inventory_image = "aereus_ingot.png"
 })
+
+core.register_alias("aereus_ingot", "sb_minerals:aereus_ingot")
 
 core.register_craft({
     type = "shapeless",
@@ -57,15 +69,21 @@ minetest.register_craftitem("sb_minerals:aurem_raw", {
 	inventory_image = "aurem_raw.png"
 })
 
+core.register_alias("aurem_raw", "sb_minerals:aurem_raw")
+
 minetest.register_craftitem("sb_minerals:aurem_ingot", {
 	description = "Aurem Ingot",
 	inventory_image = "aurem_ingot.png"
 })
 
+core.register_alias("aurem_ingot", "sb_minerals:aurem_ingot")
+
 minetest.register_craftitem("sb_minerals:aurem_nugget", {
 	description = "Aurem Nugget",
 	inventory_image = "aurem_nugget.png"
 })
+
+core.register_alias("aurem_nugget", "sb_minerals:aurem_nugget")
 
 core.register_craft({
     type = "cooking",
@@ -104,6 +122,8 @@ minetest.register_craftitem("sb_minerals:coal", {
 	groups = {coal = 1, flammable = 1}
 })
 
+core.register_alias("coal", "sb_minerals:coal")
+
 core.register_craft({
     type = "cooking",
     output = "sb_minerals:coal",
@@ -123,10 +143,14 @@ minetest.register_craftitem("sb_minerals:cuprum_raw", {
 	inventory_image = "cuprum_raw.png"
 })
 
+core.register_alias("cuprum_raw", "sb_minerals:cuprum_raw")
+
 minetest.register_craftitem("sb_minerals:cuprum_ingot", {
 	description = "Cuprum Ingot",
 	inventory_image = "cuprum_ingot.png"
 })
+
+core.register_alias("cuprum_ingot", "sb_minerals:cuprum_ingot")
 
 core.register_craft({
     type = "cooking",
@@ -148,15 +172,21 @@ minetest.register_craftitem("sb_minerals:ferrum_raw", {
 	inventory_image = "ferrum_raw.png"
 })
 
+core.register_alias("ferrum_raw", "sb_minerals:ferrum_raw")
+
 minetest.register_craftitem("sb_minerals:ferrum_ingot", {
 	description = "Ferrum Ingot",
 	inventory_image = "ferrum_ingot.png"
 })
 
+core.register_alias("ferrum_ingot", "sb_minerals:ferrum_ingot")
+
 minetest.register_craftitem("sb_minerals:ferrum_nugget", {
 	description = "Ferrum Nugget",
 	inventory_image = "ferrum_nugget.png"
 })
+
+core.register_alias("ferrum_nugget", "sb_minerals:ferrum_nugget")
 
 core.register_craft({
     type = "cooking",
@@ -194,10 +224,14 @@ minetest.register_craftitem("sb_minerals:stannum_raw", {
 	inventory_image = "stannum_raw.png"
 })
 
+core.register_alias("stannum_raw", "sb_minerals:stannum_raw")
+
 minetest.register_craftitem("sb_minerals:stannum_ingot", {
 	description = "Stannum Ingot",
 	inventory_image = "stannum_ingot.png"
 })
+
+core.register_alias("stannum_ingot", "sb_minerals:stannum_ingot")
 
 core.register_craft({
     type = "cooking",
@@ -219,10 +253,14 @@ minetest.register_craftitem("sb_minerals:uran_raw", {
 	inventory_image = "uran_raw.png"
 })
 
+core.register_alias("uran_raw", "sb_minerals:uran_raw")
+
 minetest.register_craftitem("sb_minerals:uran_ingot", {
 	description = "Uran Ingot",
 	inventory_image = "uran_ingot.png"
 })
+
+core.register_alias("uran_ingot", "sb_minerals:uran_ingot")
 
 core.register_craft({
     type = "cooking",
@@ -244,10 +282,14 @@ minetest.register_craftitem("sb_minerals:wolfram_raw", {
 	inventory_image = "wolfram_raw.png"
 })
 
+core.register_alias("wolfram_raw", "sb_minerals:wolfram_raw")
+
 minetest.register_craftitem("sb_minerals:wolfram_ingot", {
 	description = "Wolfram Ingot",
 	inventory_image = "wolfram_ingot.png"
 })
+
+core.register_alias("wolfram_ingot", "sb_minerals:wolfram_ingot")
 
 core.register_craft({
     type = "cooking",

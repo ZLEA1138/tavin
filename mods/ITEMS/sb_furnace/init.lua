@@ -405,6 +405,8 @@ minetest.register_node("sb_furnace:furnace", apply_logger({
 	allow_metadata_inventory_take = allow_metadata_inventory_take,
 }))
 
+core.register_alias("furnace", "sb_furnace:furnace")
+
 minetest.register_node("sb_furnace:furnace_active", apply_logger({
 	description = "Furnace",
 	tiles = {

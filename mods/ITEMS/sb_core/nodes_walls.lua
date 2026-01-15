@@ -18,6 +18,8 @@ functions.register_wall("sb_core:wall_cobble",
 	sounds.node_sound_stone_defaults()
 )
 
+core.register_alias("wall_cobble", "sb_core:wall_cobble")
+
 -- Mossy Cobblestone Wall
 functions.register_wall("sb_core:wall_cobble_mossy",
 	"Mossy Cobblestone Wall",
@@ -34,6 +36,8 @@ functions.register_wall("sb_core:wall_cobble_mossy",
 	"sb_core:cobble_mossy",
 	sounds.node_sound_stone_defaults()
 )
+
+core.register_alias("wall_cobble_mossy", "sb_core:wall_cobble_mossy")
 
 -- Stone Brick Wall
 functions.register_wall("sb_core:wall_stone_brick",
@@ -52,6 +56,8 @@ functions.register_wall("sb_core:wall_stone_brick",
 	sounds.node_sound_stone_defaults()
 )
 
+core.register_alias("wall_stone_brick", "sb_core:wall_stone_brick")
+
 -- Mossy Stone Brick Wall
 functions.register_wall("sb_core:wall_stone_brick_mossy",
 	"Mossy Stone Brick Wall",
@@ -68,6 +74,8 @@ functions.register_wall("sb_core:wall_stone_brick_mossy",
 	"sb_core:stone_bricks_mossy",
 	sounds.node_sound_stone_defaults()
 )
+
+core.register_alias("wall_stone_brick_mossy", "sb_core:wall_stone_brick_mossy")
 
 -- Brick Wall
 functions.register_wall("sb_core:wall_brick",
@@ -86,6 +94,8 @@ functions.register_wall("sb_core:wall_brick",
 	sounds.node_sound_stone_defaults()
 )
 
+core.register_alias("wall_brick", "sb_core:wall_brick")
+
 -- Mud Brick Wall
 functions.register_wall("sb_core:wall_mud_brick",
 	"Mud Brick Wall",
@@ -102,6 +112,8 @@ functions.register_wall("sb_core:wall_mud_brick",
 	"sb_core:mud_bricks",
 	sounds.node_sound_stone_defaults()
 )
+
+core.register_alias("wall_mud_brick", "sb_core:wall_mud_brick")
 
 -- Sandstone Wall
 functions.register_wall("sb_core:wall_sandstone",
@@ -120,6 +132,8 @@ functions.register_wall("sb_core:wall_sandstone",
 	sounds.node_sound_stone_defaults()
 )
 
+core.register_alias("wall_sandstone", "sb_core:wall_sandstone")
+
 -- Desert Sandstone Wall
 functions.register_wall("sb_core:wall_sandstone_desert",
 	"Desert Sandstone Wall",
@@ -136,6 +150,8 @@ functions.register_wall("sb_core:wall_sandstone_desert",
 	"sb_core:sandstone_desert",
 	sounds.node_sound_stone_defaults()
 )
+
+core.register_alias("wall_sandstone_desert", "sb_core:wall_sandstone_desert")
 
 -- Sandstone Brick Wall
 functions.register_wall("sb_core:wall_sandstone_bricks",
@@ -154,6 +170,8 @@ functions.register_wall("sb_core:wall_sandstone_bricks",
 	sounds.node_sound_stone_defaults()
 )
 
+core.register_alias("wall_sandstone_bricks", "sb_core:wall_sandstone_bricks")
+
 -- Desert Sandstone Brick Wall
 functions.register_wall("sb_core:wall_sandstone_bricks_desert",
 	"Desert Sandstone Brick Wall",
@@ -170,3 +188,5 @@ functions.register_wall("sb_core:wall_sandstone_bricks_desert",
 	"sb_core:sandstone_bricks_desert",
 	sounds.node_sound_stone_defaults()
 )
+
+core.register_alias("wall_sandstone_bricks_desert", "sb_core:wall_sandstone_bricks_desert")

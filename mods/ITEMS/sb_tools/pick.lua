@@ -21,6 +21,8 @@ minetest.register_tool("sb_tools:pick_wood", {
 	groups = {pickaxe = 1, pickaxe_level_1 = 1, flammable = 2}
 })
 
+core.register_alias("pick_wood", "sb_tools:pick_wood")
+
 core.register_craft({
     output = "sb_tools:pick_wood",
     recipe = {
@@ -56,6 +58,8 @@ minetest.register_tool("sb_tools:pick_stone", {
 	groups = {pickaxe = 1, pickaxe_level_1 = 1, pickaxe_level_2 = 1}
 })
 
+core.register_alias("pick_stone", "sb_tools:pick_stone")
+
 core.register_craft({
     output = "sb_tools:pick_stone",
     recipe = {
@@ -84,6 +88,8 @@ minetest.register_tool("sb_tools:pick_aereus", {
 	sound = {breaks = "tool_breaks"},
 	groups = {pickaxe = 1, pickaxe_level_1 = 1, pickaxe_level_2 = 1, pickaxe_level_3 = 1}
 })
+
+core.register_alias("pick_aereus", "sb_tools:pick_aereus")
 
 core.register_craft({
     output = "sb_tools:pick_aereus",
@@ -114,6 +120,8 @@ minetest.register_tool("sb_tools:pick_ferrum", {
 	groups = {pickaxe = 1, pickaxe_level_1 = 1, pickaxe_level_2 = 1, pickaxe_level_3 = 1}
 })
 
+core.register_alias("pick_ferrum", "sb_tools:pick_ferrum")
+
 core.register_craft({
     output = "sb_tools:pick_ferrum",
     recipe = {
@@ -143,6 +151,8 @@ minetest.register_tool("sb_tools:pick_aurem", {
 	groups = {pickaxe = 1, pickaxe_level_1 = 1, pickaxe_level_2 = 1, pickaxe_level_3 = 1}
 })
 
+core.register_alias("pick_aurem", "sb_tools:pick_aurem")
+
 core.register_craft({
     output = "sb_tools:pick_aurem",
     recipe = {
@@ -171,6 +181,8 @@ minetest.register_tool("sb_tools:pick_wolfram", {
 	sound = {breaks = "tool_breaks"},
 	groups = {pickaxe = 1, pickaxe_level_1 = 1, pickaxe_level_2 = 1, pickaxe_level_3 = 1, pickaxe_level_4 = 1}
 })
+
+core.register_alias("pick_wolfram", "sb_tools:pick_wolfram")
 
 core.register_craft({
     output = "sb_tools:pick_wolfram",

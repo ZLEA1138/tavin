@@ -309,6 +309,8 @@ sb_core.chest.register_chest("sb_core:chest", {
 	},
 })
 
+core.register_alias("chest", "sb_core:chest")
+
 sb_core.chest.register_chest("sb_core:chest_locked", {
 	description = "Locked Chest",
 	tiles = {
@@ -331,6 +333,8 @@ sb_core.chest.register_chest("sb_core:chest_locked", {
 	},
 	protected = true,
 })
+
+core.register_alias("chest_locked", "sb_core:chest_locked")
 
 minetest.register_craft({
 	output = "sb_core:chest",

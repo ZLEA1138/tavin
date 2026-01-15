@@ -498,6 +498,8 @@ sb_doors.register("door_wood_marshtree", {
 		}
 })
 
+core.register_alias("door_wood_marshtree", "sb_doors:door_wood_marshtree")
+
 minetest.register_craft({
 	type = "fuel",
 	recipe = "sb_doors:door_wood_marshtree",
@@ -526,6 +528,8 @@ sb_doors.register("door_wood_oki", {
 			{"sb_core:planks_oki", "sb_core:planks_oki"},
 		}
 })
+
+core.register_alias("door_wood_oki", "sb_doors:door_wood_oki")
 
 minetest.register_craft({
 	type = "fuel",
@@ -556,6 +560,8 @@ sb_doors.register("door_wood_sana", {
 		}
 })
 
+core.register_alias("door_wood_sana", "sb_doors:door_wood_sana")
+
 minetest.register_craft({
 	type = "fuel",
 	recipe = "sb_doors:door_wood_sana",
@@ -584,6 +590,8 @@ sb_doors.register("door_wood_suntree", {
 			{"sb_core:planks_suntree", "sb_core:planks_suntree"},
 		}
 })
+
+core.register_alias("door_wood_suntree", "sb_doors:door_wood_suntree")
 
 minetest.register_craft({
 	type = "fuel",
@@ -614,6 +622,8 @@ sb_doors.register("door_wood_taeda", {
 		}
 })
 
+core.register_alias("door_wood_taeda", "sb_doors:door_wood_taeda")
+
 minetest.register_craft({
 	type = "fuel",
 	recipe = "sb_doors:door_wood_taeda",
@@ -642,6 +652,8 @@ sb_doors.register("door_wood_wungu", {
 			{"sb_core:planks_wungu", "sb_core:planks_wungu"},
 		}
 })
+
+core.register_alias("door_wood_wungu", "sb_doors:door_wood_wungu")
 
 minetest.register_craft({
 	type = "fuel",
@@ -675,6 +687,8 @@ sb_doors.register("door_ferrum", {
 		}
 	}
 )
+
+core.register_alias("door_ferrum", "sb_doors:door_ferrum")
 
 ----trapdoor----
 
@@ -862,6 +876,8 @@ sb_doors.register_trapdoor("sb_doors:trapdoor_wood_marshtree", {
 	},
 })
 
+core.register_alias("trapdoor_wood_marshtree", "sb_doors:trapdoor_wood_marshtree")
+
 minetest.register_craft({
 	output = "sb_doors:trapdoor_wood_marshtree 2",
 	recipe = {
@@ -895,6 +911,8 @@ sb_doors.register_trapdoor("sb_doors:trapdoor_wood_oki", {
 		door = 1
 	},
 })
+
+core.register_alias("trapdoor_wood_oki", "sb_doors:trapdoor_wood_oki")
 
 minetest.register_craft({
 	output = "sb_doors:trapdoor_wood_oki 2",
@@ -930,6 +948,8 @@ sb_doors.register_trapdoor("sb_doors:trapdoor_wood_sana", {
 	},
 })
 
+core.register_alias("trapdoor_wood_sana", "sb_doors:trapdoor_wood_sana")
+
 minetest.register_craft({
 	output = "sb_doors:trapdoor_wood_sana 2",
 	recipe = {
@@ -963,6 +983,8 @@ sb_doors.register_trapdoor("sb_doors:trapdoor_wood_suntree", {
 		door = 1
 	},
 })
+
+core.register_alias("trapdoor_wood_suntree", "sb_doors:trapdoor_wood_suntree")
 
 minetest.register_craft({
 	output = "sb_doors:trapdoor_wood_suntree 2",
@@ -998,6 +1020,8 @@ sb_doors.register_trapdoor("sb_doors:trapdoor_wood_taeda", {
 	},
 })
 
+core.register_alias("trapdoor_wood_taeda", "sb_doors:trapdoor_wood_taeda")
+
 minetest.register_craft({
 	output = "sb_doors:trapdoor_wood_taeda 2",
 	recipe = {
@@ -1031,6 +1055,8 @@ sb_doors.register_trapdoor("sb_doors:trapdoor_wood_wungu", {
 		door = 1
 	},
 })
+
+core.register_alias("trapdoor_wood_wungu", "sb_doors:trapdoor_wood_wungu")
 
 minetest.register_craft({
 	output = "sb_doors:trapdoor_wood_wungu 2",
@@ -1068,6 +1094,8 @@ sb_doors.register_trapdoor("sb_doors:trapdoor_ferrum", {
 		door = 1
 	},
 })
+
+core.register_alias("trapdoor_ferrum", "sb_doors:trapdoor_ferrum")
 
 minetest.register_craft({
 	output = "sb_doors:trapdoor_ferrum",

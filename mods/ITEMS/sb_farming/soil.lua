@@ -38,6 +38,8 @@ minetest.register_node("sb_farming:soil", {
 	}
 })
 
+core.register_alias("soil", "sb_farming:soil")
+
 -- wet soil
 
 minetest.register_node("sb_farming:soil_wet", {

@@ -84,6 +84,8 @@ minetest.register_node("sb_torch:torch", {
 	on_rotate = false
 })
 
+core.register_alias("torch", "sb_torch:torch")
+
 minetest.register_node("sb_torch:torch_wall", {
 	drawtype = "mesh",
 	mesh = "torch_wall.obj",

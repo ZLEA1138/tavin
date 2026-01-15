@@ -26,6 +26,8 @@ minetest.register_node("sb_minerals:stone_ore_adamas", {
 	sounds = {},
 })
 
+core.register_alias("stone_ore_adamas", "sb_minerals:stone_ore_adamas")
+
 -- AUREM
 minetest.register_node("sb_minerals:stone_ore_aurem", {
 	description = "Aurem Ore",
@@ -49,6 +51,8 @@ minetest.register_node("sb_minerals:stone_ore_aurem", {
     },
 	sounds = {},
 })
+
+core.register_alias("stone_ore_aurem", "sb_minerals:stone_ore_aurem")
 
 -- COAL
 minetest.register_node("sb_minerals:stone_ore_coal", {
@@ -74,6 +78,8 @@ minetest.register_node("sb_minerals:stone_ore_coal", {
 	sounds = {},
 })
 
+core.register_alias("stone_ore_coal", "sb_minerals:stone_ore_coal")
+
 -- CUPRUM
 minetest.register_node("sb_minerals:stone_ore_cuprum", {
 	description = "Cuprum Ore",
@@ -97,6 +103,8 @@ minetest.register_node("sb_minerals:stone_ore_cuprum", {
     },
 	sounds = {},
 })
+
+core.register_alias("stone_ore_cuprum", "sb_minerals:stone_ore_cuprum")
 
 -- FERRUM
 minetest.register_node("sb_minerals:stone_ore_ferrum", {
@@ -122,6 +130,8 @@ minetest.register_node("sb_minerals:stone_ore_ferrum", {
 	sounds = {},
 })
 
+core.register_alias("stone_ore_ferrum", "sb_minerals:stone_ore_ferrum")
+
 -- STANNUM
 minetest.register_node("sb_minerals:stone_ore_stannum", {
 	description = "Stannum Ore",
@@ -145,6 +155,8 @@ minetest.register_node("sb_minerals:stone_ore_stannum", {
     },
 	sounds = {},
 })
+
+core.register_alias("stone_ore_stannum", "sb_minerals:stone_ore_stannum")
 
 -- URAN
 minetest.register_node("sb_minerals:stone_ore_uran", {
@@ -170,6 +182,8 @@ minetest.register_node("sb_minerals:stone_ore_uran", {
 	sounds = {},
 })
 
+core.register_alias("stone_ore_uran", "sb_minerals:stone_ore_uran")
+
 -- WOLFRAM
 minetest.register_node("sb_minerals:stone_ore_wolfram", {
 	description = "Wolfram Ore",
@@ -193,3 +207,5 @@ minetest.register_node("sb_minerals:stone_ore_wolfram", {
     },
 	sounds = {},
 })
+
+core.register_alias("stone_ore_wolfram", "sb_minerals:stone_ore_wolfram")

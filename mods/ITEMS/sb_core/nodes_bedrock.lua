@@ -14,13 +14,15 @@ minetest.register_node("sb_core:bedrock", {
 	can_dig = function() return false end,
 	diggable = false,
 	groups = {
-		immortal=1,
-		unbreakable=1,
-		not_in_creative_inventory=1
+		immortal = 1,
+		unbreakable = 1,
+		not_in_creative_inventory = 1
 	},
 	drop = "",
 	sounds = sounds.node_sound_stone_defaults(),
 })
+
+core.register_alias("bedrock", "sb_core:bedrock")
 
 -- Based on bedrock2 by Wuzzy
 minetest.register_on_generated(function(minp, maxp)

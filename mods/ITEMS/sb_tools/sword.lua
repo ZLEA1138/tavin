@@ -21,6 +21,8 @@ minetest.register_tool("sb_tools:sword_wood", {
 	groups = {sword = 1, sword_level_1 = 1, flammable = 2}
 })
 
+core.register_alias("sword_wood", "sb_tools:sword_wood")
+
 core.register_craft({
     output = "sb_tools:sword_wood",
     recipe = {
@@ -56,6 +58,8 @@ minetest.register_tool("sb_tools:sword_stone", {
 	groups = {sword = 1, sword_level_1 = 1, sword_level_2 = 1}
 })
 
+core.register_alias("sword_stone", "sb_tools:sword_stone")
+
 core.register_craft({
     output = "sb_tools:sword_stone",
     recipe = {
@@ -84,6 +88,8 @@ minetest.register_tool("sb_tools:sword_aereus", {
 	sound = {breaks = "tool_breaks"},
 	groups = {sword = 1, sword_level_1 = 1, sword_level_2 = 1, sword_level_3 = 1}
 })
+
+core.register_alias("sword_aereus", "sb_tools:sword_aereus")
 
 core.register_craft({
     output = "sb_tools:sword_aereus",
@@ -114,6 +120,8 @@ minetest.register_tool("sb_tools:sword_ferrum", {
 	groups = {sword = 1, sword_level_1 = 1, sword_level_2 = 1, sword_level_3 = 1}
 })
 
+core.register_alias("sword_ferrum", "sb_tools:sword_ferrum")
+
 core.register_craft({
     output = "sb_tools:sword_ferrum",
     recipe = {
@@ -143,6 +151,8 @@ minetest.register_tool("sb_tools:sword_aurem", {
 	groups = {sword = 1, sword_level_1 = 1, sword_level_2 = 1, sword_level_3 = 1}
 })
 
+core.register_alias("sword_aurem", "sb_tools:sword_aurem")
+
 core.register_craft({
     output = "sb_tools:sword_aurem",
     recipe = {
@@ -171,6 +181,8 @@ minetest.register_tool("sb_tools:sword_wolfram", {
 	sound = {breaks = "tool_breaks"},
 	groups = {sword = 1, sword_level_1 = 1, sword_level_2 = 1, sword_level_3 = 1, sword_level_4 = 1}
 })
+
+core.register_alias("sword_wolfram", "sb_tools:sword_wolfram")
 
 core.register_craft({
     output = "sb_tools:sword_wolfram",

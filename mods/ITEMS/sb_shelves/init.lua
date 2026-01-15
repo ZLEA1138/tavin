@@ -98,3 +98,5 @@ local bookshelf_def = {
 }
 functions.set_inventory_action_loggers(bookshelf_def, "bookshelf")
 minetest.register_node("sb_shelves:bookshelf", bookshelf_def)
+
+core.register_alias("bookshelf", "sb_shelves:bookshelf")

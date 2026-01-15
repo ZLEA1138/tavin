@@ -58,8 +58,10 @@ minetest.register_craftitem("sb_keys:skeleton_keycard", {
 	end
 })
 
+core.register_alias("keycard", "sb_keys:skeleton_keycard")
+
 minetest.register_craftitem("sb_keys:keycard", {
-	description = "Keycard",
+	description = "Programmed Keycard",
 	inventory_image = "keycard.png",
 	groups = {key = 1, not_in_creative_inventory = 1},
 	on_place = function(itemstack, placer, pointed_thing)

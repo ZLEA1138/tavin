@@ -227,6 +227,8 @@ minetest.register_craftitem("sb_books:book", {
 	on_use = book_on_use,
 })
 
+core.register_alias("book", "sb_books:book")
+
 minetest.register_craftitem("sb_books:book_written", {
 	description = "Written Book",
 	inventory_image = "book_written.png",
@@ -234,6 +236,8 @@ minetest.register_craftitem("sb_books:book_written", {
 	stack_max = 1,
 	on_use = book_on_use,
 })
+
+core.register_alias("book_written", "sb_books:book_written")
 
 minetest.register_craft({
 	output = "sb_books:book",

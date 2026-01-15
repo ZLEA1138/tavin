@@ -40,6 +40,8 @@ minetest.register_node("sb_core:chain_ferrum", {
 	on_place = minetest.rotate_node,
 })
 
+core.register_alias("chain_ferrum", "sb_core:chain_ferrum")
+
 minetest.register_craft({
 	type = "shaped",
 	output = "sb_core:chain_ferrum",
@@ -89,6 +91,8 @@ minetest.register_node("sb_core:ladder_ferrum", {
 	sounds = sounds.node_sound_metal_defaults(),
 })
 
+core.register_alias("ladder_ferrum", "sb_core:ladder_ferrum")
+
 -- Wooden Ladder
 minetest.register_node("sb_core:ladder_wood", {
 	description = "Wooden Ladder",
@@ -120,6 +124,8 @@ minetest.register_node("sb_core:ladder_wood", {
 	sounds = sounds.node_sound_wood_defaults(),
 })
 
+core.register_alias("ladder_wood", "sb_core:ladder_wood")
+
 -- Vines
 minetest.register_node("sb_core:vines", {
 	description = "Vines",
@@ -144,3 +150,5 @@ minetest.register_node("sb_core:vines", {
 	legacy_wallmounted = true,
 	sounds = sounds.node_sound_leaves_defaults()
 })
+
+core.register_alias("vines", "sb_core:vines")

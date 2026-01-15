@@ -99,3 +99,20 @@ for _, mix in pairs(dye_recipes) do
 		recipe = {"sb_dye:" .. mix[1], "sb_dye:" .. mix[2]},
 	})
 end
+
+core.register_alias("dye_white", "sb_dye:white")
+core.register_alias("dye_light_gray", "sb_dye:light_gray")
+core.register_alias("dye_gray", "sb_dye:gray")
+core.register_alias("dye_black", "sb_dye:black")
+core.register_alias("dye_brown", "sb_dye:brown")
+core.register_alias("dye_red", "sb_dye:red")
+core.register_alias("dye_orange", "sb_dye:orange")
+core.register_alias("dye_yellow", "sb_dye:yellow")
+core.register_alias("dye_light_green", "sb_dye:light_green")
+core.register_alias("dye_green", "sb_dye:green")
+core.register_alias("dye_cyan", "sb_dye:cyan")
+core.register_alias("dye_light_blue", "sb_dye:light_blue")
+core.register_alias("dye_blue", "sb_dye:blue")
+core.register_alias("dye_purple", "sb_dye:purple")
+core.register_alias("dye_magenta", "sb_dye:magenta")
+core.register_alias("dye_pink", "sb_dye:pink")

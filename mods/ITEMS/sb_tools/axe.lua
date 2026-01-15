@@ -38,6 +38,8 @@ minetest.register_tool("sb_tools:axe_wood", {
 	end
 })
 
+core.register_alias("axe_wood", "sb_tools:axe_wood")
+
 core.register_craft({
     output = "sb_tools:axe_wood",
     recipe = {
@@ -99,6 +101,8 @@ minetest.register_tool("sb_tools:axe_stone", {
 	end
 })
 
+core.register_alias("axe_stone", "sb_tools:axe_stone")
+
 core.register_craft({
     output = "sb_tools:axe_stone",
     recipe = {
@@ -153,6 +157,8 @@ minetest.register_tool("sb_tools:axe_aereus", {
 		end
 	end
 })
+
+core.register_alias("axe_aereus", "sb_tools:axe_aereus")
 
 core.register_craft({
     output = "sb_tools:axe_aereus",
@@ -209,6 +215,8 @@ minetest.register_tool("sb_tools:axe_ferrum", {
 	end
 })
 
+core.register_alias("axe_ferrum", "sb_tools:axe_ferrum")
+
 core.register_craft({
     output = "sb_tools:axe_ferrum",
     recipe = {
@@ -264,6 +272,8 @@ minetest.register_tool("sb_tools:axe_aurem", {
 	end
 })
 
+core.register_alias("axe_aurem", "sb_tools:axe_aurem")
+
 core.register_craft({
     output = "sb_tools:axe_aurem",
     recipe = {
@@ -318,6 +328,8 @@ minetest.register_tool("sb_tools:axe_wolfram", {
 		end
 	end
 })
+
+core.register_alias("axe_wolfram", "sb_tools:axe_wolfram")
 
 core.register_craft({
     output = "sb_tools:axe_wolfram",

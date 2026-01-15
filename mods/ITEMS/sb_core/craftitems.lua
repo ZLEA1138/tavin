@@ -7,6 +7,8 @@ minetest.register_craftitem("sb_core:brick", {
 	inventory_image = "brick.png"
 })
 
+core.register_alias("brick", "sb_core:brick")
+
 core.register_craft({
     type = "cooking",
     output = "sb_core:brick",
@@ -20,12 +22,16 @@ minetest.register_craftitem("sb_core:clay_lump", {
 	inventory_image = "clay_lump.png"
 })
 
+core.register_alias("clay_lump", "sb_core:clay_lump")
+
 -- CHARCOAL
 minetest.register_craftitem("sb_core:charcoal", {
 	description = "Charcoal",
 	inventory_image = "charcoal.png",
 	groups = {coal = 1, flammable = 1}
 })
+
+core.register_alias("charcoal", "sb_core:charcoal")
 
 core.register_craft({
     type = "cooking",
@@ -46,12 +52,16 @@ minetest.register_craftitem("sb_core:flint", {
 	inventory_image = "flint.png"
 })
 
+core.register_alias("flint", "sb_core:flint")
+
 -- STICK
 minetest.register_craftitem("sb_core:stick", {
 	description = "Stick",
 	inventory_image = "stick.png",
 	groups = {stick = 1, flammable = 2},
 })
+
+core.register_alias("stick", "sb_core:stick")
 
 core.register_craft({
     output = "sb_core:stick 4",
@@ -75,12 +85,16 @@ minetest.register_craftitem("sb_core:wungu_fruit", {
 	groups = {compostability = 65},
 })
 
+core.register_alias("wungu_fruit", "sb_core:wungu_fruit")
+
 -- STRING
 minetest.register_craftitem("sb_core:string", {
 	description = "String",
 	inventory_image = "string.png",
 	groups = {flammable = 2},
 })
+
+core.register_alias("string", "sb_core:string")
 
 minetest.register_craft({
 	output = "sb_core:string 2",
@@ -103,3 +117,5 @@ minetest.register_craft({
 		{"sb_core:reeds", "sb_core:reeds", "sb_core:reeds"},
 	}
 })
+
+core.register_alias("paper", "sb_core:paper")

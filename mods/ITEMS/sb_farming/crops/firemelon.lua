@@ -10,6 +10,8 @@ minetest.register_craftitem("sb_farming:firemelon_slice", {
 	end
 })
 
+core.register_alias("firemelon_slice", "sb_farming:firemelon_slice")
+
 sb_farming.add_eatable("sb_farming:firemelon_slice", 2)
 
 -- Firemelon Crop

@@ -10,6 +10,8 @@ minetest.register_craftitem("sb_farming:spicecorn", {
 	end
 })
 
+core.register_alias("spicecorn", "sb_farming:spicecorn")
+
 sb_farming.add_eatable("sb_farming:spicecorn", 3)
 
 -- Spicecorn Crop

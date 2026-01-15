@@ -9,12 +9,16 @@ minetest.register_craftitem("sb_farming:seed_strandflower", {
 	end
 })
 
+core.register_alias("seed_strandflower", "sb_farming:seed_strandflower")
+
 -- Strandflower
 minetest.register_craftitem("sb_farming:strandflower", {
 	description = "Strandflower",
 	inventory_image = "strandflower.png",
 	groups = {flammable = 4, compostability = 50}
 })
+
+core.register_alias("strandflower", "sb_farming:strandflower")
 
 -- Strandflower Crop
 local def = {

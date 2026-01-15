@@ -9,12 +9,16 @@ minetest.register_craftitem("sb_farming:seed_wheat", {
 	end
 })
 
+core.register_alias("seed_wheat", "sb_farming:seed_wheat")
+
 -- Wheat (item)
 minetest.register_craftitem("sb_farming:wheat", {
 	description = "Wheat",
 	inventory_image = "wheat.png",
 	groups = {food_wheat = 1, flammable = 4}
 })
+
+core.register_alias("wheat", "sb_farming:wheat")
 
 -- Wheat Crop
 local def = {

@@ -29,6 +29,23 @@ for i = 1, #dyes do
 	})
 end
 
+core.register_alias("cloth_white", "sb_cloth:white")
+core.register_alias("cloth_light_gray", "sb_cloth:light_gray")
+core.register_alias("cloth_gray", "sb_cloth:gray")
+core.register_alias("cloth_black", "sb_cloth:black")
+core.register_alias("cloth_brown", "sb_cloth:brown")
+core.register_alias("cloth_red", "sb_cloth:red")
+core.register_alias("cloth_orange", "sb_cloth:orange")
+core.register_alias("cloth_yellow", "sb_cloth:yellow")
+core.register_alias("cloth_light_green", "sb_cloth:light_green")
+core.register_alias("cloth_green", "sb_cloth:green")
+core.register_alias("cloth_cyan", "sb_cloth:cyan")
+core.register_alias("cloth_light_blue", "sb_cloth:light_blue")
+core.register_alias("cloth_blue", "sb_cloth:blue")
+core.register_alias("cloth_purple", "sb_cloth:purple")
+core.register_alias("cloth_magenta", "sb_cloth:magenta")
+core.register_alias("cloth_pink", "sb_cloth:pink")
+
 minetest.register_craft({
 	output = "sb_cloth:white",
 	recipe = {

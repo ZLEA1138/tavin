@@ -1,11 +1,3 @@
-minetest.register_craft({
-	output = "bucket:bucket_empty 1",
-	recipe = {
-		{"sb_minerals:ferrum_ingot", "", "sb_minerals:ferrum_ingot"},
-		{"", "sb_minerals:ferrum_ingot", ""},
-	}
-})
-
 sb_bucket = {}
 sb_bucket.liquids = {}
 
@@ -183,6 +175,16 @@ minetest.register_craftitem("sb_bucket:bucket_empty", {
 	end,
 })
 
+core.register_alias("bucket_empty", "sb_bucket:bucket_empty")
+
+minetest.register_craft({
+	output = "bucket:bucket_empty 1",
+	recipe = {
+		{"sb_minerals:ferrum_ingot", "", "sb_minerals:ferrum_ingot"},
+		{"", "sb_minerals:ferrum_ingot", ""},
+	}
+})
+
 sb_bucket.register_liquid(
 	"sb_core:water_source",
 	"sb_core:water_flowing",
@@ -192,6 +194,8 @@ sb_bucket.register_liquid(
 	{tool = 1, water_bucket = 1}
 )
 
+core.register_alias("bucket_water", "sb_bucket:bucket_water")
+
 sb_bucket.register_liquid(
 	"sb_core:lava_source",
 	"sb_core:lava_flowing",
@@ -200,6 +204,8 @@ sb_bucket.register_liquid(
 	"Lava Bucket",
 	{tool = 1}
 )
+
+core.register_alias("bucket_lava", "sb_bucket:bucket_lava")
 
 minetest.register_craft({
 	type = "fuel",

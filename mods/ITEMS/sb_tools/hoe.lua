@@ -148,12 +148,16 @@ sb_tools.register_hoe("sb_tools:hoe_wood", {
 	material = "group:wood"
 })
 
+core.register_alias("hoe_wood", "sb_tools:hoe_wood")
+
 sb_tools.register_hoe("sb_tools:hoe_stone", {
 	description = "Stone Hoe",
 	inventory_image = "hoe_stone.png",
 	max_uses = 132,
 	material = "group:stone"
 })
+
+core.register_alias("hoe_stone", "sb_tools:hoe_stone")
 
 sb_tools.register_hoe("sb_tools:hoe_aereus", {
 	description = "Aereus Hoe",
@@ -162,12 +166,16 @@ sb_tools.register_hoe("sb_tools:hoe_aereus", {
 	material = "sb_minerals:aereus_ingot"
 })
 
+core.register_alias("hoe_aereus", "sb_tools:hoe_aereus")
+
 sb_tools.register_hoe("sb_tools:hoe_ferrum", {
 	description = "Ferrum Hoe",
 	inventory_image = "hoe_ferrum.png",
 	max_uses = 250,
 	material = "sb_minerals:ferrum_ingot"
 })
+
+core.register_alias("hoe_ferrum", "sb_tools:hoe_ferrum")
 
 sb_tools.register_hoe("sb_tools:hoe_aurem", {
 	description = "Aurem Hoe",
@@ -176,9 +184,13 @@ sb_tools.register_hoe("sb_tools:hoe_aurem", {
 	material = "sb_minerals:aurem_ingot"
 })
 
+core.register_alias("hoe_aurem", "sb_tools:hoe_aurem")
+
 sb_tools.register_hoe("sb_tools:hoe_wolfram", {
 	description = "Wolfram Hoe",
 	inventory_image = "hoe_wolfram.png",
 	max_uses = 1562,
 	material = "sb_minerals:wolfram_ingot"
 })
+
+core.register_alias("hoe_wolfram", "sb_tools:hoe_wolfram")

@@ -40,6 +40,8 @@ minetest.register_node("sb_core:log_marshtree", {
 	on_place = minetest.rotate_node,
 })
 
+core.register_alias("log_marshtree", "sb_core:log_marshtree")
+
 core.register_craft({
     type = "fuel",
     recipe = "sb_core:log_marshtree",
@@ -69,6 +71,8 @@ minetest.register_node("sb_core:stripped_log_marshtree", {
 	on_place = minetest.rotate_node,
 })
 
+core.register_alias("stripped_log_marshtree", "sb_core:stripped_log_marshtree")
+
 core.register_craft({
     type = "fuel",
     recipe = "sb_core:stripped_log_marshtree",
@@ -91,6 +95,8 @@ minetest.register_node("sb_core:planks_marshtree", {
 	},
 	sounds = sounds.node_sound_wood_defaults(),
 })
+
+core.register_alias("planks_marshtree", "sb_core:planks_marshtree")
 
 core.register_craft({
     type = "shapeless",
@@ -153,6 +159,8 @@ minetest.register_node("sb_core:leaves_marshtree", {
 	after_place_node = after_place_leaves,
 })
 
+core.register_alias("leaves_marshtree", "sb_core:leaves_marshtree")
+
 functions.register_leafdecay({
 	trunks = {"sb_core:log_marshtree"},
 	leaves = {"sb_core:leaves_marshtree"},
@@ -200,6 +208,8 @@ minetest.register_node("sb_core:sapling_marshtree", {
 	end,
 })
 
+core.register_alias("sapling_marshtree", "sb_core:sapling_marshtree")
+
 
 
 
@@ -230,6 +240,8 @@ minetest.register_node("sb_core:log_oki", {
 	on_place = minetest.rotate_node,
 })
 
+core.register_alias("log_oki", "sb_core:log_oki")
+
 core.register_craft({
     type = "fuel",
     recipe = "sb_core:log_oki",
@@ -259,6 +271,8 @@ minetest.register_node("sb_core:stripped_log_oki", {
 	on_place = minetest.rotate_node,
 })
 
+core.register_alias("stripped_log_oki", "sb_core:stripped_log_oki")
+
 core.register_craft({
     type = "fuel",
     recipe = "sb_core:stripped_log_oki",
@@ -281,6 +295,8 @@ minetest.register_node("sb_core:planks_oki", {
 	},
 	sounds = sounds.node_sound_wood_defaults(),
 })
+
+core.register_alias("planks_oki", "sb_core:planks_oki")
 
 core.register_craft({
     type = "shapeless",
@@ -343,6 +359,8 @@ minetest.register_node("sb_core:leaves_oki", {
 	after_place_node = after_place_leaves,
 })
 
+core.register_alias("leaves_oki", "sb_core:leaves_oki")
+
 functions.register_leafdecay({
 	trunks = {"sb_core:log_oki"},
 	leaves = {"sb_core:leaves_oki"},
@@ -390,6 +408,8 @@ minetest.register_node("sb_core:sapling_oki", {
 	end,
 })
 
+core.register_alias("sapling_oki", "sb_core:sapling_oki")
+
 
 
 
@@ -420,6 +440,8 @@ minetest.register_node("sb_core:log_sana", {
 	on_place = minetest.rotate_node,
 })
 
+core.register_alias("log_sana", "sb_core:log_sana")
+
 core.register_craft({
     type = "fuel",
     recipe = "sb_core:log_sana",
@@ -449,6 +471,8 @@ minetest.register_node("sb_core:stripped_log_sana", {
 	on_place = minetest.rotate_node,
 })
 
+core.register_alias("stripped_log_sana", "sb_core:stripped_log_sana")
+
 core.register_craft({
     type = "fuel",
     recipe = "sb_core:stripped_log_sana",
@@ -471,6 +495,8 @@ minetest.register_node("sb_core:planks_sana", {
 	},
 	sounds = sounds.node_sound_wood_defaults(),
 })
+
+core.register_alias("planks_sana", "sb_core:planks_sana")
 
 core.register_craft({
     type = "shapeless",
@@ -533,6 +559,8 @@ minetest.register_node("sb_core:leaves_sana", {
 	after_place_node = after_place_leaves,
 })
 
+core.register_alias("leaves_sana", "sb_core:leaves_sana")
+
 functions.register_leafdecay({
 	trunks = {"sb_core:log_sana"},
 	leaves = {"sb_core:leaves_sana"},
@@ -580,6 +608,8 @@ minetest.register_node("sb_core:sapling_sana", {
 	end,
 })
 
+core.register_alias("sapling_sana", "sb_core:sapling_sana")
+
 
 
 
@@ -610,6 +640,8 @@ minetest.register_node("sb_core:log_suntree", {
 	on_place = minetest.rotate_node,
 })
 
+core.register_alias("log_suntree", "sb_core:log_suntree")
+
 core.register_craft({
     type = "fuel",
     recipe = "sb_core:log_suntree",
@@ -639,6 +671,8 @@ minetest.register_node("sb_core:stripped_log_suntree", {
 	on_place = minetest.rotate_node,
 })
 
+core.register_alias("stripped_log_suntree", "sb_core:stripped_log_suntree")
+
 core.register_craft({
     type = "fuel",
     recipe = "sb_core:stripped_log_suntree",
@@ -661,6 +695,8 @@ minetest.register_node("sb_core:planks_suntree", {
 	},
 	sounds = sounds.node_sound_wood_defaults(),
 })
+
+core.register_alias("planks_suntree", "sb_core:planks_suntree")
 
 core.register_craft({
     type = "shapeless",
@@ -723,6 +759,8 @@ minetest.register_node("sb_core:leaves_suntree", {
 	after_place_node = after_place_leaves,
 })
 
+core.register_alias("leaves_suntree", "sb_core:leaves_suntree")
+
 functions.register_leafdecay({
 	trunks = {"sb_core:log_suntree"},
 	leaves = {"sb_core:leaves_suntree"},
@@ -770,6 +808,8 @@ minetest.register_node("sb_core:sapling_suntree", {
 	end,
 })
 
+core.register_alias("sapling_suntree", "sb_core:sapling_suntree")
+
 
 
 
@@ -800,6 +840,8 @@ minetest.register_node("sb_core:log_taeda", {
 	on_place = minetest.rotate_node,
 })
 
+core.register_alias("log_taeda", "sb_core:log_taeda")
+
 core.register_craft({
     type = "fuel",
     recipe = "sb_core:log_taeda",
@@ -829,6 +871,8 @@ minetest.register_node("sb_core:stripped_log_taeda", {
 	on_place = minetest.rotate_node,
 })
 
+core.register_alias("stripped_log_taeda", "sb_core:stripped_log_taeda")
+
 core.register_craft({
     type = "fuel",
     recipe = "sb_core:stripped_log_taeda",
@@ -851,6 +895,8 @@ minetest.register_node("sb_core:planks_taeda", {
 	},
 	sounds = sounds.node_sound_wood_defaults(),
 })
+
+core.register_alias("planks_taeda", "sb_core:planks_taeda")
 
 core.register_craft({
     type = "shapeless",
@@ -913,6 +959,8 @@ minetest.register_node("sb_core:leaves_taeda", {
 	after_place_node = after_place_leaves,
 })
 
+core.register_alias("leaves_taeda", "sb_core:leaves_taeda")
+
 functions.register_leafdecay({
 	trunks = {"sb_core:log_taeda"},
 	leaves = {"sb_core:leaves_taeda"},
@@ -960,6 +1008,8 @@ minetest.register_node("sb_core:sapling_taeda", {
 	end,
 })
 
+core.register_alias("sapling_taeda", "sb_core:sapling_taeda")
+
 
 
 
@@ -990,6 +1040,8 @@ minetest.register_node("sb_core:log_wungu", {
 	on_place = minetest.rotate_node,
 })
 
+core.register_alias("log_wungu", "sb_core:log_wungu")
+
 core.register_craft({
     type = "fuel",
     recipe = "sb_core:log_wungu",
@@ -1019,6 +1071,8 @@ minetest.register_node("sb_core:stripped_log_wungu", {
 	on_place = minetest.rotate_node,
 })
 
+core.register_alias("stripped_log_wungu", "sb_core:stripped_log_wungu")
+
 core.register_craft({
     type = "fuel",
     recipe = "sb_core:stripped_log_wungu",
@@ -1041,6 +1095,8 @@ minetest.register_node("sb_core:planks_wungu", {
 	},
 	sounds = sounds.node_sound_wood_defaults(),
 })
+
+core.register_alias("planks_wungu", "sb_core:planks_wungu")
 
 core.register_craft({
     type = "shapeless",
@@ -1108,6 +1164,8 @@ minetest.register_node("sb_core:leaves_wungu", {
 	after_place_node = after_place_leaves,
 })
 
+core.register_alias("leaves_wungu", "sb_core:leaves_wungu")
+
 functions.register_leafdecay({
 	trunks = {"sb_core:log_wungu"},
 	leaves = {"sb_core:leaves_wungu"},
@@ -1155,6 +1213,8 @@ minetest.register_node("sb_core:sapling_wungu", {
 	end,
 })
 
+core.register_alias("sapling_wungu", "sb_core:sapling_wungu")
+
 
 
 
@@ -1184,3 +1244,5 @@ minetest.register_node("sb_core:log_scorched", {
 	sounds = sounds.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node,
 })
+
+core.register_alias("log_scorched", "sb_core:log_scorched")

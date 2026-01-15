@@ -25,6 +25,8 @@ minetest.register_node("sb_minerals:aereus_block", {
 	sounds = sounds.node_sound_stone_defaults(),
 })
 
+core.register_alias("aereus_block", "sb_minerals:aereus_block")
+
 core.register_craft({
     output = "sb_minerals:aereus_block",
     recipe = {
@@ -64,6 +66,8 @@ minetest.register_node("sb_minerals:aurem_block", {
     },
 	sounds = sounds.node_sound_stone_defaults(),
 })
+
+core.register_alias("aurem_block", "sb_minerals:aurem_block")
 
 core.register_craft({
     output = "sb_minerals:aurem_block",
@@ -105,6 +109,8 @@ minetest.register_node("sb_minerals:coal_block", {
 	sounds = sounds.node_sound_stone_defaults(),
 })
 
+core.register_alias("coal_block", "sb_minerals:coal_block")
+
 core.register_craft({
     output = "sb_minerals:coal_block",
     recipe = {
@@ -144,6 +150,8 @@ minetest.register_node("sb_minerals:cuprum_block", {
     },
 	sounds = sounds.node_sound_stone_defaults(),
 })
+
+core.register_alias("cuprum_block", "sb_minerals:cuprum_block")
 
 core.register_craft({
     output = "sb_minerals:cuprum_block",
@@ -185,6 +193,8 @@ minetest.register_node("sb_minerals:ferrum_block", {
 	sounds = sounds.node_sound_stone_defaults(),
 })
 
+core.register_alias("ferrum_block", "sb_minerals:ferrum_block")
+
 core.register_craft({
     output = "sb_minerals:ferrum_block",
     recipe = {
@@ -224,6 +234,8 @@ minetest.register_node("sb_minerals:stannum_block", {
     },
 	sounds = sounds.node_sound_stone_defaults(),
 })
+
+core.register_alias("stannum_block", "sb_minerals:stannum_block")
 
 core.register_craft({
     output = "sb_minerals:stannum_block",
@@ -265,6 +277,8 @@ minetest.register_node("sb_minerals:uran_block", {
 	sounds = sounds.node_sound_stone_defaults(),
 })
 
+core.register_alias("uran_block", "sb_minerals:uran_block")
+
 core.register_craft({
     output = "sb_minerals:uran_block",
     recipe = {
@@ -304,6 +318,8 @@ minetest.register_node("sb_minerals:wolfram_block", {
     },
 	sounds = sounds.node_sound_stone_defaults(),
 })
+
+core.register_alias("wolfram_block", "sb_minerals:wolfram_block")
 
 core.register_craft({
     output = "sb_minerals:wolfram_block",

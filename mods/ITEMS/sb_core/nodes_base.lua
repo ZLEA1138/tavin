@@ -26,6 +26,8 @@ minetest.register_node("sb_core:stone", {
     sounds = sounds.node_sound_stone_defaults(),
 })
 
+core.register_alias("stone", "sb_core:stone")
+
 core.register_craft({
     type = "cooking",
     output = "sb_core:stone",
@@ -65,6 +67,8 @@ minetest.register_node("sb_core:cobble", {
 	sounds = sounds.node_sound_stone_defaults(),
 })
 
+core.register_alias("cobble", "sb_core:cobble")
+
 minetest.register_node("sb_core:cobble_mossy", {
 	description = "Mossy Cobblestone",
 	tiles = {"cobble_mossy.png"},
@@ -88,6 +92,8 @@ minetest.register_node("sb_core:cobble_mossy", {
     },
 	sounds = sounds.node_sound_stone_defaults(),
 })
+
+core.register_alias("cobble_mossy", "sb_core:cobble_mossy")
 
 -- SMOOTH STONE
 minetest.register_node("sb_core:stone_smooth", {
@@ -113,6 +119,8 @@ minetest.register_node("sb_core:stone_smooth", {
     },
 	sounds = sounds.node_sound_stone_defaults(),
 })
+
+core.register_alias("stone_smooth", "sb_core:stone_smooth")
 
 core.register_craft({
     type = "cooking",
@@ -148,6 +156,8 @@ minetest.register_node("sb_core:stone_bricks", {
 	sounds = sounds.node_sound_stone_defaults(),
 })
 
+core.register_alias("stone_bricks", "sb_core:stone_bricks")
+
 core.register_craft({
     output = "sb_core:stone_bricks 4",
     recipe = {
@@ -181,6 +191,8 @@ minetest.register_node("sb_core:stone_bricks_mossy", {
     },
 	sounds = sounds.node_sound_stone_defaults(),
 })
+
+core.register_alias("stone_bricks_mossy", "sb_core:stone_bricks_mossy")
 
 -- DIRT
 minetest.register_node("sb_core:dirt", {
@@ -222,6 +234,8 @@ minetest.register_node("sb_core:dirt_dry", {
 	sounds = sounds.node_sound_dirt_defaults(),
 })
 
+core.register_alias("dirt_dry", "sb_core:dirt_dry")
+
 -- SCORCHED DIRT
 minetest.register_node("sb_core:dirt_scorched", {
 	description = "Scorched Dirt",
@@ -236,6 +250,8 @@ minetest.register_node("sb_core:dirt_scorched", {
 	},
 	sounds = sounds.node_sound_gravel_defaults(),
 })
+
+core.register_alias("dirt_scorched", "sb_core:dirt_scorched")
 
 -- GRASS BLOCKS
 -- Forest Grass
@@ -266,6 +282,8 @@ minetest.register_node("sb_core:dirt_grass_forest", {
     sounds = sounds.node_sound_dirt_defaults(),
 })
 
+core.register_alias("dirt_grass_forest", "sb_core:dirt_grass_forest")
+
 minetest.register_node("sb_core:dirt_grass_forest_snow", {
     description = "Snowy Forest Grass Block",
     tiles = {
@@ -279,7 +297,8 @@ minetest.register_node("sb_core:dirt_grass_forest_snow", {
 		cracky = mining.hardness(0.6, -1),
 		choppy = mining.hardness(0.6, -1),
 		snappy = mining.hardness(0.6, -1),
-		oddly_breakable_by_hand = mining.hardness(0.6, 0)
+		oddly_breakable_by_hand = mining.hardness(0.6, 0),
+		not_in_creative_inventory = 1
 	},
     drop = "sb_core:dirt",
     sounds = sounds.node_sound_dirt_defaults(),
@@ -313,6 +332,8 @@ minetest.register_node("sb_core:dirt_mycelium", {
     sounds = sounds.node_sound_dirt_defaults(),
 })
 
+core.register_alias("dirt_mycelium", "sb_core:dirt_mycelium")
+
 minetest.register_node("sb_core:dirt_mycelium_snow", {
     description = "Snowy Mycelium Block",
     tiles = {
@@ -326,7 +347,8 @@ minetest.register_node("sb_core:dirt_mycelium_snow", {
 		cracky = mining.hardness(0.6, -1),
 		choppy = mining.hardness(0.6, -1),
 		snappy = mining.hardness(0.6, -1),
-		oddly_breakable_by_hand = mining.hardness(0.6, 0)
+		oddly_breakable_by_hand = mining.hardness(0.6, 0),
+		not_in_creative_inventory = 1
 	},
     drop = "sb_core:dirt",
     sounds = sounds.node_sound_dirt_defaults(),
@@ -360,6 +382,8 @@ minetest.register_node("sb_core:dirt_grass_plains", {
     sounds = sounds.node_sound_dirt_defaults(),
 })
 
+core.register_alias("dirt_grass_plains", "sb_core:dirt_grass_plains")
+
 minetest.register_node("sb_core:dirt_grass_plains_snow", {
     description = "Snowy Plains Grass Block",
     tiles = {
@@ -373,7 +397,8 @@ minetest.register_node("sb_core:dirt_grass_plains_snow", {
 		cracky = mining.hardness(0.6, -1),
 		choppy = mining.hardness(0.6, -1),
 		snappy = mining.hardness(0.6, -1),
-		oddly_breakable_by_hand = mining.hardness(0.6, 0)
+		oddly_breakable_by_hand = mining.hardness(0.6, 0),
+		not_in_creative_inventory = 1
 	},
     drop = "sb_core:dirt",
     sounds = sounds.node_sound_dirt_defaults(),
@@ -407,6 +432,8 @@ minetest.register_node("sb_core:dirt_grass_prairie", {
     sounds = sounds.node_sound_dirt_defaults(),
 })
 
+core.register_alias("dirt_grass_prairie", "sb_core:dirt_grass_prairie")
+
 minetest.register_node("sb_core:dirt_grass_prairie_snow", {
     description = "Snowy Prairie Grass Block",
     tiles = {
@@ -420,7 +447,8 @@ minetest.register_node("sb_core:dirt_grass_prairie_snow", {
 		cracky = mining.hardness(0.6, -1),
 		choppy = mining.hardness(0.6, -1),
 		snappy = mining.hardness(0.6, -1),
-		oddly_breakable_by_hand = mining.hardness(0.6, 0)
+		oddly_breakable_by_hand = mining.hardness(0.6, 0),
+		not_in_creative_inventory = 1
 	},
     drop = "sb_core:dirt",
     sounds = sounds.node_sound_dirt_defaults(),
@@ -454,6 +482,8 @@ minetest.register_node("sb_core:dirt_grass_savanna", {
     sounds = sounds.node_sound_dirt_defaults(),
 })
 
+core.register_alias("dirt_grass_savanna", "sb_core:dirt_grass_savanna")
+
 minetest.register_node("sb_core:dirt_grass_savanna_snow", {
     description = "Snowy Savanna Grass Block",
     tiles = {
@@ -467,7 +497,8 @@ minetest.register_node("sb_core:dirt_grass_savanna_snow", {
 		cracky = mining.hardness(0.6, -1),
 		choppy = mining.hardness(0.6, -1),
 		snappy = mining.hardness(0.6, -1),
-		oddly_breakable_by_hand = mining.hardness(0.6, 0)
+		oddly_breakable_by_hand = mining.hardness(0.6, 0),
+		not_in_creative_inventory = 1
 	},
     drop = "sb_core:dirt",
     sounds = sounds.node_sound_dirt_defaults(),
@@ -501,6 +532,8 @@ minetest.register_node("sb_core:dirt_grass_swamp", {
     sounds = sounds.node_sound_dirt_defaults(),
 })
 
+core.register_alias("dirt_grass_swamp", "sb_core:dirt_grass_swamp")
+
 minetest.register_node("sb_core:dirt_grass_swamp_snow", {
     description = "Snowy Swamp Grass Block",
     tiles = {
@@ -514,7 +547,8 @@ minetest.register_node("sb_core:dirt_grass_swamp_snow", {
 		cracky = mining.hardness(0.6, -1),
 		choppy = mining.hardness(0.6, -1),
 		snappy = mining.hardness(0.6, -1),
-		oddly_breakable_by_hand = mining.hardness(0.6, 0)
+		oddly_breakable_by_hand = mining.hardness(0.6, 0),
+		not_in_creative_inventory = 1
 	},
     drop = "sb_core:dirt",
     sounds = sounds.node_sound_dirt_defaults(),
@@ -550,6 +584,8 @@ minetest.register_node("sb_core:dirt_path", {
     sounds = sounds.node_sound_dirt_defaults(),
 })
 
+core.register_alias("dirt_path", "sb_core:dirt_path")
+
 -- MUD
 minetest.register_node("sb_core:mud", {
     description = "Mud",
@@ -565,6 +601,8 @@ minetest.register_node("sb_core:mud", {
     sounds = sounds.node_sound_dirt_defaults(),
 })
 
+core.register_alias("mud", "sb_core:mud")
+
 -- PACKED MUD (WIP crafting recipe)
 minetest.register_node("sb_core:mud_packed", {
     description = "Packed Mud",
@@ -579,6 +617,8 @@ minetest.register_node("sb_core:mud_packed", {
 	},
     sounds = sounds.node_sound_dirt_defaults(),
 })
+
+core.register_alias("mud_packed", "sb_core:mud_packed")
 
 -- MUD BRICKS
 minetest.register_node("sb_core:mud_bricks", {
@@ -603,6 +643,8 @@ minetest.register_node("sb_core:mud_bricks", {
     },
     sounds = sounds.node_sound_dirt_defaults(),
 })
+
+core.register_alias("mud_bricks", "sb_core:mud_bricks")
 
 core.register_craft({
     output = "sb_core:mud_bricks",
@@ -629,6 +671,8 @@ minetest.register_node("sb_core:sand", {
     sounds = sounds.node_sound_sand_defaults(),
 })
 
+core.register_alias("sand", "sb_core:sand")
+
 -- DESERT SAND
 minetest.register_node("sb_core:sand_desert", {
     description = "Desert Sand",
@@ -645,6 +689,8 @@ minetest.register_node("sb_core:sand_desert", {
 	},
     sounds = sounds.node_sound_sand_defaults(),
 })
+
+core.register_alias("sand_desert", "sb_core:sand_desert")
 
 -- QUICKSAND (from Ethereal NG by TenPlus1)
 
@@ -676,6 +722,8 @@ core.register_node("sb_core:quicksand", {
 	},
 	sounds = sounds.node_sound_sand_defaults()
 })
+
+core.register_alias("quicksand", "sb_core:quicksand")
 
 core.register_craft({
 	output = "sb_core:quicksand",
@@ -713,6 +761,8 @@ minetest.register_node("sb_core:sandstone", {
     sounds = sounds.node_sound_stone_defaults(),
 })
 
+core.register_alias("sandstone", "sb_core:sandstone")
+
 core.register_craft({
     output = "sb_core:sandstone",
     recipe = {
@@ -744,6 +794,8 @@ minetest.register_node("sb_core:sandstone_desert", {
     },
     sounds = sounds.node_sound_stone_defaults(),
 })
+
+core.register_alias("sandstone_desert", "sb_core:sandstone_desert")
 
 core.register_craft({
     output = "sb_core:sandstone_desert",
@@ -777,6 +829,8 @@ minetest.register_node("sb_core:sandstone_smooth", {
     sounds = sounds.node_sound_stone_defaults(),
 })
 
+core.register_alias("sandstone_smooth", "sb_core:sandstone_smooth")
+
 core.register_craft({
     type = "cooking",
     output = "sb_core:sandstone_smooth",
@@ -808,6 +862,8 @@ minetest.register_node("sb_core:sandstone_smooth_desert", {
     sounds = sounds.node_sound_stone_defaults(),
 })
 
+core.register_alias("sandstone_smooth_desert", "sb_core:sandstone_smooth_desert")
+
 core.register_craft({
     type = "cooking",
     output = "sb_core:sandstone_smooth_desert",
@@ -838,6 +894,8 @@ minetest.register_node("sb_core:sandstone_bricks", {
     },
     sounds = sounds.node_sound_stone_defaults(),
 })
+
+core.register_alias("sandstone_bricks", "sb_core:sandstone_bricks")
 
 core.register_craft({
     output = "sb_core:sandstone_bricks 4",
@@ -871,6 +929,8 @@ minetest.register_node("sb_core:sandstone_bricks_desert", {
     sounds = sounds.node_sound_stone_defaults(),
 })
 
+core.register_alias("sandstone_bricks_desert", "sb_core:sandstone_bricks_desert")
+
 core.register_craft({
     output = "sb_core:sandstone_bricks_desert 4",
     recipe = {
@@ -902,6 +962,8 @@ minetest.register_node("sb_core:gravel", {
 	sounds = sounds.node_sound_gravel_defaults(),
 })
 
+core.register_alias("gravel", "sb_core:gravel")
+
 -- OBSIDIAN
 minetest.register_node("sb_core:obsidian", {
 	description = "Obsidian",
@@ -925,6 +987,8 @@ minetest.register_node("sb_core:obsidian", {
     },
 	sounds = sounds.node_sound_stone_defaults(),
 })
+
+core.register_alias("obsidian", "sb_core:obsidian")
 
 -- OBSIDIAN BRICK
 minetest.register_node("sb_core:obsidian_bricks", {
@@ -950,6 +1014,8 @@ minetest.register_node("sb_core:obsidian_bricks", {
 	sounds = sounds.node_sound_stone_defaults(),
 })
 
+core.register_alias("obsidian_bricks", "sb_core:obsidian_bricks")
+
 core.register_craft({
     output = "sb_core:obsidian_bricks 4",
     recipe = {
@@ -973,6 +1039,8 @@ minetest.register_node("sb_core:clay", {
 	drop = "sb_core:clay_lump 4",
 	sounds = sounds.node_sound_dirt_defaults(),
 })
+
+core.register_alias("clay", "sb_core:clay")
 
 core.register_craft({
     output = "sb_core:clay",
@@ -1008,6 +1076,8 @@ minetest.register_node("sb_core:bricks", {
     },
 	sounds = sounds.node_sound_stone_defaults(),
 })
+
+core.register_alias("bricks", "sb_core:bricks")
 
 core.register_craft({
     output = "sb_core:bricks",

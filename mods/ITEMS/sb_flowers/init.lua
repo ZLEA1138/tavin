@@ -83,6 +83,13 @@ for _,item in pairs(sb_flowers.datas) do
 	add_simple_flower(unpack(item))
 end
 
+core.register_alias("rose", "sb_flowers:rose")
+core.register_alias("marigold", "sb_flowers:marigold")
+core.register_alias("dandelion", "sb_flowers:dandelion")
+core.register_alias("iris", "sb_flowers:iris")
+core.register_alias("clematis", "sb_flowers:clematis")
+core.register_alias("star_tulip", "sb_flowers:star_tulip")
+
 
 -- Flower spread
 -- Public function to enable override by mods
@@ -168,6 +175,8 @@ minetest.register_node("sb_flowers:mushroom_red", {
 	}
 })
 
+core.register_alias("mushroom_red", "sb_flowers:mushroom_red")
+
 minetest.register_node("sb_flowers:mushroom_brown", {
 	description = "Brown Mushroom",
 	tiles = {"mushroom_brown.png"},
@@ -193,6 +202,8 @@ minetest.register_node("sb_flowers:mushroom_brown", {
 	}
 })
 
+core.register_alias("mushroom_brown", "sb_flowers:mushroom_brown")
+
 minetest.register_node("sb_flowers:mushroom_white", {
 	description = "White Mushroom",
 	tiles = {"mushroom_white.png"},
@@ -217,6 +228,8 @@ minetest.register_node("sb_flowers:mushroom_white", {
 		fixed = {-3 / 16, -0.5, -3 / 16, 3 / 16, -2 / 16, 3 / 16},
 	}
 })
+
+core.register_alias("mushroom_white", "sb_flowers:mushroom_white")
 
 
 -- Mushroom spread and death
@@ -318,3 +331,4 @@ local waterlily_def = {
 
 minetest.register_node("sb_flowers:waterlily", waterlily_def)
 
+core.register_alias("waterlily", "sb_flowers:waterlily")

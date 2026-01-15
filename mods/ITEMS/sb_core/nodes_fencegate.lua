@@ -25,6 +25,8 @@ functions.register_fence("sb_core:fence_marshtree", {
 	sounds = sounds.node_sound_wood_defaults()
 })
 
+core.register_alias("fence_marshtree", "sb_core:fence_marshtree")
+
 -- Marshtree Gate
 functions.register_fencegate("sb_core:gate_marshtree", {
 	description = "Marshtree Fence Gate",
@@ -40,6 +42,8 @@ functions.register_fencegate("sb_core:gate_marshtree", {
 		nondirtifier = 1
 	}
 })
+
+core.register_alias("gate_marshtree", "sb_core:gate_marshtree")
 
 
 
@@ -68,6 +72,8 @@ functions.register_fence("sb_core:fence_oki", {
 	sounds = sounds.node_sound_wood_defaults()
 })
 
+core.register_alias("fence_oki", "sb_core:fence_oki")
+
 -- Oki Gate
 functions.register_fencegate("sb_core:gate_oki", {
 	description = "Oki Fence Gate",
@@ -83,6 +89,8 @@ functions.register_fencegate("sb_core:gate_oki", {
 		nondirtifier = 1
 	}
 })
+
+core.register_alias("gate_oki", "sb_core:gate_oki")
 
 
 
@@ -111,6 +119,8 @@ functions.register_fence("sb_core:fence_sana", {
 	sounds = sounds.node_sound_wood_defaults()
 })
 
+core.register_alias("fence_sana", "sb_core:fence_sana")
+
 -- Sana Gate
 functions.register_fencegate("sb_core:gate_sana", {
 	description = "Sana Fence Gate",
@@ -126,6 +136,8 @@ functions.register_fencegate("sb_core:gate_sana", {
 		nondirtifier = 1
 	}
 })
+
+core.register_alias("gate_sana", "sb_core:gate_sana")
 
 
 
@@ -154,6 +166,8 @@ functions.register_fence("sb_core:fence_suntree", {
 	sounds = sounds.node_sound_wood_defaults()
 })
 
+core.register_alias("fence_suntree", "sb_core:fence_suntree")
+
 -- Suntree Gate
 functions.register_fencegate("sb_core:gate_suntree", {
 	description = "Suntree Fence Gate",
@@ -169,6 +183,8 @@ functions.register_fencegate("sb_core:gate_suntree", {
 		nondirtifier = 1
 	}
 })
+
+core.register_alias("gate_suntree", "sb_core:gate_suntree")
 
 
 
@@ -197,6 +213,8 @@ functions.register_fence("sb_core:fence_taeda", {
 	sounds = sounds.node_sound_wood_defaults()
 })
 
+core.register_alias("fence_taeda", "sb_core:fence_taeda")
+
 -- Taeda Gate
 functions.register_fencegate("sb_core:gate_taeda", {
 	description = "Taeda Fence Gate",
@@ -212,6 +230,8 @@ functions.register_fencegate("sb_core:gate_taeda", {
 		nondirtifier = 1
 	}
 })
+
+core.register_alias("gate_taeda", "sb_core:gate_taeda")
 
 
 
@@ -240,8 +260,10 @@ functions.register_fence("sb_core:fence_wungu", {
 	sounds = sounds.node_sound_wood_defaults()
 })
 
+core.register_alias("fence_wungu", "sb_core:fence_wungu")
+
 -- Wungu Gate
-functions.register_fencegate("sb_core:gate_wood", {
+functions.register_fencegate("sb_core:gate_wungu", {
 	description = "Wungu Fence Gate",
 	texture = "planks_wungu.png",
 	material = "sb_core:planks_wungu",
@@ -255,3 +277,5 @@ functions.register_fencegate("sb_core:gate_wood", {
 		nondirtifier = 1
 	}
 })
+
+core.register_alias("gate_wungu", "sb_core:gate_wungu")

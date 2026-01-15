@@ -13,6 +13,8 @@ minetest.register_craftitem("sb_farming:ruberberries", {
 	end
 })
 
+core.register_alias("ruberberries", "sb_farming:ruberberries")
+
 sb_farming.add_eatable("sb_farming:ruberberries", 1)
 
 -- Ruberberry Bush

@@ -78,6 +78,8 @@ end
 
 minetest.register_node("sb_fire:basic_flame", flame_fire_node)
 
+core.register_alias("flame", "sb_fire:basic_flame")
+
 -- Permanent flame node
 local permanent_fire_node = table.copy(fire_node)
 permanent_fire_node.description = "Permanent Fire"
@@ -131,6 +133,8 @@ minetest.register_tool("sb_fire:sparker", {
 		end
 	end
 })
+
+core.register_alias("sparker", "sb_fire:sparker")
 
 minetest.register_craft({
 	output = "sb_fire:sparker",

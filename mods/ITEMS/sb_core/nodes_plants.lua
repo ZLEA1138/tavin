@@ -45,6 +45,8 @@ minetest.register_node("sb_core:grass_1", {
 	end,
 })
 
+core.register_alias("grass", "sb_core:grass_1")
+
 for i = 2, 5 do
 	minetest.register_node("sb_core:grass_" .. i, {
 		description = "Grass",
@@ -116,6 +118,8 @@ minetest.register_node("sb_core:seagrass_1", {
 	end,
 })
 
+core.register_alias("seagrass", "sb_core:seagrass_1")
+
 for i = 2, 3 do
 	minetest.register_node("sb_core:seagrass_" .. i, {
 		description = "Seagrass",
@@ -170,3 +174,5 @@ minetest.register_node("sb_core:reeds", {
 		functions.dig_up(pos, node, digger)
 	end,
 })
+
+core.register_alias("reeds", "sb_core:reeds")

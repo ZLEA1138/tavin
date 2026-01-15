@@ -22,6 +22,8 @@ minetest.register_craftitem("sb_farming:groundroot", {
 	end
 })
 
+core.register_alias("groundroot", "sb_farming:groundroot")
+
 sb_farming.add_eatable("sb_farming:groundroot", 1)
 
 -- Groundroot Crop
