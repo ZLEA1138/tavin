@@ -86,7 +86,7 @@ permanent_fire_node.description = "Permanent Fire"
 
 minetest.register_node("sb_fire:permanent_flame", permanent_fire_node)
 
--- Flint and Steel
+-- Sparker
 minetest.register_tool("sb_fire:sparker", {
 	description = "Sparker",
 	inventory_image = "sparker.png",
