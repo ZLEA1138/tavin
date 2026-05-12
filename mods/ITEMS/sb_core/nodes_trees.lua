@@ -52,8 +52,8 @@ core.register_craft({
 minetest.register_node("sb_core:stripped_log_marshtree", {
 	description = "Stripped Marshtree Log",
 	tiles = {
-		"log_marshtree_top.png",
-		"log_marshtree_top.png",
+		"stripped_log_marshtree_top.png",
+		"stripped_log_marshtree_top.png",
 		"stripped_log_marshtree.png"
 	},
 	paramtype2 = "facedir",
@@ -252,8 +252,8 @@ core.register_craft({
 minetest.register_node("sb_core:stripped_log_oki", {
 	description = "Oki Log",
 	tiles = {
-		"log_oki_top.png",
-		"log_oki_top.png",
+		"stripped_log_oki_top.png",
+		"stripped_log_oki_top.png",
 		"stripped_log_oki.png"
 	},
 	paramtype2 = "facedir",
@@ -452,8 +452,8 @@ core.register_craft({
 minetest.register_node("sb_core:stripped_log_sana", {
 	description = "Sana Log",
 	tiles = {
-		"log_sana_top.png",
-		"log_sana_top.png",
+		"stripped_log_sana_top.png",
+		"stripped_log_sana_top.png",
 		"stripped_log_sana.png"
 	},
 	paramtype2 = "facedir",
@@ -623,7 +623,7 @@ minetest.register_node("sb_core:log_suntree", {
 	tiles = {
 		"log_suntree_top.png",
 		"log_suntree_top.png",
-		"log_suntree.png"
+		"log_suntree.png" -- Based on Palm Tree Trunk texture in More Trees! mod by VanessaE
 	},
 	paramtype2 = "facedir",
 	is_ground_content = false,
@@ -652,8 +652,8 @@ core.register_craft({
 minetest.register_node("sb_core:stripped_log_suntree", {
 	description = "Suntree Log",
 	tiles = {
-		"log_suntree_top.png",
-		"log_suntree_top.png",
+		"stripped_log_suntree_top.png",
+		"stripped_log_suntree_top.png",
 		"stripped_log_suntree.png"
 	},
 	paramtype2 = "facedir",
@@ -852,8 +852,8 @@ core.register_craft({
 minetest.register_node("sb_core:stripped_log_taeda", {
 	description = "Taeda Log",
 	tiles = {
-		"log_taeda_top.png",
-		"log_taeda_top.png",
+		"stripped_log_taeda_top.png",
+		"stripped_log_taeda_top.png",
 		"stripped_log_taeda.png"
 	},
 	paramtype2 = "facedir",
